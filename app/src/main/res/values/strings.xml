@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tajweed</string>
+    <string name="tajweed">مخارج الحروف</string>
+    <string name="parsed_data">parsing</string>
+</resources>
