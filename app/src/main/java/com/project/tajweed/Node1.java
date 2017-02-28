@@ -1,6 +1,6 @@
 package com.project.tajweed;
 
-public class Node {
+public class Node1 {
     private String name= "";
 
     public void setName(String name) {

@@ -1,10 +1,13 @@
 package com.project.tajweed;
 
+import android.util.Log;
+
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.util.ArrayList;
+
 
 public class OrderXMLHandler extends DefaultHandler {
 
@@ -14,8 +17,8 @@ public class OrderXMLHandler extends DefaultHandler {
     String cartId;
     String customerId;
     String email;
-    Node node;
-    ArrayList<Node> nodeList;
+    Node1 node;
+    ArrayList<Node1> nodeList;
 
     public String getCartId() {
         return cartId;
@@ -29,7 +32,7 @@ public class OrderXMLHandler extends DefaultHandler {
         return email;
     }
 
-    public ArrayList<Node> getNodeList() {
+    public ArrayList<Node1> getNodeList() {
         return nodeList;
     }
 
@@ -39,9 +42,9 @@ public class OrderXMLHandler extends DefaultHandler {
         currentElement = true;
 
         if (qName.equals("rNode")) {
-            nodeList = new ArrayList<Node>();
+            nodeList = new ArrayList<Node1>();
         } else if (qName.equals("node")) {
-            node = new Node();
+            node = new Node1();
             node.setName(attributes.getValue(0));
         }
 
