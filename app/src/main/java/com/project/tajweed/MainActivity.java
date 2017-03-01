@@ -17,18 +17,15 @@ import android.widget.Toast;
 
 import com.project.tajweed.xStream.Nodea;
 import com.project.tajweed.xStream.Rnode;
-import com.project.tajweed.xmlBeam.Detail;
-import com.project.tajweed.xmlBeam.Detaila;
-import com.project.tajweed.xmlBeam.Detailb;
-import com.project.tajweed.xmlBeam.Details;
-import com.thoughtworks.xstream.XStream;
-import com.thoughtworks.xstream.converters.extended.ToAttributedValueConverter;
-import com.thoughtworks.xstream.io.xml.DomDriver;
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -51,12 +48,16 @@ import java.util.Set;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
 public class MainActivity extends Activity {
 
     private static final String ns = null;
+    private static Rnode rNode;
     private DetailActivity detailActivity;
     public ArrayList<Node1> nodeList;
     private LinearLayout treeView;
@@ -83,14 +84,71 @@ public class MainActivity extends Activity {
 
         root.addChild(parent);
         AndroidTreeView tView = new AndroidTreeView(this, root);
-        //  l1.addView(tView.getView());
+        //   treeView.addView(tView.getView());
 
         detailActivity = DetailActivity.newInstance();
-       // parseXML();
-      //  parseNodeXML1();
-       // Utils.parseNodeXML(this);
-        Utils.parseNodeDOMXML(this);
+        // parseXML();
+        //  parseNodeXML1();
+        // Utils.parseNodeXML(this);
+        parseNodeDOMXML(this);
+
+        remplir_treeView();
         // parseNodeXML();
+    }
+
+    private void remplir_treeView() {
+        TreeNode root = TreeNode.root();
+
+        ///parent
+        MyHolder.IconTreeItem nodeItem = new MyHolder.IconTreeItem();
+        nodeItem.text = "" + rNode.getName();
+        TreeNode parent = new TreeNode(nodeItem).setViewHolder(new MyHolder(this));
+        /////////////
+        List<Nodea> fils_rnodes = rNode.getNodes();
+        for (Nodea na : fils_rnodes) {
+            MyHolder.IconTreeItem naItem = new MyHolder.IconTreeItem();
+            naItem.text = "" + na.getName();
+            TreeNode child = new TreeNode(naItem).setViewHolder(new MyHolder(this));
+            /////////////
+            List<Nodea> fils_rnodes1 = na.getNodes();
+            for (Nodea na1 : fils_rnodes1) {
+                MyHolder.IconTreeItem naItem1 = new MyHolder.IconTreeItem();
+                naItem1.text = "" + na1.getName();
+                TreeNode child1 = new TreeNode(naItem1).setViewHolder(new MyHolder(this));
+                /////////////
+                List<Nodea> fils_rnodes2 = na1.getNodes();
+                for (Nodea na2 : fils_rnodes2) {
+                    MyHolder.IconTreeItem naItem2 = new MyHolder.IconTreeItem();
+                    naItem2.text = "" + na2.getName();
+                    TreeNode child2 = new TreeNode(naItem2).setViewHolder(new MyHolder(this));
+                    /////////////
+                    List<Nodea> fils_rnodes3 = na2.getNodes();
+                    for (Nodea na3 : fils_rnodes3) {
+                        MyHolder.IconTreeItem naItem3 = new MyHolder.IconTreeItem();
+                        naItem3.text = "" + na3.getName();
+                        TreeNode child3 = new TreeNode(naItem3).setViewHolder(new MyHolder(this));
+                        child2.addChildren(child3);
+
+                    }
+                    /////////////
+                    child1.addChildren(child2);
+
+                }
+                /////////////
+                child.addChildren(child1);
+
+            }
+            /////////////
+            parent.addChildren(child);
+
+        }
+        /////////////
+
+
+        root.addChild(parent);
+        AndroidTreeView tView = new AndroidTreeView(this, root);
+        treeView.addView(tView.getView());
+
     }
 
 
@@ -122,8 +180,8 @@ public class MainActivity extends Activity {
                     //System.out.println(st.nextToken());
                     String item_of_path = st.nextToken();
                     // Log.d("sectionsection",":"+item_of_path);
-                   // Nodea nodea = new Nodea(item_of_path);
-                  //  list.add(nodea);
+                    // Nodea nodea = new Nodea(item_of_path);
+                    //  list.add(nodea);
                 }
                 for (int i = 0; i < list.size(); i++) {
 
@@ -259,5 +317,101 @@ public class MainActivity extends Activity {
         }
         reader.close();
         return sb.toString();
+    }
+
+
+    public static void parseNodeDOMXML(Context context) {
+        rNode = Rnode.getInstance();
+        AssetManager assetManager = context.getAssets();
+
+        try {
+            InputStream is = assetManager.open("tajweed_structure.xml");
+
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+            Document doc = dBuilder.parse(is);
+
+            Element element = doc.getDocumentElement();
+            element.normalize();
+            Log.d("Rootelement :", "" + doc.getDocumentElement().getNodeName());
+
+
+            //NodeList nList = doc.getElementsByTagName("node");
+            Node root = doc.getFirstChild();
+            if (root.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement = (Element) root;
+                rNode.setName(eElement.getAttribute("name"));
+                NodeList nList = root.getChildNodes();
+                for (int i = 0; i < nList.getLength(); i++) {
+                    Node node = nList.item(i);
+                    if (node.getNodeType() == Node.ELEMENT_NODE) {
+                        Element enode = (Element) node;
+                        Nodea nodea = new Nodea();
+                        nodea.setName(enode.getAttribute("name"));
+
+                        //Log.d("Rootelement :", "" + node.getNodeName() + " " + enode.getLocalName() + " " + enode.getAttribute("name"));
+                        NodeList nList1 = node.getChildNodes();
+                        for (int j = 0; j < nList1.getLength(); j++) {
+                            Node node1 = nList1.item(j);
+                            if (node1.getNodeType() == Node.ELEMENT_NODE) {
+                                Element enode1 = (Element) node1;
+                                Nodea nodea1 = new Nodea();
+                                nodea1.setName(enode1.getAttribute("name"));
+
+                                //////////
+                                NodeList nList2 = node1.getChildNodes();
+                                for (int k = 0; k < nList2.getLength(); k++) {
+                                    Node node2 = nList2.item(k);
+                                    if (node2.getNodeType() == Node.ELEMENT_NODE) {
+                                        Element enode2 = (Element) node2;
+                                        Nodea nodea2 = new Nodea();
+                                        nodea2.setName(enode2.getAttribute("name"));
+
+                                        //////////
+                                        NodeList nList3 = node2.getChildNodes();
+                                        if (nList3.getLength() > 0) {
+                                            for (int l = 0; l < nList2.getLength(); l++) {
+                                                Node node3 = nList3.item(l);
+                                                if (node3 != null && node3.getNodeType() == Node.ELEMENT_NODE) {
+                                                    Element enode3 = (Element) node3;
+                                                    Nodea nodea3 = new Nodea();
+                                                    nodea3.setName(enode3.getAttribute("name"));
+
+
+                                                    nodea2.add(nodea3);
+                                                    //Log.d("Rootelement :", "" + node1.getNodeName() + " " + enode1.getLocalName() + " " + enode1.getAttribute("name"));
+                                                }
+                                            }
+                                        }
+                                        //////////
+                                        nodea1.add(nodea2);
+                                        //Log.d("Rootelement :", "" + node1.getNodeName() + " " + enode1.getLocalName() + " " + enode1.getAttribute("name"));
+                                    }
+                                }
+                                //////////
+
+
+                                nodea.add(nodea1);
+                                Log.d("Rootelement :", "" + node1.getNodeName() + " " + enode1.getLocalName() + " " + enode1.getAttribute("name"));
+                            }
+                        }
+                        rNode.add(nodea);
+                    }
+                }
+            }
+            int m = 0;
+            Log.d("Rootelement :", "" + m);
+
+        } catch (IOException e) {
+            Log.d("Rootelement :", "" + e.getMessage());
+            e.printStackTrace();
+        } catch (ParserConfigurationException e) {
+            Log.d("Rootelement PConfEx:", "" + e.getMessage());
+            e.printStackTrace();
+        } catch (SAXException e) {
+            Log.d("Rootelement SAXException:", "" + e.getMessage());
+            e.printStackTrace();
+        }
+
     }
 }

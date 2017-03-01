@@ -32,8 +32,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     compile 'com.github.bmelnychuk:atv:1.2.+'
-    compile('com.thoughtworks.xstream:xstream:1.4.2') {
+   /* compile('com.thoughtworks.xstream:xstream:1.4.2') {
         exclude group: 'xmlpull', module: 'xmlpull'
-    }
+    }*/
 
 }

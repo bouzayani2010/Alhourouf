@@ -1,5 +1,6 @@
 package com.project.tajweed.xStream;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,7 +8,7 @@ import java.util.List;
  */
 public class Rnode {
     private static Rnode ourInstance = new Rnode();
-    private List<Nodea> nodes;
+    private List<Nodea> nodes=new ArrayList<Nodea>();
 
 
     private String name;

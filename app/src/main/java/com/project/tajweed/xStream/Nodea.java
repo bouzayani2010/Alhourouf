@@ -1,8 +1,5 @@
 package com.project.tajweed.xStream;
 
-import com.project.tajweed.xmlBeam.Detail;
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,15 +8,11 @@ import java.util.List;
  * Created by Belgacem on 23/02/2017.
  */
 
-@XStreamAlias("node")
 public class Nodea {
-
-
-
-    @XStreamAlias("name")
     String name;
-    @XStreamImplicit
     String message;
+    private List<Nodea> nodes=new ArrayList<Nodea>();
+
 
     public String getMessage() {
         return message;
@@ -37,4 +30,15 @@ public class Nodea {
         this.name = name;
     }
 
+    public void add(Nodea nodea1) {
+        nodes.add(nodea1);
+    }
+
+    public List<Nodea> getNodes() {
+        return nodes;
+    }
+
+    public void setNodes(List<Nodea> nodes) {
+        this.nodes = nodes;
+    }
 }
