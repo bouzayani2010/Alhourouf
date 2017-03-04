@@ -1,6 +1,8 @@
 package com.project.tajweed.xStream;
 
 
+import com.project.tajweed.Section;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +14,7 @@ public class Nodea {
     String name;
     String message;
     private List<Nodea> nodes=new ArrayList<Nodea>();
+    private Section section;
 
 
     public String getMessage() {
@@ -40,5 +43,13 @@ public class Nodea {
 
     public void setNodes(List<Nodea> nodes) {
         this.nodes = nodes;
+    }
+
+    public void setSection(Section section) {
+        this.section = section;
+    }
+
+    public Section getSection() {
+        return section;
     }
 }

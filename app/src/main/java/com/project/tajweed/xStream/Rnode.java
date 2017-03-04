@@ -1,5 +1,7 @@
 package com.project.tajweed.xStream;
 
+import com.project.tajweed.Section;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +14,7 @@ public class Rnode {
 
 
     private String name;
+    private Section section;
 
     public static Rnode getInstance() {
         return ourInstance;
@@ -31,18 +34,15 @@ public class Rnode {
     public void add(Nodea nodea) {
         nodes.add(nodea);
     }
-    public boolean hasNode(Nodea nodea) {
-    /*    for(Nodea nodea_item:nodes){
-            if(nodea_item.getName().equals(nodea.getName())){
-                return true;
-            }
-        }*/
-        return false;
-    }
+   
     public void setName(String name) {
         this.name = name;
     }
     public String getName() {
         return name;
+    }
+
+    public void setSection(Section section) {
+        this.section = section;
     }
 }

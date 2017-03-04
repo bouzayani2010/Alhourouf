@@ -10,6 +10,7 @@ import android.util.Log;
 import android.util.Xml;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -61,7 +62,8 @@ public class MainActivity extends Activity {
     private DetailActivity detailActivity;
     public ArrayList<Node1> nodeList;
     private LinearLayout treeView;
-    private ArrayList<Section> cartList;
+    private static ArrayList<Section> cartList;
+    private TextView tvname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +72,7 @@ public class MainActivity extends Activity {
 
         treeView = (LinearLayout) this.findViewById(R.id.linearLayout1);
 
+        tvname = (TextView) this.findViewById(R.id.tv_name);
         TreeNode root = TreeNode.root();
 
 
@@ -87,13 +90,11 @@ public class MainActivity extends Activity {
         //   treeView.addView(tView.getView());
 
         detailActivity = DetailActivity.newInstance();
-        // parseXML();
-        //  parseNodeXML1();
-        // Utils.parseNodeXML(this);
+        parseXML();
         parseNodeDOMXML(this);
-
         remplir_treeView();
-        // parseNodeXML();
+
+        tvname.setText(rNode.getName());
     }
 
     private void remplir_treeView() {
@@ -108,24 +109,30 @@ public class MainActivity extends Activity {
         for (Nodea na : fils_rnodes) {
             MyHolder.IconTreeItem naItem = new MyHolder.IconTreeItem();
             naItem.text = "" + na.getName();
+            naItem.section = na.getSection();
             TreeNode child = new TreeNode(naItem).setViewHolder(new MyHolder(this));
             /////////////
             List<Nodea> fils_rnodes1 = na.getNodes();
             for (Nodea na1 : fils_rnodes1) {
                 MyHolder.IconTreeItem naItem1 = new MyHolder.IconTreeItem();
                 naItem1.text = "" + na1.getName();
+
+                naItem1.section = na1.getSection();
                 TreeNode child1 = new TreeNode(naItem1).setViewHolder(new MyHolder(this));
                 /////////////
                 List<Nodea> fils_rnodes2 = na1.getNodes();
                 for (Nodea na2 : fils_rnodes2) {
                     MyHolder.IconTreeItem naItem2 = new MyHolder.IconTreeItem();
                     naItem2.text = "" + na2.getName();
+
+                    naItem2.section = na2.getSection();
                     TreeNode child2 = new TreeNode(naItem2).setViewHolder(new MyHolder(this));
                     /////////////
                     List<Nodea> fils_rnodes3 = na2.getNodes();
                     for (Nodea na3 : fils_rnodes3) {
                         MyHolder.IconTreeItem naItem3 = new MyHolder.IconTreeItem();
                         naItem3.text = "" + na3.getName();
+                        naItem3.section = na3.getSection();
                         TreeNode child3 = new TreeNode(naItem3).setViewHolder(new MyHolder(this));
                         child2.addChildren(child3);
 
@@ -147,6 +154,34 @@ public class MainActivity extends Activity {
 
         root.addChild(parent);
         AndroidTreeView tView = new AndroidTreeView(this, root);
+        // tView.setUseAutoToggle(true);
+        tView.setDefaultNodeClickListener(new TreeNode.TreeNodeClickListener() {
+            @Override
+            public void onClick(TreeNode node, Object value) {
+                if (node.isExpanded()) {
+
+                    View nodeview = node.getViewHolder().getView();
+                    ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
+                    img_node.setImageResource(R.drawable.down);
+                } else {
+
+                    View nodeview = node.getViewHolder().getView();
+                    ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
+                    img_node.setImageResource(R.drawable.up);
+                }
+                if (node.getPath().length() > 1) {
+                    Log.d("nodenode", ((MyHolder.IconTreeItem) value).section.getDesc());
+                    DetailActivity.path =  ((MyHolder.IconTreeItem) value).section.getPath();
+                    DetailActivity.desc =  ((MyHolder.IconTreeItem) value).section.getDesc();
+                    DetailActivity.name =  ((MyHolder.IconTreeItem) value).section.getName();
+                    Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+                    startActivity(intent);
+
+                }
+
+            }
+        });
+
         treeView.addView(tView.getView());
 
     }
@@ -167,35 +202,6 @@ public class MainActivity extends Activity {
 
 
             cartList = myXMLHandler.getCartList();
-            Rnode rnode = Rnode.getInstance();
-            List<Nodea> listnodes = new ArrayList<>();
-            rnode.setNodes(listnodes);
-            for (Section section : cartList) {
-                String pathsection = section.getPath();
-                Log.d("nodeanodea", ":" + pathsection);
-                StringTokenizer st = new StringTokenizer(pathsection, "/");
-
-                List<Nodea> list = new ArrayList();
-                while (st.hasMoreTokens()) {
-                    //System.out.println(st.nextToken());
-                    String item_of_path = st.nextToken();
-                    // Log.d("sectionsection",":"+item_of_path);
-                    // Nodea nodea = new Nodea(item_of_path);
-                    //  list.add(nodea);
-                }
-                for (int i = 0; i < list.size(); i++) {
-
-                }
-            }
-            Log.d("rnodesize", ":" + rnode.getNodes().size());
-           /* for(Nodea nodea:rnode.getNodes()){
-                Log.d("rnodesize", ":" +nodea.getName());
-                for(Nodea nodeas:nodea.getNodes()){
-                    Log.d("rnodesize", ":" +nodeas.getName());
-                }
-            }*/
-
-
             ListView listView = (ListView) findViewById(R.id.listview);
             ListAdapter adapter = new ListAdapter(this, cartList);
             listView.setAdapter(adapter);
@@ -341,6 +347,7 @@ public class MainActivity extends Activity {
             if (root.getNodeType() == Node.ELEMENT_NODE) {
                 Element eElement = (Element) root;
                 rNode.setName(eElement.getAttribute("name"));
+                // rNode.setSection(getSectionfrompath(eElement.getAttribute("name")));
                 NodeList nList = root.getChildNodes();
                 for (int i = 0; i < nList.getLength(); i++) {
                     Node node = nList.item(i);
@@ -348,6 +355,12 @@ public class MainActivity extends Activity {
                         Element enode = (Element) node;
                         Nodea nodea = new Nodea();
                         nodea.setName(enode.getAttribute("name"));
+
+                        nodea.setSection(getSectionfrompath(eElement.getAttribute("name")
+                                + "/"
+                                +
+                                enode.getAttribute("name")
+                        ));
 
                         //Log.d("Rootelement :", "" + node.getNodeName() + " " + enode.getLocalName() + " " + enode.getAttribute("name"));
                         NodeList nList1 = node.getChildNodes();
@@ -357,7 +370,10 @@ public class MainActivity extends Activity {
                                 Element enode1 = (Element) node1;
                                 Nodea nodea1 = new Nodea();
                                 nodea1.setName(enode1.getAttribute("name"));
-
+                                nodea1.setSection(getSectionfrompath(eElement.getAttribute("name")
+                                        + "/" + enode.getAttribute("name")
+                                        + "/" + enode1.getAttribute("name")
+                                ));
                                 //////////
                                 NodeList nList2 = node1.getChildNodes();
                                 for (int k = 0; k < nList2.getLength(); k++) {
@@ -366,7 +382,11 @@ public class MainActivity extends Activity {
                                         Element enode2 = (Element) node2;
                                         Nodea nodea2 = new Nodea();
                                         nodea2.setName(enode2.getAttribute("name"));
-
+                                        nodea2.setSection(getSectionfrompath(eElement.getAttribute("name")
+                                                + "/" + enode.getAttribute("name")
+                                                + "/" + enode1.getAttribute("name")
+                                                + "/" + enode2.getAttribute("name")
+                                        ));
                                         //////////
                                         NodeList nList3 = node2.getChildNodes();
                                         if (nList3.getLength() > 0) {
@@ -376,7 +396,12 @@ public class MainActivity extends Activity {
                                                     Element enode3 = (Element) node3;
                                                     Nodea nodea3 = new Nodea();
                                                     nodea3.setName(enode3.getAttribute("name"));
-
+                                                    nodea3.setSection(getSectionfrompath(eElement.getAttribute("name")
+                                                            + "/" + enode.getAttribute("name")
+                                                            + "/" + enode1.getAttribute("name")
+                                                            + "/" + enode2.getAttribute("name")
+                                                            + "/" + enode3.getAttribute("name")
+                                                    ));
 
                                                     nodea2.add(nodea3);
                                                     //Log.d("Rootelement :", "" + node1.getNodeName() + " " + enode1.getLocalName() + " " + enode1.getAttribute("name"));
@@ -412,6 +437,24 @@ public class MainActivity extends Activity {
             Log.d("Rootelement SAXException:", "" + e.getMessage());
             e.printStackTrace();
         }
+
+    }
+
+    private static Section getSectionfrompath(String path) {
+        //Log.d("cartlist", "" + path);
+        // Log.d("cartlist",""+cartList.toString());
+        for (Section section : cartList) {
+
+            String sectionpath = section.getPath().replace(" ", "");
+            path = path.replace(" ", "");
+
+            //Log.d("cartlist", "**" + sectionpath + "**" + path);
+            if (path.equals(sectionpath)) {
+                Log.d("cartlist", "**" + sectionpath + "**" + path);
+                return section;
+            }
+        }
+        return null;
 
     }
 }
