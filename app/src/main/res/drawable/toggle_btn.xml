@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 選択時 -->
+    <item android:state_checked="true">
+        <layer-list>
+            <item android:gravity="right" android:left="38dp" android:top="0dp">
+                <shape android:shape="oval">
+                    <gradient
+                        android:centerColor="@color/blue90"
+                        android:endColor="@color/blue90"
+                        android:gradientRadius="30"
+                        android:startColor="#e7e7e7"
+                        android:type="radial" />
+                </shape>
+            </item>
+            <item
+                android:bottom="0dp"
+                android:gravity="right"
+                android:left="40dp"
+                android:right="1dp"
+                android:top="0dp">
+                <shape android:shape="oval">
+                    <size android:width="15dp" android:height="15dp" />
+                    <solid android:color="@color/blue90" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- 未選択時 -->
+    <item>
+        <layer-list>
+            <item android:top="0dp">
+                <shape android:shape="oval">
+                    <gradient android:centerColor="@color/white95" android:endColor="@color/white95" android:gradientRadius="30" android:startColor="#e7e7e7" android:type="radial" />
+                </shape>
+            </item>
+            <item android:bottom="0dp" android:left="1dp" android:right="2dp" android:top="0dp">
+                <shape android:shape="oval">
+                    <size android:width="15dp" android:height="15dp" />
+                    <solid android:color="@color/white95" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

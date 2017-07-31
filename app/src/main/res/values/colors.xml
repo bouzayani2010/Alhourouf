@@ -1,9 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
     <color name="white_color">#ffffff</color>
     <color name="blue_color">#01adee</color>
     <color name="gray_color">#aaa9a7</color>
+    <color name="colorPrimary">#a2a2a2</color>
+    <color name="colorPrimaryDark">#a2a2a2</color>
+    <color name="colorPrimary1">#a2a2a2</color>
+    <color name="colorPrimaryDark1">#a2a2a2</color>
+    <color name="colorAccent">#a73212</color>
+    <color name="blue">#005596</color>
+    <color name="blue__">#13629e</color>
+    <color name="blue_button">#005596</color>
+
+    <color name="blue_drawer">#9907365a</color>
+    <color name="blue_book">#6599c0</color>
+
+    <color name="blue_register">#005596</color>
+    <color name="blue_register1">#50005596</color>
+    <color name="blue_price">#1966a0</color>
+
+    <color name="lightGrayColor">#a2a2a2</color>
+    <color name="lightGrayColor3">#e8e8e8</color>
+    <color name="lightGrayColor35">#55e8e8e8</color>
+    <color name="gray_book">#6b6b6b</color>
+    <color name="gray_currency">#979797</color>
+    <color name="grayColor">#808080</color>
+    <color name="grayColor2">#cecece</color>
+    <color name="grayColor4">#796f6a</color>
+    <color name="grayColor7">#878686</color>
+
+    <color name="grayColor3">#666666</color>
+    <color name="grayColor_book">#565656</color>
+    <color name="darkGrayColor">#555555</color>
+    <color name="DateGray">#747474</color>
+
+
+    <color name="blue90">#E60e5d9a</color>
+    <color name="blue60">#994f87b4</color>
+    <color name="blue50">#800e5d9a</color>
+    <color name="blue30">#4D4f87b4</color>
+    <color name="blue20">#334f87b4</color>
+    <color name="blue10">#1A4f87b4</color>
+    <color name="blue40">#005596</color>
+    <color name="blue400">#DD005596</color>
+    <color name="blue300">#aa005596</color>
+
+    <color name="black_alpha_40">#93000000</color>
+
+    <color name="red">#ff0000</color>
+    <color name="red_color">#982729</color>
+    <color name="green_color">#428649</color>
+    <color name="orange_color">#b86320</color>
+    <drawable name="red_drawable">#ff0000</drawable>
+    <drawable name="black_drawable">#000</drawable>
+    <drawable name="red2_drawable">#E00023</drawable>
+    <color name="light_grey">#f2f2f2f2</color>
+    <color name="black70">#21272d</color>
+    <color name="black60">#99000000</color>
+    <color name="black40">#66000000</color>
+    <color name="black30">#4D000000</color>
+    <color name="black20">#32000000</color>
+    <color name="grey">#9C9C9C</color>
+    <color name="greyy">#989594</color>
+    <color name="grey_stay">#4a4a4a</color>
+
+    <color name="grey_nine_light">#99cccccc</color>
+    <color name="light_grey2">#c8c7cc</color>
+    <color name="light_grey3">#a2a2a2</color>
+    <color name="grey2">#969696</color>
+    <color name="grey3">#8E8E8E</color>
+    <color name="grey4">#EEEEEE</color>
+    <color name="grey5">#A3A3A3</color>
+    <color name="grey6">#DDDDDD</color>
+    <color name="grey7">#AAAAAA</color>
+    <color name="grey8">#c7cbd1</color>
+
+    <color name="orange">#F2E3D4</color>
+
+    <color name="white95">#F2ffffff</color>
+    <color name="white80">#CCffffff</color>
+    <color name="white40">#66ffffff</color>
+    <color name="white50">#99ffffff</color>
+    <color name="white30">#4Dffffff</color>
+    <color name="white20">#32ffffff</color>
+    <color name="white_smooking">#e0e0e0</color>
+    <color name="green_reservation">#43864c</color>
+    <color name="red_reservation">#812e2e</color>
+
+    <!-- Caldroid -->
+    <color name="caldroid_white">#FFFFFF</color>
+    <color name="caldroid_black">#000000</color>
+    <color name="caldroid_transparent">#00000000</color>
+    <!-- For settings framework -->
+    <color name="caldroid_lighter_gray">#ddd</color>
+    <color name="caldroid_gray">#CCC</color>
+    <color name="caldroid_darker_gray">#aaa</color>
+    <color name="caldroid_middle_gray">#888</color>
+    <!-- A light Holo shade of blue -->
+    <!--<color name="caldroid_holo_blue_light">#ff33b5e5</color>-->
+    <color name="caldroid_holo_blue_light">#DE0D32</color>
+    <!-- A dark Holo shade of blue -->
+    <color name="caldroid_holo_blue_dark">#ff0099cc</color>
+    <!-- A really bright Holo shade of blue -->
+    <!--<color name="caldroid_sky_blue">#FFA3E8F7</color>-->
+    <color name="caldroid_sky_blue">#DE0D32</color>
+
+    <color name="caldroid_333">#333</color>
+    <color name="caldroid_555">#555</color>
+    <color name="caldroid_light_red">#ff7f7f</color>
+
+    <color name="black6">#dd444444</color>
+    <color name="rose">#DE0D32</color>
+    <color name="gray">#6a878e</color>
+    <!-- end Caldroid -->
+    <color name="red_booking">#a73212</color>
+
+    <color name="red_btn">#a73212</color>
+    <color name="red_btn6">#bba73212</color>
+    <color name="red_btn8">#44a73212</color>
+    <color name="red_btn10">#22a73212</color>
+
+    <color name="calendar_active_month_bg">#FFFFFF</color>
+    <color name="calendar_current_day_text">#fff</color>
+    <color name="calendar_month_divider">#EAEAEA</color>
+    <color name="calendar_inactive_month_bg">#c7cbd1</color>
+    <color name="calendar_selected_day_bg">#ffb500</color>
+    <color name="calendar_highlighted_day_bg">#ccffcc</color>
+    <color name="calendar_text_inactive">#cccccc</color>
+    <color name="calendar_text_active">#555555</color>
+    <color name="calendar_text_selected">#ffffffff</color>
+    <color name="calendar_text_unselectable">#cccccc</color>
 </resources>
