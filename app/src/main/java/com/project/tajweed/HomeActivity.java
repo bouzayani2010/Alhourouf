@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -15,6 +16,7 @@ import com.project.tajweed.adapters.ListtajweedAdapter;
 import com.project.tajweed.xStream.Nodea;
 import com.project.tajweed.xStream.Rnode;
 
+import org.lucasr.twowayview.TwoWayView;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -26,6 +28,7 @@ import org.xml.sax.XMLReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.EmptyStackException;
 import java.util.List;
 import java.util.Stack;
@@ -59,6 +62,8 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
 
     private List<Nodea> nodes = new ArrayList<>();
     private Stack stack;
+    private Stack stack_path;
+    private ArrayList<String> items_path;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,15 +72,28 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
 
         ButterKnife.inject(this);
         stack = new Stack();
+        stack_path = new Stack();
         //listView = (ListView) findViewById(R.id.listview);
 
         parseXML();
         parseNodeDOMXML(this);
         nodes = rNode.getNodes();
         stack.push(nodes);
+        //stack_path.push(rNode.getName());
         adapter = new ListtajweedAdapter(this, nodes);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
+        items_path = new ArrayList<String>();
+        createviews();
+    }
+
+    private void createviews() {
+        items_path = new ArrayList(stack_path);
+        Collections.reverse(items_path);
+      //  items_path.add(getString(R.string.tajweed));
+        ArrayAdapter<String> aItems = new ArrayAdapter<String>(this, R.layout.simple_list_item_1, items_path);
+        TwoWayView lvTest = (TwoWayView) findViewById(R.id.lvItems);
+        lvTest.setAdapter(aItems);
     }
 
     @OnItemSelected(R.id.listview)
@@ -267,9 +285,13 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
             Nodea nodea = nodes.get(i);
             List<Nodea> nodeas = nodea.getNodes();
             if (nodeas.size() > 0) {
+                nodes.clear();
                 nodes = nodeas;
 
                 stack.push(nodes);
+
+                stack_path.push(nodea.getName());
+                createviews();
                 adapter = new ListtajweedAdapter(this, nodes);
                 listView.setAdapter(adapter);
                 scrollView.setVisibility(View.GONE);
@@ -303,7 +325,10 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
     public void onBackPressed() {
         //
         try {
+            
             nodes = (List<Nodea>) stack.pop();
+            stack_path.pop();
+            createviews();
             adapter = new ListtajweedAdapter(this, nodes);
             listView.setAdapter(adapter);
             scrollView.setVisibility(View.GONE);
