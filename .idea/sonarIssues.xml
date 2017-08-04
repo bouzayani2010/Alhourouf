@@ -33,6 +33,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/project/tajweed/PathAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/project/tajweed/SplashScreen.java">
           <value>
             <set />
@@ -104,6 +109,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../Rotana_new_app_android/app/src/main/java/com/rotana/rotanahotels/container/booking/BookingRoomDetailFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../rosewood_android/app/src/main/java/com/project/rosewood/bean/Booking_restaurant.java">
           <value>
             <set />
           </value>
