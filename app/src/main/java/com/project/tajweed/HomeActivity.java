@@ -29,7 +29,9 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EmptyStackException;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.Stack;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -57,11 +59,13 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
 
     @InjectView(R.id.tv_desc)
     TextView tv_desc;
+    @InjectView(R.id.tv_back)
+    TextView tv_back;
 
     private List<Nodea> nodes = new ArrayList<>();
     //private Stack stack;
-    private Stack stack_path;
-    private ArrayList<String> items_path;
+    private List stack_path;
+    private List<String> items_path;
     private PathAdapter pathAdapter;
 
     @Override
@@ -77,19 +81,37 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
         parseXML();
         parseNodeDOMXML(this);
         // stack.push(nodes);
-        stack_path.push(rNode);
+        stack_path.add(0, rNode);
 
         nodes = rNode.getNodes();
-        adapter = new ListtajweedAdapter(this, nodes);
-        listView.setAdapter(adapter);
+        refreshlistview();
         listView.setOnItemClickListener(this);
         items_path = new ArrayList<String>();
         createviews();
+        tv_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+    }
+
+    private void refreshlistview() {
+   /*     List<Nodea> al = new ArrayList<>();
+// add elements to al, including duplicates
+        Set<Nodea> hs = new HashSet<>();
+        hs.addAll(nodes);
+        al.clear();
+        al.addAll(hs);
+        Collections.reverse(al);*/
+        adapter = new ListtajweedAdapter(this, nodes);
+        listView.setAdapter(adapter);
     }
 
     private void createviews() {
-        items_path = new ArrayList(stack_path);
-        Collections.reverse(items_path);
+        //  items_path = new ArrayList(stack_path);
+        items_path = stack_path;
+        //   Collections.reverse(items_path);
         // Collections.sort(items_path,Collections.<String>reverseOrder());
         //  items_path.add(getString(R.string.tajweed));
         pathAdapter = new PathAdapter(this, items_path);
@@ -284,16 +306,18 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
         try {
             Nodea nodea = nodes.get(i);
             List<Nodea> nodeas = nodea.getNodes();
+
             if (nodeas.size() > 0) {
-                nodes.clear();
-                nodes = nodeas;
+                nodes = nodea.getNodes();
+                // nodes.clear();
+                //    nodes = nodeas;
 
                 // stack.push(nodes);
 
-                stack_path.push(nodea);
+                stack_path.add(0, nodea);
                 createviews();
-                adapter = new ListtajweedAdapter(this, nodes);
-                listView.setAdapter(adapter);
+                refreshlistview();
+                // adapter.notifyDataSetChanged();
             }
             if (!nodea.getSection().getDesc().isEmpty()) {
                 // adapter = new ListtajweedAdapter(this, nodes);
@@ -313,14 +337,14 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
                 //  tv_name.setTextColor(R.color.red_color);
                 view.setBackgroundResource(R.drawable.gray_shape);
 
-            }
-            else{
+            } else {
 
                 scrollView.setVisibility(View.GONE);
             }
             Log.d("nodeanodea", "::" + nodea.getName());
         } catch (Exception e) {
             e.printStackTrace();
+            Log.d("nodeanodea", e.getMessage());
         }
 
     }
@@ -329,20 +353,29 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
     public void onBackPressed() {
         //
         try {
-            stack_path.pop();
-            Object nd = stack_path.get(stack_path.size() - 1);
-            if (nd instanceof Nodea) {
-                nodes = ((Nodea) nd).getNodes();
-            } else if (nd instanceof Rnode) {
-                nodes = ((Rnode) nd).getNodes();
+            if (stack_path.size() > 1) {
+                stack_path.remove(0);
+                Object nd = stack_path.get(0);
+                if (nd instanceof Nodea) {
+                    nodes = ((Nodea) nd).getNodes();
+                    Log.d("nodessize","::"+nodes.size());
+                } else if (nd instanceof Rnode) {
+                    nodes = ((Rnode) nd).getNodes();
+                    Log.d("nodessize","::"+nodes.size());
+                }
             } else {
                 super.onBackPressed();
             }
+            Log.d("nodessize","::"+nodes.size());
+            if (nodes.size() > 0) {
+                createviews();
+                refreshlistview();
+                scrollView.setVisibility(View.GONE);
+            } else {
+
+                super.onBackPressed();
+            }
             // nodes = (List<Nodea>) stack.pop();
-            createviews();
-            adapter = new ListtajweedAdapter(this, nodes);
-            listView.setAdapter(adapter);
-            scrollView.setVisibility(View.GONE);
         } catch (EmptyStackException e) {
             e.printStackTrace();
             super.onBackPressed();

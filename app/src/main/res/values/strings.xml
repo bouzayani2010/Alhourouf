@@ -2,4 +2,5 @@
     <string name="app_name">Tajweed</string>
     <string name="tajweed">التجويد</string>
     <string name="parsed_data">parsing</string>
+    <string name="back">رجوع</string>
 </resources>

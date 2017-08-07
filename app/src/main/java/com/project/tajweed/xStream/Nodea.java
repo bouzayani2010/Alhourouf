@@ -52,4 +52,9 @@ public class Nodea {
     public Section getSection() {
         return section;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return this.name.equals(((Nodea)obj).name);
+    }
 }
