@@ -6,7 +6,9 @@ import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -27,11 +29,8 @@ import org.xml.sax.XMLReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.EmptyStackException;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.Stack;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -65,8 +64,10 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
     private List<Nodea> nodes = new ArrayList<>();
     //private Stack stack;
     private List stack_path;
-    private List<String> items_path;
+    private List items_path;
     private PathAdapter pathAdapter;
+    private WebView mWebView;
+    private ImageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,13 +81,15 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
 
         parseXML();
         parseNodeDOMXML(this);
-        // stack.push(nodes);
         stack_path.add(0, rNode);
 
         nodes = rNode.getNodes();
         refreshlistview();
         listView.setOnItemClickListener(this);
-        items_path = new ArrayList<String>();
+        items_path = new ArrayList();
+        mWebView = (WebView) this.findViewById(R.id.webview);
+        img = (ImageView) this.findViewById(R.id.image_view);
+        img.setVisibility(View.GONE);
         createviews();
         tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,6 +124,23 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+
+                Object nod = items_path.get(i);
+                if (nod instanceof Nodea) {
+                    nodes = ((Nodea) nod).getNodes();
+                    Log.d("nodessize", "::" + nodes.size());
+                } else if (nod instanceof Rnode) {
+                    nodes = ((Rnode) nod).getNodes();
+                    Log.d("nodessize", "::" + nodes.size());
+                }
+                if (nodes.size() > 0) {
+                    createviews();
+                    refreshlistview();
+                    scrollView.setVisibility(View.GONE);
+                }
+                for (int k = 0 ; k <i; k++) {
+                    stack_path.remove(0);
+                }
             }
         });
     }
@@ -332,6 +352,7 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
                 }
                 scrollView.setVisibility(View.GONE);
                 tv_desc.setText(nodea.getSection().getDesc());
+                drawviews(nodea);
                 scrollView.setVisibility(View.VISIBLE);
                 TextView tv_name = (TextView) view.findViewById(R.id.tv_name);
                 //  tv_name.setTextColor(R.color.red_color);
@@ -349,6 +370,79 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
 
     }
 
+    private void drawviews(Nodea nodea) {
+        img.setVisibility(View.VISIBLE);
+        String desc = nodea.getSection().getDesc();
+        String name = nodea.getSection().getName();
+
+        img.setVisibility(View.VISIBLE);
+        if (name.equals("الجوف: تجاويف الحلقوم")) {
+            img.setImageResource(R.drawable.jawf_01);
+        } else if (name.equals("الحلق")) {
+            img.setImageResource(R.drawable.quaaf_05);
+        } else if (name.equals("اللسان")) {
+            img.setImageResource(R.drawable.wasat_lissan_07);
+        } else if (name.equals("الشفتان")) {
+            img.setImageResource(R.drawable.meem_baa_16);
+        } else if (name.equals("الخيشوم")) {
+            img.setImageResource(R.drawable.khayshoom_17);
+        } else if (name.equals("1 - الجوف")) {
+            img.setImageResource(R.drawable.jawf_01);
+        } else if (name.equals("2 - أقصى الحلق")) {
+            img.setImageResource(R.drawable.hamzaa_aa_02);
+        } else if (name.equals("3 - وسط الحلق")) {
+            img.setImageResource(R.drawable.ayn_7aa_03);
+        } else if (name.equals("4 - آخر الحلق أي أدناه إلى الفم")) {
+            img.setImageResource(R.drawable.ayn_7aa_03);
+        } else if (name.equals("5 - أصل اللسان: أقصاه")) {
+            img.setImageResource(R.drawable.kaaf_06);
+        } else if (name.equals("6 - وسط اللسان")) {
+            img.setImageResource(R.drawable.wasat_lissan_07);
+        } else if (name.equals("7 - حافة اللسان من جهة الأضراس")) {
+            img.setImageResource(R.drawable.al_dhaad_08);
+        } else if (name.equals("8 - أدنى اللسان إلى طرفه")) {
+            img.setImageResource(R.drawable.al_dhaad_08);
+        } else if (name.equals("9 - طرف اللسان أي رأس اللسان أي من أسفل رأس اللسان")) {
+            img.setImageResource(R.drawable.al_noon_09);
+        } else if (name.equals("10 - من رأس اللسان و لكنه أدخل إلى جهة الظهر")) {
+            img.setImageResource(R.drawable.al_raa_10);
+        } else if (name.equals("11 - بين راس اللسان و الثنايا العليا")) {
+            img.setImageResource(R.drawable.taa_daal_ta_11);
+        } else if (name.equals("12 - من طرف اللسان و من فوق الثنايا السفلى")) {
+            img.setImageResource(R.drawable.al_safeer_12);
+        } else if (name.equals("13 - من طرف اللسان و لكن بينه و بين الثنايا العليا")) {
+            img.setImageResource(R.drawable.taa_daal_ta_11);
+        } else if (name.equals("14 - من بطن الشفة مع أطراف الثنايا المشرفة")) {
+            img.setImageResource(R.drawable.al_faa_14);
+        } else if (name.equals("الشفتان")) {
+            img.setImageResource(R.drawable.al_waw_15);
+        } else if (name.equals("15- من بين الشفتين لكنها داخلة إلى الداخل")) {
+            img.setImageResource(R.drawable.al_waw_15);
+        } else if (name.equals("16 - من بين الشفتين لكنها من الخارج")) {
+            img.setImageResource(R.drawable.meem_baa_16);
+        } else {
+            img.setVisibility(View.GONE);
+        }
+        String html = "<html dir=\"rtl\" lang=\"\"><head><style>@font-face {font-family: framd;src: " +
+                "url('file:///android_asset/fonts/framd.ttf');}.container_style {margin: 0; padding" +
+                ": 10px 5px 10px 5px;color: #00aaa9a7;font-size: 16px;font-weight:normal;font-family: " +
+                "'framd';}.detail_style {color: #00aaa9a7;font-size: 16px;font-weight:normal;}</style>" +
+                "</head><body class=\"container_style\"><div class=\"detail_style\" >"
+                + desc
+                + "</div></body></html>";
+        try
+
+        {
+            mWebView.setVisibility(View.VISIBLE);
+            mWebView.loadDataWithBaseURL("file:///android_asset/", html,
+                    "text/html", "utf-8", null);
+        } catch (Exception e)
+
+        {
+            // TODO: handle exception
+        }
+    }
+
     @Override
     public void onBackPressed() {
         //
@@ -358,15 +452,16 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
                 Object nd = stack_path.get(0);
                 if (nd instanceof Nodea) {
                     nodes = ((Nodea) nd).getNodes();
-                    Log.d("nodessize","::"+nodes.size());
+                    Log.d("nodessize", "::" + nodes.size());
+                    drawviews((Nodea) nd);
                 } else if (nd instanceof Rnode) {
                     nodes = ((Rnode) nd).getNodes();
-                    Log.d("nodessize","::"+nodes.size());
+                    Log.d("nodessize", "::" + nodes.size());
                 }
             } else {
                 super.onBackPressed();
             }
-            Log.d("nodessize","::"+nodes.size());
+            Log.d("nodessize", "::" + nodes.size());
             if (nodes.size() > 0) {
                 createviews();
                 refreshlistview();

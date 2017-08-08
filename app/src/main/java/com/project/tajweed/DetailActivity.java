@@ -6,7 +6,6 @@ package com.project.tajweed;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -85,25 +84,21 @@ public class DetailActivity extends Activity {
             img.setImageResource(R.drawable.al_raa_10);
         } else if (name.equals("11 - بين راس اللسان و الثنايا العليا")) {
             img.setImageResource(R.drawable.taa_daal_ta_11);
-        }else if (name.equals("12 - من طرف اللسان و من فوق الثنايا السفلى")) {
+        } else if (name.equals("12 - من طرف اللسان و من فوق الثنايا السفلى")) {
             img.setImageResource(R.drawable.al_safeer_12);
-        }else if (name.equals("13 - من طرف اللسان و لكن بينه و بين الثنايا العليا")) {
+        } else if (name.equals("13 - من طرف اللسان و لكن بينه و بين الثنايا العليا")) {
             img.setImageResource(R.drawable.taa_daal_ta_11);
-        }else if (name.equals("14 - من بطن الشفة مع أطراف الثنايا المشرفة")) {
+        } else if (name.equals("14 - من بطن الشفة مع أطراف الثنايا المشرفة")) {
             img.setImageResource(R.drawable.al_faa_14);
-        }else if (name.equals("الشفتان")) {
+        } else if (name.equals("الشفتان")) {
             img.setImageResource(R.drawable.al_waw_15);
-        }else if (name.equals("15- من بين الشفتين لكنها داخلة إلى الداخل")) {
+        } else if (name.equals("15- من بين الشفتين لكنها داخلة إلى الداخل")) {
             img.setImageResource(R.drawable.al_waw_15);
-        }else if (name.equals("16 - من بين الشفتين لكنها من الخارج")) {
+        } else if (name.equals("16 - من بين الشفتين لكنها من الخارج")) {
             img.setImageResource(R.drawable.meem_baa_16);
-        }else if (name.equals("الخيشوم")) {
+        } else if (name.equals("الخيشوم")) {
             img.setImageResource(R.drawable.khayshoom_17);
-        }
-
-
-
-        else {
+        } else {
             img.setVisibility(View.GONE);
         }
 
@@ -121,9 +116,7 @@ public class DetailActivity extends Activity {
             mWebView.setVisibility(View.VISIBLE);
             mWebView.loadDataWithBaseURL("file:///android_asset/", html,
                     "text/html", "utf-8", null);
-        } catch (
-                Exception e
-                )
+        } catch (Exception e)
 
         {
             // TODO: handle exception
