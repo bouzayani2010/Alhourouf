@@ -18,6 +18,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/project/tajweed/DetailActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/project/tajweed/HomeActivity.java">
           <value>
             <set />
@@ -119,6 +124,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../rosewood_android/app/src/main/java/com/project/rosewood/bean/Booking_restaurant.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../rosewood_android/app/src/main/java/com/project/rosewood/fragment/gallery/GalleryDeatailFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../rosewood_android/app/src/main/java/com/project/rosewood/fragment/offrespromotions/OffresPromotionsDetailFragment.java">
           <value>
             <set />
           </value>

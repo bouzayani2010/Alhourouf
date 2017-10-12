@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:padding="10dp"
+    android:layout_margin="3dp"
     android:layout_height="wrap_content"
-    android:background="@color/white_color">
+    android:background="@drawable/background_transparent">
 
     <TextView
         android:id="@+id/tv_name"
