@@ -12,6 +12,9 @@ import android.widget.TextView;
 import com.project.tajweed.xStream.Nodea;
 import com.project.tajweed.xStream.Rnode;
 
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +24,7 @@ import java.util.List;
 
 public class PathAdapter extends BaseAdapter {
     private final Context mContext;
-    private List items_path= new ArrayList<>();
+    private List<Node> items_path= new ArrayList<Node>();
 
 
     public PathAdapter(Context mContext, List items_path) {
@@ -35,7 +38,7 @@ public class PathAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int position) {
+    public Node getItem(int position) {
         if (items_path.size() > 0)
             return items_path.get(position);
         return null;
@@ -48,7 +51,7 @@ public class PathAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Object node = items_path.get(position);
+        Node node = items_path.get(position);
         ViewHolderItem viewHolder;
         if (convertView == null) {
             LayoutInflater inflater = ((Activity) mContext).getLayoutInflater();
@@ -62,7 +65,12 @@ public class PathAdapter extends BaseAdapter {
 
         }
         try {
-            viewHolder.name.setText(((Rnode)node).getName());
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
+
+
+                Element nodea = (Element) node;
+
+                viewHolder.name.setText(nodea.getAttribute("name"));}
         } catch (ClassCastException e) {
             e.printStackTrace();
             viewHolder.name.setText(((Nodea)node).getName());

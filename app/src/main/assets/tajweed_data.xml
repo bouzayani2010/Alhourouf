@@ -1,432 +1,998 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <sections>
-    <section name="باب مخارج الحروف" path="كتاب التجويد/باب مخارج الحروف">
-        <desc>مَخَارِجُ الحُروفِ سَبْعَةَ عَشَرْ عَلَى الْذِي يَخْتَارُهُ مَنِ اخْتَبَرْ
-            فَأَلِفُ الجَوُفِ وأُخْتَاهَا وَهى حُرُوفُ مَدٍّ للْـهَوَاءِ تَنْتَهـي
-            ثُمَّ لأَقْصَى الحَلْقِ هَمْزٌ هَاءُ ثُمَّ لِـوَسْطِـهِ فَعَـيْنٌ حَـاءُ
-            أَدْنَـاهُ غَيْنٌ خَاؤُهَا والْقَـافُ أَقْصَى اللِّسَانِ فَوْقُ ثُمَّ الْكَافُ
-            أَسْفَلُ وَالوَسْطُ فَجِيمُ الشِّينُ يـَا وَالضَّادُ مِنْ حَافَتِهِ إِذْ وَلِيَــا
-            اَلأضْرَاسَ مِنْ أَيْسَرَ أَوْ يُمْنَاهَا وَالـلاَّمُ أَدْنـَاهَا لمُنْتَهَاهــَا
-            وَالنُّونُ مِنْ طَرَفِهِ تَحْتُ اجْعَلُوا وَالرَّا يُدَانِيهِ لِظَهْرٍ أَدْخــَلُوا
-            وَالطَّاءُ وَالدَّالُ وَتَا مِنْـهُ وَمِنْ عُلْيَا الثَّنَايَا والصَّفِيرُ مُسْتـَكِنْ
-            مِنْهُ وَمِنْ فَوْقِ الثَّنَايَا السُّفْلَـى وَالظـَّاءُ وَالذَّالُ وَثَا لِلْعُلْيــَا
-            مِنْ طَرْفَيْهِما وَمِنْ بَطْنِ الشَّفَهْ فَالْفَا مَعَ اطْرافِ الثَّنَايَا المُشْرِفَهْ
-            للشَّـفَتَيْنِ الْـوَاوُ بَـاءٌ مِيـمُ وَغُنَّـةٌ مَخْرَجُهـَا الخَيْشـُومُ
+    <section name="مقدمة البرنامج" path="التجويد/مقدمة البرنامج">
+        <desc>&lt;FONT color=black&gt;
+            &lt;P align=center&gt;&lt;FONT face="Simplified Arabic"&gt;&lt;STRONG&gt;&lt;U&gt;بسم الله الرحمان الرحيم&lt;/U&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=center&gt;&lt;FONT face="Simplified Arabic"&gt;&lt;U&gt;الحمد لله وحده و الصلاة و السلام على من لا نبي بعده&lt;/U&gt;&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;FONT face="Simplified Arabic"&gt;مادة هذا البرنامج مأخوذة من شرح سماحة الشيخ العلامة محمد الحسن ولد الددو لمنظومة الجزرية في التجويد. و محتوى هذة المادة موجودة بالصوت على &lt;A href="http://www.dedewnet.com/" target=_BLANK&gt;موقع الشيخ &lt;/A&gt;بكبس هذا الرابط&lt;BR&gt;معظم المادة مفرغة تفريغا من صوت سماحة الشيخ أثناء شرحه للمنظومة و ذلك لغزارة المعلمومات و تسلسلها بحيث يسهل فهمها ثم بعد ذلك حفظها&lt;BR&gt;الجديد في هذا التطبيق أنه مبني بطريقة منطقية ييسر لطالب العلم فهم المادة و تلقف مكوناتها. هذا البرنامج ليس على شكل كتاب تقليدي يتصفحه الانسان من الصفحة الأولى إلى منتهاه حتى يلم بالموضوع و يستوعبه, و لكننا بنينا الموضوع كله أو علم التجويد على شكل شجرة لتبيين البنية المنطفية لهذا العلم. فبدل أن يتوه الطالب بين الصفحات من ما يسهل انفلات المعلومة و عدم تماسكها في مخيلته بحيث تصبح عملية التلقي نسبية و تختلف من طالب لآخر, قمنا في هذا التطبيق ببناء الفكرة و تفرعاتها على شكل شجرة. فالطالب قد&amp;nbsp;كفيناه عناء ربط المعلومة بغيرها و استيعاب الفكرة منطقيا إلى حد كبير&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=center&gt;&lt;FONT face="Simplified Arabic"&gt;&lt;/FONT&gt;&amp;nbsp;&lt;/P&gt;&lt;/FONT&gt;</desc>
+    </section>
+    <section name="مقدمة لعلم التجويد" path="التجويد/مقدمة لعلم التجويد">
+        <desc>
         </desc>
     </section>
-    <section name="باب الصفات" path="كتاب التجويد/باب الصفات">
-        <desc>الصفات ثلاثة أقسام:
-            1 - صفات ذاتية: هي ما خلق الله عليه الشيء كالطول و القبح و السواد
-            و هي ثمانية عشرة صفة
-            وهي الواردة في هذه الأبيات:
-            صِفَـاتُهَا جَهْـرٌ وَرِخْوٌ مُسْتَفِلْ مُنْفَتِـحٌ مُصْمَـتَةٌ وَالضِّـدَّ قُـلْ
-            مَهْمُوسُهَا (فَحَثّهُ شَخْصٌ سَكَتَ) شَدِيدُهَـا لَـفْظُ (أَجِدْ قَطٍ بَكَـتْ)
-            وَبَيْنَ رِخْوٍ وَالشَّدِيدِ ( لِنْ عُمَرْ) وَسَبْعُ عُلْوٍ خُصَّ ضَغْطٍ قظْ حَصَرْ
-            وَصَادُ ضَادٌ طَاءُ ظَاءٌ مُطْـبَقَه وَفَـرَّ مِنْ لُبِّ الحُـرُوفُ المُذْلَقَهْ
-            صَفِيـرُهَا صَـادٌ وَزَاىٌ سِينُ قَلْـقَلَـةٌ قُـطْـبُ جَـدٍّ وَاللِّـينُ
-            وَاوٌ وَيَـاءٌ سَكَنَـا وَانْفَتَحَـا قَبْلَـهُماَ وَالاِنْحِـرَافُ صُـحَّـحَا
-            في اللاَّمِ وَالرَّا وَبِتَكْرِيرٍ جُعلْ وَلِلتَّفَشِّي الشِّيـنُ ضَاداً اسْتَـطِـلْ
-
-            و عد مكّي ابن أبي طالب منها 44 أربعة و أربعين صفة
-
-            2 - صفات عَرضية: كالصفات الاختيارية أو الفعلية كالحركة و السكون أو التفخيم و الترقيق
-            3 - صفات حُكمية: ما ناطه به الشارع من الأحكام كالطهارة و النجاسة
+    <section name="خصائص القران" path="التجويد/مقدمة لعلم التجويد/خصائص القران">
+        <desc>&lt;P align=right&gt;التي تميز بها عن الرسالات السابقة&lt;/P&gt;</desc>
+    </section>
+    <section name="التنجيم" path="التجويد/مقدمة لعلم التجويد/خصائص القران/التنجيم">
+        <desc>&lt;P align=right&gt;المقصود به إنزاله&amp;nbsp;بالتدريج منجما في 23 سنة حسب الوقائع، لبيان ما يشرعه الله للناس، فكان القرآن رسالة الله الخاتمة إلى أهل الأرض. و هذا دليل قوله تعالى في سورة الإسراء: (&lt;FONT size=3&gt;&lt;SPAN style='FONT-SIZE: 25px; FONT-FAMILY: Traditional, "Lucida Grande", Verdana, Arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: bold; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: justify; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial'&gt;&lt;FONT face="Arabic Typesetting"&gt;وَقُرْآنًا فَرَقْنَاهُ لِتَقْرَأَهُ عَلَى النَّاسِ عَلَىٰ مُكْثٍ وَنَزَّلْنَاهُ تَنْزِيلًا&lt;/FONT&gt;&lt;/SPAN&gt;) الآية 106&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="حكمته" path="التجويد/مقدمة لعلم التجويد/خصائص القران/التنجيم/حكمته">
+        <desc>&lt;P align=right&gt;في الآياتين 32 و 33 من سورة الفرقان التي يقول فيهما سبحانه (&lt;FONT face="Arabic Typesetting"&gt;&lt;STRONG&gt;وَقَالَ الَّذِينَ كَفَرُوا لَوْلَا نُزِّلَ عَلَيْهِ الْقُرْآنُ جُمْلَةً وَاحِدَةً ۚ كَذَٰلِكَ لِنُثَبِّتَ بِهِ فُؤَادَكَ ۖ وَرَتَّلْنَاهُ تَرْتِيلًا &lt;/STRONG&gt;&lt;/FONT&gt;(32) &lt;FONT face="Arabic Typesetting"&gt;&lt;STRONG&gt;وَلَا يَأْتُونَكَ بِمَثَلٍ إِلَّا جِئْنَاكَ بِالْحَقِّ وَأَحْسَنَ تَفْسِيرًا &lt;/STRONG&gt;&lt;/FONT&gt;(33)) يورد ثلاث حكم من التنجيم&lt;BR&gt;الحكمة الأولى&amp;nbsp;في قوله ( &lt;STRONG&gt;&lt;FONT face="Arabic Typesetting"&gt;كَذَلِكَ لِنُثَبِّتَ بِهِ فُؤَادَكَ&lt;/FONT&gt;&lt;/STRONG&gt;) أي&amp;nbsp;تثبيت الفؤاد&amp;nbsp;&lt;BR&gt;&amp;nbsp; الحكمة الثانية في قوله ( &lt;STRONG&gt;&lt;FONT face="Arabic Typesetting"&gt;وَرَتَّلْنَاهُ تَرْتِيلا&lt;/FONT&gt;&lt;/STRONG&gt;) فان الله تولى حفظه بنفسه ولم يكله الى الناس&lt;BR&gt;الحكمة الثالثة في قوله تعالى: (&lt;STRONG&gt;&lt;FONT face="Arabic Typesetting"&gt;وَلا يَأْتُونَكَ بِمَثَلٍ إِلاَّ جِئْنَاكَ بِالْحَقِّ وَأَحْسَنَ تَفْسِيرًا&lt;/FONT&gt;&lt;/STRONG&gt;) يعني بيان الرد على الحجة و الشبهة&amp;nbsp;&lt;/P&gt;</desc>
+    </section>
+    <section name="الإعجاز" path="التجويد/مقدمة لعلم التجويد/خصائص القران/الإعجاز">
+        <desc>&lt;P align=right&gt;وهو معجزة باقية خالدة.&lt;BR&gt;&amp;nbsp;ونبه الشيخ حفظه الله إلى أن معجزة الأنبياء كانت تأتي مناسبة لما يسود في البيئة التي يبعث إليها، مؤكدا أن معجزة النبي صلى الله عليه وسلم كانت إعجازا في اللفظ والمعنى والتشريع والقصص، فكان إعجازا خالدا إلى أن يرث الله الأرض ومن عليها&lt;/P&gt;</desc>
+    </section>
+    <section name="في اللفظ" path="التجويد/مقدمة لعلم التجويد/خصائص القران/الإعجاز/في اللفظ">
+        <desc>&lt;P align=right&gt;اياته محصورة معدودة و مع ذلك جمعت علوم الأولين و الاخرين ثم لخص كل ما فيها من العلوم على كثرتها و تشعبها في سورة الفاتحة و هي السبع المثاني&lt;BR&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="الفاتحة" path="التجويد/مقدمة لعلم التجويد/خصائص القران/الإعجاز/في اللفظ/الفاتحة">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ&lt;/FONT&gt;&lt;/STRONG&gt;: هذا جامع لتوحيد الله بربوبيته و ألوهيته&lt;BR&gt;&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;الرَّحْمَنِ الرَّحِيمِ&lt;/FONT&gt;&lt;/STRONG&gt;: هذا جامع للايمان بأسمائه و صفاته&lt;BR&gt;&amp;nbsp;&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;مَالِكِ يَوْمِ الدِّينِ&lt;/FONT&gt;&lt;/STRONG&gt;: هذا جامع لليوم الاخر و ما اشتمل عليه&lt;BR&gt;&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;إِيَّاكَ نَعْبُدُ&lt;/FONT&gt;&lt;/STRONG&gt;: هذا جامع لأحكام العبادات و التعامل مع الله&lt;BR&gt;&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;وَإِيَّاكَ نَسْتَعِينُ&lt;/FONT&gt;&lt;/STRONG&gt;: و هذا جامع لكل ما يتعلق بالمعاملات و أحكام العباد فيما بينهم&lt;BR&gt;&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;اهدِنَا الصِّرَاطَ الْمُسْتَقِيمَ&lt;/FONT&gt;&lt;/STRONG&gt;: هذا جامع لأحوال العباد من النشأة الى الممات و ما يكلفون به من التكاليف و يمر عليهم من الأخلاق و المبادئ و الأديولوجيات و غير ذلك&lt;BR&gt;&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلاَ الضَّالِّينَ&lt;/FONT&gt;&lt;/STRONG&gt;: هذا جامع لقصص الماضين و بيان حالهم&amp;nbsp; &lt;/P&gt;</desc>
+    </section>
+    <section name="في المعنى" path="التجويد/مقدمة لعلم التجويد/خصائص القران/الإعجاز/في المعنى">
+        <desc>
         </desc>
     </section>
-    <section name="باب التجويد" path="كتاب التجويد/باب التجويد">
-        <desc></desc>
-    </section>
-    <section name="مواضع المخارج الأساسية"
-        path="كتاب التجويد/باب مخارج الحروف/مواضع المخارج الأساسية">
-        <desc></desc>
-    </section>
-    <section name="الجوف: تجاويف الحلقوم"
-        path="كتاب التجويد/باب مخارج الحروف/مواضع المخارج الأساسية/الجوف: تجاويف الحلقوم">
-        <desc></desc>
-    </section>
-    <section name="الحلق" path="كتاب التجويد/باب مخارج الحروف/مواضع المخارج الأساسية/الحلق">
-        <desc></desc>
-    </section>
-    <section name="اللسان" path="كتاب التجويد/باب مخارج الحروف/مواضع المخارج الأساسية/اللسان">
-        <desc></desc>
-    </section>
-    <section name="الشفتان" path="كتاب التجويد/باب مخارج الحروف/مواضع المخارج الأساسية/الشفتان">
-        <desc></desc>
-    </section>
-    <section name="الخيشوم" path="كتاب التجويد/باب مخارج الحروف/مواضع المخارج الأساسية/الخيشوم">
-        <desc></desc>
-    </section>
-    <section name="المخارج الجزئية: مواضع خروج الحروف"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف">
-        <desc>اختلف أهل العلم فيها, فذهب بعضهم أنها:
-            1 - تسع و عشرون: أي لكل حرف مخرجا
-            2 - ستة عشرة (على مذهب سبويه) بإلغاء مخرج الجوف , و هذ ا الذي سلكه النحويون
-            3 - أربعة عشرة (مذهب الفراء) قسم المخارج التي في اللسان فجعل المتقارب منها مخرجا واحدا
-            4 - سبعة عشرة وهذا مذهب الخليل ابن أحمد وهو الذي اختاره أهل الأداء و سار عليه ابن الجزري
-            في هذه المقدمة
-
-            و لمعرفة مخرج الحرف يسبق الحرف بهمزة مكسورة أو مفتوحة ثم ينطق به ساكنا
-            و يعبتبر المخرج من حيث الابتداء لا من حيث الانتهاء
+    <section name="في التشريع" path="التجويد/مقدمة لعلم التجويد/خصائص القران/الإعجاز/في التشريع">
+        <desc>
         </desc>
     </section>
-    <section name="1 - الجوف"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/1 - الجوف">
-        <desc>فَأَلِفُ الجَوُفِ وأُخْتَاهَا وَهِي * حُرُوفُ مَدٍّ لِلْـهَوَاءِ تَنْتَهـِي
-
-            تخرج منه أحرف المد, و سميت أحرف مد لأنها امتداد في صوت غيرها وهي:
-            الألف المدية
-            الياء المدية
-            الواو المدية
+    <section name="في العلم" path="التجويد/مقدمة لعلم التجويد/خصائص القران/الإعجاز/في العلم">
+        <desc>
         </desc>
     </section>
-    <section name="الحلق"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/الحلق">
-        <desc>وهو مخرج أساسي و فيه ثلاثة مخارج جزئية</desc>
-    </section>
-    <section name="2 - أقصى الحلق"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/الحلق/2 - أقصى الحلق">
-        <desc>ثُمَّ لِأَقْصَى الْحَلْقِ هَمْزٌ هَاءُ
-            و هو مخرج للهمزة و الهاء
+    <section name="في القصص" path="التجويد/مقدمة لعلم التجويد/خصائص القران/الإعجاز/في القصص">
+        <desc>
         </desc>
     </section>
-    <section name="3 - وسط الحلق"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/الحلق/3 - وسط الحلق">
-        <desc>ثُمَّ لِـوَسْطِـهِ فَعَـيْنٌ حَـاءُ
-            و تخرج منه العين و الحاء
+    <section name="في النطق" path="التجويد/مقدمة لعلم التجويد/خصائص القران/الإعجاز/في اللفظ/في النطق">
+        <desc>
         </desc>
     </section>
-    <section name="4 - آخر الحلق أي أدناه إلى الفم"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/الحلق/4 - آخر الحلق أي أدناه إلى الفم">
-        <desc>أَدْنَـاهُ غَيْنٌ خَاؤُهَا
-            و تخرج منه الغين و الخاء
+    <section name=" قُلْنَا احْمِلْ فِيهَا مِن كُلٍّ زَوْجَيْنِ اثْنَيْنِ" path="التجويد/مقدمة لعلم التجويد/خصائص القران/الإعجاز/في اللفظ/في النطق/ قُلْنَا احْمِلْ فِيهَا مِن كُلٍّ زَوْجَيْنِ اثْنَيْنِ">
+        <desc>&lt;P align=right&gt;قراءة نافع: (&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;مٍن كلِّ زوجين&lt;/FONT&gt;&lt;/STRONG&gt;) &lt;FONT color=red&gt;بالجر بدون تنوين أي بالإضافة&lt;/FONT&gt;, سيشكل عليك المعنى و ستقول كيف أحمل فيها من كل زوجين وهما اثنان&lt;BR&gt;القراءات الأخرى: (&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;مِن كُلٍّ زَوْجَيْنِ&lt;/FONT&gt;&lt;/STRONG&gt;) &lt;FONT color=red&gt;بالتنوين&lt;/FONT&gt;, فسيحل الإشكال أي احمل من كل نوع من الخلائق زوجين اثنين&lt;/P&gt;</desc>
+    </section>
+    <section name="وَاتَّقُواْ اللَّهَ الَّذِي تَسَاءَلُونَ بِهِ وَالأَرْحَام" path="التجويد/مقدمة لعلم التجويد/خصائص القران/الإعجاز/في اللفظ/في النطق/وَاتَّقُواْ اللَّهَ الَّذِي تَسَاءَلُونَ بِهِ وَالأَرْحَام">
+        <desc>&lt;P align=right&gt;قراءة حمزة: (&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;وَاتَّقُواْ اللَّهَ الَّذِي تَسَاءَلُونَ بِهِ وَالأَرْحَامِ&lt;/FONT&gt;&lt;/STRONG&gt;)&lt;FONT color=red&gt; بجر الميم&lt;/FONT&gt;, يشكل الجر هنا, كيف يقسم الله بالأرحام أي بغير الله&lt;BR&gt;القراءات الأخرى: (&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;وَاتَّقُواْ اللَّهَ الَّذِي تَسَاءَلُونَ بِهِ وَالأَرْحَامَ&lt;/FONT&gt;&lt;/STRONG&gt;) &lt;FONT color=red&gt;بفتح الميم&lt;/FONT&gt;, فتجد أن الجر كان للمجاورة, و المعنى هنا أي اتقوا الأرحامَ&lt;/P&gt;</desc>
+    </section>
+    <section name="وَامْسَحُواْ بِرُؤُوسِكُمْ وَأَرْجُلَكُمْ" path="التجويد/مقدمة لعلم التجويد/خصائص القران/الإعجاز/في اللفظ/في النطق/وَامْسَحُواْ بِرُؤُوسِكُمْ وَأَرْجُلَكُمْ">
+        <desc>&lt;P align=right&gt;قراءة ابن كثير: (&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;وَامْسَحُواْ بِرُؤُوسِكُمْو وَأَرْجُلِكُمْو&lt;/FONT&gt;&lt;/STRONG&gt;) &lt;FONT color=red&gt;بجر اللام&lt;/FONT&gt;, وهي تقتضي المسح على الرجلين كالمسح على الرأس, فيكون الوضوء غسلتين و مسحتين فالغسلتان للوجه و اليدين و المسحتان للرأس و الرجلين&lt;BR&gt;القراءات الأخرى: (&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;وَامْسَحُواْ بِرُؤُوسِكُمْ وَأَرْجُلَكُمْ&lt;/FONT&gt;&lt;/STRONG&gt;) &lt;FONT color=red&gt;بفتح اللام&lt;/FONT&gt;, و يترتب عليه وجوب غسل الرجلين&lt;/P&gt;</desc>
+    </section>
+    <section name="في الكتابة" path="التجويد/مقدمة لعلم التجويد/خصائص القران/الإعجاز/في الكتابة">
+        <desc>&lt;P align=right&gt;في الآية (&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;وَجَعَلُوا الْمَلائِكَةَ الَّذِينَ هُمْ عِبَادُ الرَّحْمَنِ إِنَاثًا أَشَهِدُوا خَلْقَهُمْ سَتُكْتَبُ شَهَادَتُهُمْ وَيُسْأَلُونَ&lt;/FONT&gt;&lt;/STRONG&gt;) قرأت ب &lt;FONT color=red&gt;عند الرحمان&lt;/FONT&gt; و ب &lt;FONT color=red&gt;عباد الرحمان&lt;/FONT&gt;&lt;BR&gt;&lt;FONT color=red&gt;ملك&lt;/FONT&gt; و &lt;FONT color=red&gt;مالك&lt;/FONT&gt; يوم الدين&lt;BR&gt;و تمت كلمة ربك &lt;FONT color=red&gt;قرأت بالجمع &lt;U&gt;كلمات&lt;/U&gt;&lt;/FONT&gt; و &lt;FONT color=red&gt;بالإفراد &lt;U&gt;كلمة&lt;/U&gt;&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="علم التجويد" path="التجويد/مقدمة لعلم التجويد/علم التجويد">
+        <desc>&lt;P align=right&gt;نتناول هذا العلم من خلال شرح منظومة&amp;nbsp;المقدمة الجزرية، وهو علم مهيمن على غيره من علوم القرآن باعتباره ممهدا لها كلها,&amp;nbsp;و مادة هذا التطبيق أغلبه مأخوذ من شرح &lt;FONT color=red&gt;&lt;STRONG&gt;سماحة العلامة الشيخ محمد الحسن ولد الددو&lt;BR&gt;&lt;/STRONG&gt;&lt;/FONT&gt;&lt;FONT color=black&gt;و لهذا العلم عشر مقدمات&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="1 - حده" path="التجويد/مقدمة لعلم التجويد/علم التجويد/1 - حده">
+        <desc>يقصد به تعريفه</desc>
+    </section>
+    <section name="لغوي" path="التجويد/مقدمة لعلم التجويد/علم التجويد/1 - حده/لغوي">
+        <desc>&lt;P align=right&gt;مصدر جوّد الشيء إذا حسّنه، ويشمل الحسيات والمعنويات&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;التجويد في الحسيات&lt;/U&gt;&lt;/STRONG&gt;: كتجويد الكتابة و منه أن عليا قال لكاتبه: (ألصق روانفك بالجبوب و خذ المسطرة بأباخصك و اجعل حُندورتيك إلى قيهري حتى إذا لا أنبس نبسة إلا أودعتها في لمظة رباطك - أو قال في حماطة جُلجُلانك - و أقم الباء و فرق السين و لا تُعوِر الميمَ و جوِّد الله و مُد الرحمان و حسن الرحيم) وهنا يأمره بالتحسين في كتابة الحروف حتى تتميز عن بعضها&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;التجويد في المعنويات&lt;/U&gt;&lt;/STRONG&gt;: فتجويد الحديث لدى أهل الحديث هو أن تذكر على وجه يزيل العلة, فمثلاً إذا كان للإسناد متابعة في تلك المتابعة علة فذكره بدون تلك المتابعة تجويد له. مثلا إذا أخرج البخاري حديثا في الصحيح و كان في أسناده: عن محمد ابن سيرين و الحسن البصري عن أبي هريرة رضي الله عنه, فتجويد هذا الإسناد هو أن تحذف منه الحسن البصري فتقول عن محمد ابن سيرين عن أبي هريرة لأن الحسن البصري لم يسمع من أبي هريرة شيئا و ابن سيرين سمع من أبي هريرة. فالحسن ما يحدث به عن أبي هريرة كله من المراسيل, و إنما ذكره هنا البخاري متابعة لمحمد ابن سيرين فقط و لم يذكره استشهادا&lt;BR&gt;قرأ ابن مسعود عند النبي صلى الله عليه و سلم: (&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;إِنَّمَا الصَّدَقَاتُ لِلْفُقَرَ&lt;FONT color=red&gt;ا&lt;/FONT&gt;ء وَالْمَسَاكِينِ&lt;/FONT&gt;&lt;/STRONG&gt;)&amp;nbsp; &lt;FONT color=red&gt;بدون مد&lt;/FONT&gt; فقال :(لا, (&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;إِنَّمَا الصَّدَقَاتُ لِلْفُقَرَ&lt;FONT color=red&gt;ا&lt;/FONT&gt;ء وَالْمَسَاكِينِ&lt;/FONT&gt;&lt;/STRONG&gt;)&amp;nbsp; &lt;FONT color=red&gt;بالمد&lt;/FONT&gt;. &lt;U&gt;و لذلك فإن المد المتصل واجب لأن النبي صلى الله عليه و سلم ردّ ابن مسعود &lt;/U&gt;و من هذا فإنه رضي الله عنه كان من أتقن الناس بالقراءة و التجويد. حتى أن النبي صلى الله عليه و سلم قال: (من سره أن يقرأ القرآن غظا كما أنزل فليقرأ بقراءة ابن أم عبد) وهو ابن مسعود&lt;/P&gt;</desc>
+    </section>
+    <section name="اصطلاحي" path="التجويد/مقدمة لعلم التجويد/علم التجويد/1 - حده/اصطلاحي">
+        <desc>
         </desc>
     </section>
-    <section name="اللسان"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/اللسان">
-        <desc>وهو مخرج أساسي و فيه عشرة مخارج جزئية</desc>
+    <section name="التجويد العلمي" path="التجويد/مقدمة لعلم التجويد/علم التجويد/1 - حده/اصطلاحي/التجويد العلمي">
+        <desc>&lt;P align=right&gt;تعلم القواعد و الظوابط المتعلقة بمخارج الحروف و صفاتها و الوقف و الإبتداء و الوصل و الفصل و تاءات التأنيث المكتوبة بالتاء&lt;/P&gt;</desc>
     </section>
-    <section name="5 - أصل اللسان: أقصاه"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/اللسان/5 - أصل اللسان: أقصاه">
-        <desc>و هو مخرج لحرفين:
-            1 - القاف: من فوق و هي قريبة من أحرف الحلق
-            وَالْقَـافُ * أَقْصَى اللِّسَانِ فَوْقُ
-            2 - الكاف: من أسفل
-            ثُمَّ الْكَافُ * أَسْفَلُ
+    <section name="التجويد العملي" path="التجويد/مقدمة لعلم التجويد/علم التجويد/1 - حده/اصطلاحي/التجويد العملي">
+        <desc>&lt;P align=right&gt;تعلم القواعد و الظوابط المتعلقة بمخارج الحروف و صفاتها و الوقف و الإبتداء و الوصل و الفصل و تاءات التأنيث المكتوبة بالتاء&lt;/P&gt;
+            &lt;P align=right&gt;&lt;U&gt;و اتقان ذلك&lt;/U&gt;&lt;BR&gt;أي إتقان كل ما سلف ذكره في التجويد العلمي&lt;/P&gt;</desc>
+    </section>
+    <section name="تعريفات أخرى" path="التجويد/مقدمة لعلم التجويد/علم التجويد/1 - حده/اصطلاحي/تعريفات أخرى">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;إعطاء كل حرف حقه و مستحقه&lt;/U&gt;&lt;/STRONG&gt;: التجويد العلمي و هذا الذي اختاره المؤلف ابن الجزري: &lt;U&gt;كل حرف حقه&lt;/U&gt; وهي&amp;nbsp;&lt;U&gt;صفاته اللازمة&lt;/U&gt;, و &lt;U&gt;مستحقه&lt;/U&gt; و هي&amp;nbsp;&lt;U&gt;صفاته العارضة&lt;/U&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="خاصيات التعريف الذي اختاره الشيخ حفظه الددو الله" path="التجويد/مقدمة لعلم التجويد/علم التجويد/1 - حده/اصطلاحي/خاصيات التعريف الذي اختاره الشيخ حفظه الددو الله">
+        <desc>&lt;P align=right&gt;من خصائص هذا المفهوم أنه يشمل القرآن فقط, لا يشمل النطق بكل حروف العربية, و قد جاء القرآن بلغات متعددة, فمن أمثلة اختلاف اللغات أنه قد حصل اختلاف بين أهل اليمن و أهل الحجاز عند الخليفة هارون الرشيد, فقال أحد علماء اليمن إن القرآن نزل بلغتنا و دليل ذلك قول الله تعالى: (&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;أَوْ يَأْخُذَهُمْ عَلَى تَخَوُّفٍ فَإِنَّ رَبَّكُمْ لَرَؤُوفٌ رَّحِيمٌ&lt;/FONT&gt;&lt;/STRONG&gt;) &lt;FONT color=red&gt;فالتخوُّف &lt;/FONT&gt;هو &lt;U&gt;الأخذ بالتدريج شيئا فشيئا &lt;/U&gt;و هذا من لغة أهل اليمن, فجاء رجل من أهل الحجاز فقال له الخليفة هارون الرشيد: إن هذا يزعم إن القرآن نزل بلغة أهل اليمن, فقال لا أدري ما أقول غير أن الله تعالى يقول&amp;nbsp;في كتابه:&amp;nbsp;(&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;يَجْعَلُونَ أَصَابِعَهُمْ فِي آذَانِهِم&lt;/FONT&gt;&lt;/STRONG&gt;) و لم يقل &lt;FONT color=red&gt;يجعلون شناترهم في صناراتهم&lt;/FONT&gt;. فانقطع الرجل. فلغة أهل اليمن هي لغة حِميَر, &lt;U&gt;الأذن&lt;/U&gt; اسمها &lt;U&gt;الصنارة &lt;/U&gt;و &lt;U&gt;الأصابع &lt;/U&gt;هي &lt;U&gt;الشناتر&lt;BR&gt;&lt;/U&gt;و&amp;nbsp;للعرب &lt;U&gt;لهجات&lt;/U&gt; مختلفة &lt;FONT color=red&gt;&lt;U&gt;كالكشكشة&lt;/U&gt;&lt;/FONT&gt; و هي &lt;FONT color=red&gt;النطق بالكاف كالشين &lt;/FONT&gt;و هي &lt;U&gt;لغة تميم&lt;/U&gt; و منه قول الشاعر&lt;BR&gt;
+            &lt;TABLE style="HEIGHT: 56px; WIDTH: 368px" cellSpacing=2 cols=2 cellPadding=1 width=368 border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;لشِ اليوم من وحشية لصديق&lt;/TD&gt;
+            &lt;TD&gt;أيا شبه ليلى ذا تراعي فإنني&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;و لكن عظم الساق منشِ رقيق&lt;/TD&gt;
+            &lt;TD&gt;فعيناشِ عيناها و جيدُشِ جيدها&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;BR&gt;و كذلك لهجة &lt;FONT color=red&gt;&lt;U&gt;الكسكسة &lt;/U&gt;&lt;/FONT&gt;و هي &lt;FONT color=red&gt;النطق بالكاف كالسين &lt;/FONT&gt;و هي لغة &lt;U&gt;بني أسد و من جاورهم&lt;/U&gt;.&amp;nbsp;قد&amp;nbsp;ورد القرآن على وجه الشذوذ ببعض لهجات العرب و منها القراءة الشاذة &lt;BR&gt;(قد جعل ربشِ تحتشِ سريا)&lt;BR&gt;النطق بحروف العربية منها ما يكون غير فصيح في تركيبه ووضعه فبعض العرب ينصب معمولي إن: المبتدأ و الخبر كقول الشاعر&lt;BR&gt;
+            &lt;TABLE style="HEIGHT: 33px; WIDTH: 375px" cellSpacing=2 cols=2 cellPadding=1 width=375 border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;خطاك خِفافا إن حراسَناأسدا&lt;/TD&gt;
+            &lt;TD&gt;إذا اشتد جنح الليل فلتأت و لتكن&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;
+            &lt;P align=right&gt;و ورد القرآن موافقا لهذا في قوله سبحانه (&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;إِنْ هَذَانِ لَسَاحِرَان&lt;/FONT&gt;&lt;/STRONG&gt;) على القول بالاهمال فإن الارتفاع بإن نظير الانتصاب بها, وهذا الوجه وجه ضعيف من الناحية النحوية و للشيخ جواب عنه لم يذكره&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;القواعد و الظوابط&lt;/U&gt;&lt;/STRONG&gt;: ف&lt;FONT color=red&gt;القواعد&lt;/FONT&gt; ما يطرد في كل باب و هو ما يقوم عليه الأسس, أما &lt;FONT color=red&gt;الضوابط&lt;/FONT&gt; فهي&amp;nbsp;ما يختص بباب دون باب&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;المتعلقة بمخارج الحروف&lt;/U&gt;&lt;/STRONG&gt;: بعضها يتعلق بالمخارج و الآخر بالصفات&lt;BR&gt;&amp;nbsp;&amp;nbsp;&lt;STRONG&gt;&lt;U&gt;ما يتعلق بالوقف و الابتداء&lt;/U&gt;&lt;/STRONG&gt;: لا بد من تعلم مرتبتين لكل حرف&lt;BR&gt;&lt;U&gt;&lt;FONT color=blue&gt;&lt;STRONG&gt;المرتبة الأولى&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/U&gt;: تجويد كل حرف مستقل بغض النظر من تركيبه مع غيره و في هذا قول المختار بن بونا رحمه الله&lt;BR&gt;&lt;/P&gt;
+            &lt;P align=right&gt;
+            &lt;TABLE style="HEIGHT: 28px; WIDTH: 282px" cellSpacing=2 cols=2 cellPadding=1 width=282 border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;بإثر همز موصلٍ تبينا&lt;/TD&gt;
+            &lt;TD&gt;لكل حرف مخرج إن سكنا&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;
+            &lt;P align=right&gt;موصل: همز وصل&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;&lt;FONT color=blue&gt;المرتبة الثانية&lt;/FONT&gt;&lt;/U&gt;&lt;/STRONG&gt;: تركيب كل حرف مع غيره و ما يعرض عليه إما داخل الكلمة أو تركيب في عدد الكلمات و هذا يشمل البحث في الوقف و الابتداء و كذلك الوصل و الفصل ففي الوصل فإن الصحابة رضوان الله عليهم أدمجوا بعض الكلمات فجعلوها كالكلمة الواحدة ككلمة &lt;FONT color=red&gt;إنما &lt;/FONT&gt;فإن أصلها إن ما. رغم أن الرسم في الأصل&amp;nbsp;مرجعه إلى &lt;U&gt;قاعدتين&lt;/U&gt;: الأولى أن يوافق المقروء ما يكتب و الثانية انفصال كل لفظ عن آخر. و من أمثلة ما خرج عن القاعدتين في رسم الصحابة&lt;BR&gt;&lt;/P&gt;
+            &lt;P align=right&gt;
+            &lt;TABLE style="HEIGHT: 86px; WIDTH: 437px" cellSpacing=2 cols=2 cellPadding=1 width=437 border=1&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;لأصل الاتصال في هذا النوع: فما للذين كفروا&lt;BR&gt;لكن الصحابة كتبوها مفصولة: فمال الذين كفروا&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;فَمَالِ الَّذِينَ كَفَرُوا قِبَلَكَ مُهْطِعِينَ&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;فقد رسمها الصحابة بيائين&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;وَالسَّمَاء بَنَيْنَاهَا بِأَيْيدٍ وَإِنَّا لَمُوسِعُونَ&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;تاءات التأنيث&lt;/U&gt;&lt;/STRONG&gt;: إذا رسمت تاءا فلا يجوز الوقف عليها هاءًا. الأصل في تاءات التأنيث اللاحقة بالاسم أنها تكتب بالهاء لكن الصحابة خالفوا هذه القاعدة و كتبوها بالتاء, فمثلا و تمت كلمت ربك رسمت مفتوحة لتقرأ بالوجهين: كلمات و كلمت. و الشذوذ عن القاعدة لغة من&amp;nbsp;لغات العرب وهو الوقوف على تاء التأنيث اللاحقة بالاسم بالتاء&amp;nbsp;و منه قول الشاعر&lt;/P&gt;
+            &lt;P align=right&gt;
+            &lt;TABLE style="HEIGHT: 56px; WIDTH: 291px" cellSpacing=2 cols=2 cellPadding=1 width=291 border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;من بعد ما و بعد ما و بعد مَت&lt;/TD&gt;
+            &lt;TD&gt;الله أنجاك بكفي مسلمت&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;قد كادت الحرة أن تدعى أمت&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;BR&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="2 - موضوعه" path="التجويد/مقدمة لعلم التجويد/علم التجويد/2 - موضوعه">
+        <desc>&lt;P align=right&gt;أي ما يبحث فيه عن عوارضه الذاتية و النطق بحروف القرآن وكلماته على الوجه الصحيح فلا بد من معرفة أن في القرآن حروفًا غير مركبة و هي التي في فواتح السور و حروف مركبة وهي التي تشكل الكلمات. و هناك رأي أنه يشمل القرآن و السنة لأنه لا يجوز اللحن كذلك في الحديث لكن الراجح أن التجويد يختص بالقرآن, و لذلك فإن المحسنات اللفظية كالغنة و المدود لا تدخل في الحديث&lt;/P&gt;</desc>
+    </section>
+    <section name="3 - واضعه" path="التجويد/مقدمة لعلم التجويد/علم التجويد/3 - واضعه">
+        <desc>&lt;P align=right&gt;أبو &lt;STRONG&gt;&lt;U&gt;عمر حفص بن عمر الدوري &lt;/U&gt;&lt;/STRONG&gt;(ت. بالدور 246ه)، وهو الراوي عن كل من أبي عمرو بن العلاء والكسائي، وهو أول من وضع هذه المصطلحات و نظمها &lt;BR&gt;وأول من ألف فيه &lt;U&gt;نظما &lt;/U&gt;هو الإمام &lt;STRONG&gt;&lt;U&gt;موسى بن عبيد الله الخاقاني&lt;/U&gt;&lt;/STRONG&gt;(ت. 325ه)، قصيدته الرائية هي أول ما ألف في علم التجويد وهي 51 بيتامحققة و مطبوعة و اسمها&lt;STRONG&gt;&lt;FONT color=red&gt; رائية الخاقاني&lt;/FONT&gt;&lt;/STRONG&gt; &lt;BR&gt;&lt;U&gt;ونثرا &lt;/U&gt;هو الإمام &lt;STRONG&gt;مكي بن أبي طالب القيسي الأندلسي (&lt;/STRONG&gt;ت 437ه)، كتاب &lt;STRONG&gt;&lt;FONT color=red&gt;الرعاية &lt;/FONT&gt;&lt;/STRONG&gt;هو أول كتاب ألف نثرا في علم التجويد &lt;/P&gt;</desc>
+    </section>
+    <section name="4 - نسبته إلى بقية العلوم:  وهي نسبة العموم والخصوص الوجهي" path="التجويد/مقدمة لعلم التجويد/علم التجويد/4 - نسبته إلى بقية العلوم:  وهي نسبة العموم والخصوص الوجهي">
+        <desc>
         </desc>
     </section>
-    <section name="6 - وسط اللسان"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/اللسان/6 - وسط اللسان">
-        <desc>وَالْوَسْطُ فَجِيمُ الشِّينُ يـَا
-
-            وهو مخرج لثلاثة أحرف:
-            1 - الجيم: عندما يكون الضغط على المخرج شديدا
-            2 - الشين: عندما يكون الضغط على المخرج خفيفا
-            3 - الياء: عندما يكون الضغط على المخرج متوسطا
+    <section name="5 - مستمده: أي علم أعلى منه يرجع إليه فيه, فهو مستمد من القرآن والسنة" path="التجويد/مقدمة لعلم التجويد/علم التجويد/5 - مستمده: أي علم أعلى منه يرجع إليه فيه, فهو مستمد من القرآن والسنة">
+        <desc>&lt;P align=right&gt;من القرآن و ذلك في قوله تعالى (&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;وَقَالَ الَّذِينَ كَفَرُوا لَوْلا نُزِّلَ عَلَيْهِ الْقُرْآنُ جُمْلَةً وَاحِدَةً كَذَلِكَ لِنُثَبِّتَ بِهِ فُؤَادَكَ وَرَتَّلْنَاهُ تَرْتِيلا&lt;/FONT&gt;&lt;/STRONG&gt;) الفرقان 32 أو قوله تعالى (&lt;STRONG&gt;&lt;FONT size=4 face="Arabic Typesetting"&gt;أَوْ زِدْ عَلَيْهِ وَرَتِّلِ الْقُرْآنَ تَرْتِيلا&lt;/FONT&gt;&lt;/STRONG&gt;) المزمل 4&lt;BR&gt;و من السنة: تطبيق النبي صلى الله عليه و سلم بالقراءة فلم يكن يهذه هذا و إنما كان يقرأه فيقف على رأس كل آية أو لو أراد العادّ أن يعد كلماته لعدها. فقد قال صلى الله عليه و سلم: (حسنوا القرآن بأصواتكم), كما قال كذلك: (من لم يتغن بالقرآن فليس منا), و قال لأبي موسى الأشعري: (لو نظرت إلي و أنا أستمع إليك البارحة) فقال: &amp;lt;لو كنت أعلم أنك تستمع إلي لحبرته لك تحبيرا&amp;gt; و قال فيه (لقد أوتي هذا مزمارا من مزامير آل داود), و هذه كلها تحث على حسن الأداء&lt;/P&gt;</desc>
+    </section>
+    <section name="6 - فضله:  التجويد من أفضل العلوم لأنه خادم لكتاب الله تعالى من حيث النطق والأداء" path="التجويد/مقدمة لعلم التجويد/علم التجويد/6 - فضله:  التجويد من أفضل العلوم لأنه خادم لكتاب الله تعالى من حيث النطق والأداء">
+        <desc>
         </desc>
     </section>
-    <section name="7 - حافة اللسان من جهة الأضراس"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/اللسان/7 - حافة اللسان من جهة الأضراس">
-        <desc>وَالضَّادُ مِنْ حَافَتِهِ إِذْ وَلِيَــا * الاَضْرَاسَ مِنْ أَيْسَرَ أَوْ يُمْنَاهَا
-
-            و هو مخرج لحرف واحد الضاد و هي أصعب الحروف هقد نظم أحدهم في ذلك فقال:
-            الضاد حرف عسير يشبه الظاء لا الدال يشبه في نطق و لا الطاء
-
-            و يسهل أن يخرج الضاد من الجهة اليمنى أو اليسرى و لكنه من الأحسن أن تخرج منهما معا
+    <section name="7 - حكمه" path="التجويد/مقدمة لعلم التجويد/علم التجويد/7 - حكمه">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;&lt;FONT color=red&gt;يجب &lt;/FONT&gt;&lt;/STRONG&gt;تعلم &lt;U&gt;التجويد العلمي على سبيل الكفاية، &lt;/U&gt;أما &lt;U&gt;التجويد العملي &lt;/U&gt;&lt;STRONG&gt;&lt;FONT color=red&gt;فيجب &lt;/FONT&gt;&lt;/STRONG&gt;على الأعيان، وتعتريه أحكام الشرع حسب مختلف مواضيعه وسيأتي باب في النظم خاص بأحكامه&lt;BR&gt;أما التجويد العملي بالنسبة للفاتحة يتعين على كل مسلم أن يقرأها على الوجه الصحيح و حكمه عموما الوجوب فالصحابة رضوان الله عليهم لم يكونوا قبل أبي حفص الدوري يعرفون هذه المصطلحات و لا هذه القواعد و لكنهم كانوا يؤدون القرآن كما أنزل&lt;/P&gt;</desc>
+    </section>
+    <section name="8 - اسمه" path="التجويد/مقدمة لعلم التجويد/علم التجويد/8 - اسمه">
+        <desc>&lt;P align=right&gt;له اسمان مشهوران&lt;BR&gt;&lt;STRONG&gt;علم الأداء&lt;/STRONG&gt;: أي كيفية النطق به&lt;BR&gt;&lt;STRONG&gt;علم التجويد&lt;/STRONG&gt;: علم تجويد القرآن&lt;/P&gt;</desc>
+    </section>
+    <section name="9 -  فائدته: أداء القرآن على الوجه الذي يرضي الله تعالى وتجنب اللحن فيه" path="التجويد/مقدمة لعلم التجويد/علم التجويد/9 -  فائدته: أداء القرآن على الوجه الذي يرضي الله تعالى وتجنب اللحن فيه">
+        <desc>&lt;P align=right&gt;و ينقسم إلى قسمين&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;&lt;FONT color=blue&gt;لحن جلي&lt;/FONT&gt;&lt;/U&gt;&lt;/STRONG&gt;: و هو ما يتعلق بحركات الإعراب مثل من يقول : الحم&lt;FONT color=red&gt;دَ&lt;/FONT&gt; لله, فهو لا يغير المعنى, أو ما يتعلق بحركات البناء مثل من يقول : أنعم&lt;FONT color=red&gt;تُ&lt;/FONT&gt; عليهم فيغير المعنى. &lt;STRONG&gt;&lt;U&gt;فحكمه&lt;/U&gt;&lt;/STRONG&gt;: أنه &lt;U&gt;حرام كله&lt;/U&gt;, &lt;U&gt;ما كان مفسدا للمعنى &lt;/U&gt;فهو&amp;nbsp; &lt;U&gt;مبطل للصلاة إذا كان في الفاتحة إجماعا &lt;/U&gt;و إذا &lt;U&gt;كان في غيرها على الراجح&lt;/U&gt;, أما كان &lt;U&gt;غير مفسدا للمعنى&lt;/U&gt; فهو &lt;U&gt;حرام قطعا&lt;BR&gt;&lt;STRONG&gt;&lt;FONT color=blue&gt;لحن خفي&lt;/FONT&gt;&lt;/STRONG&gt;&lt;/U&gt;: عدم أداء القرآن على الوجه الصحيح من ناحية المد والقصر و من ناحية الإدغام و الفك, و يستثنى من أداء المد و الزيادة فيه موضعين: &lt;U&gt;ما قصد به التعظيم في اسم الله&lt;/U&gt; وهذا الذي يسمى &lt;FONT color=red&gt;مد التعظيم&lt;/FONT&gt;, و &lt;U&gt;ما إذا كان في الدعاء لقصد الضراعة &lt;/U&gt;مثاله: ربنا لا تحملنا ما لا طاقة لنا به, و يسمى هذا &lt;FONT color=red&gt;مد الضراعة&lt;/FONT&gt;&lt;FONT color=black&gt;. &lt;STRONG&gt;&lt;U&gt;فحكمه &lt;/U&gt;&lt;/STRONG&gt;أنه &lt;FONT color=red&gt;لا يبطل الصلاة&lt;/FONT&gt;, لكن &lt;FONT color=red&gt;من يعرف حكمه يحرم عليه &lt;/FONT&gt;الوقوع فيه, و &lt;/FONT&gt;&lt;FONT color=red&gt;من لا يعرفه لا يأثم به&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="10 - مسائله" path="التجويد/مقدمة لعلم التجويد/علم التجويد/10 - مسائله">
+        <desc>&lt;P align=right&gt;ما يبحث فيه من الأبواب؛ كمخارج الخروف وصفاتها والوقف والوصل والمد والقصر وغير ذلك من الأبواب التي ستأتي تفصيلا في هذا النظم&lt;/P&gt;</desc>
+    </section>
+    <section name="باب مخارج الحروف" path="التجويد/باب مخارج الحروف">
+        <desc>&lt;P align=right&gt;
+            &lt;TABLE style="HEIGHT: 298px; WIDTH: 332px" cellSpacing=2 cols=2 cellPadding=0 width=332 border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;عَلَى الْذِي يَخْتَارُهُ مَنِ اخْتَبَر&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;مَخَارِجُ الحُروفِ سَبْعَةَ عَشَرْ&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;حُرُوفُ مَدٍّ للْـهَوَاءِ تَنْتَهـي&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=blue&gt;فَأَلِفُ &lt;/FONT&gt;&lt;FONT color=red&gt;الجَوُفِ &lt;/FONT&gt;&lt;FONT color=blue&gt;وأُخْتَاهَا &lt;/FONT&gt;وَهى&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&amp;nbsp;ثُمَّ &lt;FONT color=maroon&gt;&lt;FONT color=red&gt;لِـوَسْطِـهِ&lt;/FONT&gt; &lt;/FONT&gt;&lt;FONT color=blue&gt;فَعَـيْنٌ حَـاءُ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;ثُمَّ &lt;FONT color=red&gt;لأَقْصَى الحَلْقِ&lt;/FONT&gt; &lt;FONT color=blue&gt;هَمْزٌ هَاءُ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;أَقْصَى اللِّسَانِ&lt;/FONT&gt; &lt;FONT color=black&gt;فَوْقُ&lt;/FONT&gt; ثُمَّ &lt;FONT color=blue&gt;الْكَافُ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;أَدْنَـاهُ &lt;/FONT&gt;&lt;FONT color=blue&gt;غَيْنٌ خَاؤُهَا &lt;/FONT&gt;و&lt;FONT color=blue&gt;الْقَـافُ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَ&lt;FONT color=blue&gt;الضَّادُ&lt;/FONT&gt; مِنْ &lt;FONT color=red&gt;حَافَتِهِ إِذْ وَلِيَــا&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;أَسْفَلُ&lt;/FONT&gt; &lt;FONT color=red&gt;وَالوَسْطُ&lt;/FONT&gt; &lt;FONT color=blue&gt;فَجِيمُ الشِّينُ يـَا&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَ&lt;FONT color=blue&gt;الـلاَّمُ&lt;/FONT&gt; &lt;FONT color=red&gt;أَدْنـَاهَا لمُنْتَهَاهــَا&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;لأضْرَاسَ مِنْ أَيْسَرَ أَوْ يُمْنَاهَا&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَ&lt;FONT color=blue&gt;الرَّا&lt;/FONT&gt; &lt;FONT color=red&gt;يُدَانِيهِ لِظَهْرٍ أَدْخــَلُوا&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَ&lt;FONT color=blue&gt;النُّونُ&lt;/FONT&gt; &lt;FONT color=red&gt;مِنْ طَرَفِهِ تَحْتُ&lt;/FONT&gt; اجْعَلُوا&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;عُلْيَا الثَّنَايَا&lt;/FONT&gt; والصَّفِيرُ مُسْتـَكِنْ&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=blue&gt;وَالطَّاءُ وَالدَّالُ وَتَا&lt;/FONT&gt; مِنْـهُ وَمِنْ&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=blue&gt;وَالظـَّاءُ وَالذَّالُ وَثَا &lt;/FONT&gt;&lt;FONT color=red&gt;لِلْعُلْيــَا&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;مِنْهُ وَمِنْ فَوْقِ الثَّنَايَا السُّفْلَـى&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=blue&gt;فَالْفَا&lt;/FONT&gt; &lt;FONT color=red&gt;مَعَ اطْرافِ الثَّنَايَا المُشْرِفَهْ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;مِنْ طَرْفَيْهِما وَمِنْ بَطْنِ الشَّفَهْ&lt;/FONT&gt;&amp;nbsp;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَ&lt;FONT color=blue&gt;غُنَّـةٌ&lt;/FONT&gt; مَخْرَجُهـَا &lt;FONT color=red&gt;الخَيْشـُومُ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;للشَّـفَتَيْنِ &lt;/FONT&gt;&lt;FONT color=blue&gt;الْـوَاوُ بَـاءٌ مِيـمُ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="باب الصفات" path="التجويد/باب الصفات">
+        <desc>&lt;P align=right&gt;
+            &lt;TABLE style="HEIGHT: 227px; WIDTH: 359px" cellSpacing=2 cols=2 cellPadding=1 width=359 border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;مُنْفَتِـحٌ مُصْمَـتَةٌ وَالضِّـدَّ قُـلْ&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;صِفَـاتُهَا جَهْـرٌ وَرِخْوٌ مُسْتَفِلْ&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;شَدِيدُهَـا&lt;/FONT&gt; لَـفْظُ &lt;FONT color=blue&gt;أَجِدْ قَطٍ بَكَـتْ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;مَهْمُوسُهَا&lt;/FONT&gt; &lt;FONT color=blue&gt;فَحَثّهُ شَخْصٌ سَكَتَ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَسَبْعُ &lt;FONT color=red&gt;عُلْوٍ&lt;/FONT&gt; &lt;FONT color=blue&gt;خُصَّ ضَغْطٍ قظْ &lt;/FONT&gt;حَصَرْ&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَبَيْنَ رِخْوٍ وَالشَّدِيدِ&amp;nbsp;&lt;FONT color=blue&gt;لِنْ عُمَرْ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَ&lt;FONT color=blue&gt;فَـرَّ مِنْ لُبِّ&lt;/FONT&gt; الحُـرُوفُ &lt;FONT color=red&gt;المُذْلَقَهْ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَ&lt;FONT color=blue&gt;صَادُ ضَادٌ طَاءُ ظَاءٌ&lt;/FONT&gt; &lt;FONT color=red&gt;مُطْـبَقَه&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;قَلْـقَلَـةٌ&lt;/FONT&gt; &lt;FONT color=blue&gt;قُـطْـبُ جَـدٍّ&lt;/FONT&gt; وَ&lt;FONT color=red&gt;اللِّـينُ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;صَفِيـرُهَا&lt;/FONT&gt; &lt;FONT color=blue&gt;صَـادٌ وَزَاىٌ سِينُ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;قَبْلَـهُماَ وَ&lt;FONT color=red&gt;الاِنْحِـرَافُ&lt;/FONT&gt; صُـحَّـحَا&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=blue&gt;وَاوٌ وَيَـاءٌ&lt;/FONT&gt; سَكَنَـا وَانْفَتَحَـا&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَ&lt;FONT color=red&gt;لِلتَّفَشِّي&lt;/FONT&gt; &lt;FONT color=blue&gt;الشِّيـنُ ضَاداً&lt;/FONT&gt; &lt;FONT color=red&gt;اسْتَـطِـلْ&lt;/FONT&gt;&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;في &lt;FONT color=blue&gt;اللاَّمِ &lt;FONT color=black&gt;وَ&lt;/FONT&gt;الرَّا&lt;/FONT&gt; وَبِ&lt;FONT color=red&gt;تَكْرِيرٍ&lt;/FONT&gt; جُعلْ&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;
+            &lt;P align=right&gt;و الصفات ثلاثة أقسام&lt;/P&gt;</desc>
+    </section>
+    <section name="باب الإِدِّغام" path="التجويد/باب الإِدِّغام">
+        <desc>
         </desc>
     </section>
-    <section name="8 - أدنى اللسان إلى طرفه"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/اللسان/8 - أدنى اللسان إلى طرفه">
-        <desc>وَالـلاَّمُ أَدْنـَاهَا لِمُنْتَهَاهــَا
-            وهو يمتد من مخرج الضاد إلى قرابة الحافة الأمامية للسان
+    <section name="باب الراءات" path="الالتجويد/باب الراءات">
+        <desc>&lt;P align=right&gt;&lt;FONT color=black&gt;عقد هذا الباب لصفة عارضة وهي الترقيق الذي تتصف به الراء، فقد سبق أن التغليظ صفة لكل الحروف المستعلية وأن الترقيق صفة لكل الحروف المستفلة وأن التغليظ يعرض في ثلاثة من الحروف المستفلة وهي الراء واللام والألف، فهذه الحروف الثلاثة مستفلة ومع ذلك يعرض فيها التغليظ&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;
+            &lt;TABLE style="HEIGHT: 81px; WIDTH: 351px" cellSpacing=2 cols=2 cellPadding=1 width=351 align=center border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;كَذَاكَ بَعْدَ الْكَسْرِ حَيْثُ سـَكَنَتْ&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَرَقِّقِ الرَّاءَ إِذَا مَا كُسِرَتْ&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;أَوْ كـَانَت الْكَسْرَةُ لَيْسَتْ أَصْلاَ&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;إِن لَّمْ تَكُنْ مِنْ قَبْلِ حَرْفِ اسْتِعْلاَ&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&amp;nbsp;وَأَخْفِ تَكْرِيراً إِذَا تـُشَدَّدُ&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَالْخُلْفُ فِي فِرْقٍ لِكَسْرٍ يُوجَدُ&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="باب اللامات" path="التجويد/باب اللامات">
+        <desc>&lt;P align=center&gt;وَفَخِّم اللاَّمَ مِنِ اسْمِ اللَّهِ ***&amp;nbsp;عَنْ فَتْحٍ او ضَمٍ كَعَبْدُ اللَّـهِ&lt;/P&gt;
+            &lt;P align=right&gt;بفخم اللام في موضعين&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;اللام في لفظ الجلالة الله&lt;/U&gt;&lt;/STRONG&gt;: إذا &lt;FONT color=red&gt;كانت بعد ضم أو فتح&lt;/FONT&gt;&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;ما هو مختص بورش&lt;/U&gt;&lt;/STRONG&gt;: إذا &lt;FONT color=red&gt;كانت بعد&amp;nbsp;(الصاد, الطاء, الظاء)&amp;nbsp;هذه الأحرف مفتوحات أو مسكنات و كانت هي مفتوحة أو ساكنة&lt;/FONT&gt;, و فتحتها محل اتفاق لورش دون أبي يعقوب الأزرق و الأصفهاني و تسكينها محل خلاف&lt;/P&gt;</desc>
+    </section>
+    <section name="باب الضاد و الظاء" path="التجويد/باب الضاد و الظاء">
+        <desc>&lt;P align=center&gt;والضادَ باستطالة ومخرج ** مَيِّزْ من الظاء&lt;/P&gt;
+            &lt;P align=right&gt;لا بد أن نعلم أنهما أولا حرفان، المنطلق الأول أن الضاد حرف وأن الظاء حرف وهذا يدل على التفريق بينهما، لكن لا بد أولا أن نفرق بين هذين الحرفين بين الضاد والظاء وإذا فرقنا بينهما في الأصل حينئذ سنبحث عن مخرجيهما وعن صفاتهما، فنجد أن &lt;STRONG&gt;الضاد &lt;/STRONG&gt;&lt;U&gt;تخرج من حافة اللسان مما يلي الأضراس وتمتد مستطيلة إلى مخرج اللام&lt;/U&gt;، وأن &lt;STRONG&gt;الظاء &lt;/STRONG&gt;&lt;U&gt;تخرج من رأس اللسان عند رءوس الثنايا العليا&lt;/U&gt; فهذا الفرق، فلا بد من التفريق بينهما في المخرج، &lt;FONT color=red&gt;وكذلك الفرق بينهما في الصفات فقط في الاستطالة وما عدا ذلك من الصفات مشترك&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;الكلمات التي يوجد فيها الظاء في المصحف&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الظعن&lt;/U&gt;&lt;/STRONG&gt;: {يوم ظعنكم ويوم إقامتكم} سواء بالتحريك أو بالإسكان، ظعْنكم أو ظعَنكم، كذلك &lt;STRONG&gt;&lt;U&gt;الظل&lt;/U&gt;&lt;/STRONG&gt;، {ألم تر إلى ربك كيف مد الظل} فهذه الظاء وليست الضاد، كذلك &lt;STRONG&gt;&lt;U&gt;الظهر&lt;/U&gt;&lt;/STRONG&gt; والظهيرة {حين تضعون ثيابكم من الظهيرة} فهذه الظاء وليست الضاد، وكذلك&lt;STRONG&gt;&lt;U&gt; العُظْمُ&lt;/U&gt;&lt;/STRONG&gt; أي العظمة، في أي موضع جاءت العظيم عظيما سواء كان منكرا أو معرفا كلها بالظاء، &lt;STRONG&gt;&lt;U&gt;الحفظ&lt;/U&gt;&lt;/STRONG&gt; كذلك، بالظاء، سواء كان اسما أو فعلا وكل مشتقاته كذلك، كذلك &lt;STRONG&gt;&lt;U&gt;أيقظ&lt;/U&gt;&lt;/STRONG&gt;، {وتحبسهم أيقاظا وهم رقود} فهي بالظاء، وكذلك &lt;STRONG&gt;&lt;U&gt;أنظر&lt;/U&gt;&lt;/STRONG&gt; {من المنظرين}، {وإن كان ذو عسرة فنظرة إلى ميسرة} هذه بالظاء، وكذلك &lt;STRONG&gt;&lt;U&gt;العَظْمُ&lt;/U&gt;&lt;/STRONG&gt;، {وهن العظم مني} فهي بالظاء، وكذلك &lt;STRONG&gt;&lt;U&gt;الظهر&lt;/U&gt;&lt;/STRONG&gt; {على ظهرها من دابة}، {أو ما حملت ظهورهما} فهي بالظاء،&amp;nbsp; كذلك &lt;STRONG&gt;&lt;U&gt;اللفظ&lt;/U&gt;&lt;/STRONG&gt;، لَفَظَ هذا الفعل لامه ظاء، فكل مشتقاته كذلك، {ما يلفظ من قول إلا لديه رقيب عتيد} كذلك &lt;STRONG&gt;&lt;U&gt;ظاهِرْ&lt;/U&gt;&lt;/STRONG&gt; {الذين يظاهرون منكم من نسائهم}، {الذين يظاهرون من نسائهم} يَظَّهَّرُونَ كذلك، كلها من ظاهر، فهي بالظاء، كذلك &lt;STRONG&gt;&lt;U&gt;لظى&lt;/U&gt;&lt;/STRONG&gt; وهي اسم من أسماء النار {كلا إنها لظى} فعينها ظاء، وكذلك &lt;STRONG&gt;&lt;U&gt;شواظ&lt;/U&gt;&lt;/STRONG&gt; {يرسل عليكما شواظ من نار ونحاس فلا تنتصران} فلامها ظاء، وكذلك مادة &lt;STRONG&gt;&lt;U&gt;كظم&lt;/U&gt;&lt;/STRONG&gt; الغيظ، {والكاظمين الغيظ} وهو كظيم كلها من الظاء، كلها عينها ظاء، كذلك&amp;nbsp; &lt;STRONG&gt;&lt;U&gt;ظلم&lt;/U&gt;&lt;/STRONG&gt; الظالمون ظلام {وما ربك بظلام للعبيد}، {وما ظلمناهم ولكن كانوا أنفسهم يظلمون}، {وما ظلمناهم ولكن كانوا هم الظالمين}، كلها بالظاء، كذلك &lt;STRONG&gt;&lt;U&gt;الظُّفر&lt;/U&gt;&lt;/STRONG&gt; {وعلى الذين هادوا حرمنا كل ذي ظُفُر} فهي بالظاء، فاؤها ظاء، كذلك &lt;STRONG&gt;&lt;U&gt;اغلظ&lt;/U&gt;&lt;/STRONG&gt;، فالغلظ والغلظة كلها لامها ظاء، {ولو كنت فظا غليظ القلب}، {يا أيها النبي جاهد الكفار والمنافقين واغلظ عليهم}، {يا أيها الذين آمنوا قاتلوا الذين يلونكم من الكفار وليجدوا فيكم غلظة}، كلها بالظاء، كذلك &lt;STRONG&gt;&lt;U&gt;الظلام&lt;/U&gt;&lt;/STRONG&gt;، فأظلم الليل وما يتعلق بهذه المادة كلها فاؤها ظاء، الظلمة والظلمات كلها بالظاء {ظلمات بعضها فوق بعض}، كذلك &lt;STRONG&gt;&lt;U&gt;انتظر&lt;/U&gt;&lt;/STRONG&gt; سواء أثبتت فيها التاء أو لا {انظرونا نقتبس من نوركم قيل ارجعوا وراءكم}، {فانتظر إنهم منتظرون}، فهذه عينها ظاء، كذلك &lt;STRONG&gt;&lt;U&gt;الظمأ&lt;/U&gt;&lt;/STRONG&gt; وهو العطش {يحسبه الظمآن ماء}، {إن لك أن لا تجوع فيها ولا تعرى وأنك لا تظمأ فيها ولا تضحى}، فهذه فاؤها ظاء، كذلك &lt;STRONG&gt;&lt;U&gt;أظفر&lt;/U&gt;&lt;/STRONG&gt; فالظفر كله فاؤه ظاء، وكذلك ا&lt;STRONG&gt;&lt;U&gt;لظن&lt;/U&gt;&lt;/STRONG&gt;، ففاؤه ظاء كذلك سواء كان اسما أو فعلا، {يا أيها الذين آمنوا اجتنبوا كثيرا من الظن إن بعض الظن إثم}، {إن نظن إلا ظنا وما نحن بمستيقنين}، {الظانين بالله ظن السوء عليهم دائرة السوء}، {إن هم إلا يظنون}، كلها بالظاء كيف جا: أي بأي صورة جاء هذا اللفظ في المصحف، سواء كان بالفعل أو بالاسم بالمفرد أو بالجمع ففاؤه ظاء، كذلك و&lt;STRONG&gt;&lt;U&gt;عظ&lt;/U&gt;&lt;/STRONG&gt;، لفظ الوعظ في القرآن أيضا كله بالظاء، {سواء علينا أوعظت أم لم تكن من الواعظين}، {فمن جاءه موعظة من ربه فانتهى فله ما سلف}، و&lt;STRONG&gt;&lt;U&gt;عظهم&lt;/U&gt;&lt;/STRONG&gt;، وعظوهن، كلها بالظاء، إلا لفظ عضين، وهذا الاستثناء هو لغير الناطقين بالعربية، فليست من هذه المادة أصلا ولكن نظرا للمشابهة فقط استثناها، فقال: سوى عضين {الذين جعلوا القرآن عضين} فهذه بالضاد ليست بالظاء، وهي في سورة الحجر، وقد اختلف فيها هل هي من العِضَةِ وهي السحر، أو من العضو وهو الجزء، فقيل معناه الذين جعلوا القرآن سحرا، عضين أي سحرا، وقيل معناها الذي جعلوا القرآن عضين أي أعضاء فآمنوا ببعضه وكفروا ببعض، جزؤوه، وعلى أنها من العضة قول رؤبة بن العجاج: «ليس كلام الله بالمعضه» &lt;BR&gt;ألا إلا دَهٍ فلا دَهِ ** ليس كلام الله بالمُعَضَّه&lt;BR&gt;بالمعضه من العضه في الأصل وهو السحر ويقال فيه العضة أيضا، فلامها مختلف فيه هل هو هاء أو واو، الذين جعلوا القرآن عضين كلها بالضاد، وهي في موضع واحد، إذا كانت هائية يقال: عضه، وإذا كانت واوية يقال: عضاه عضاه يعضيه إذا جعله أعضاء، استثناء فقط في المشابهة، لأن العين إذا جاء بعدها هذا الحرف فهو ظاء في الوعظ وهو ضاد في عضين، ما فاؤه عين من هذه الكلمات هذا المقصود به، فهذا استثناء فقط في الجنس وإلا فليس هذا من مادة واحدة، نعم الاستثناء في الرسم تبعا له هو وهو أيضا تبع الداني أيضا في ذلك، هو هنا يتبع أبا عمرو الداني فنفس الكلمات ذكرها أبو عمرو، &lt;STRONG&gt;&lt;U&gt;ظل&lt;/U&gt;&lt;/STRONG&gt; {ظل وجهه مسودا وهو كظيم} التي في النحل والتي في الزخرف وكلتاهما ظل وجهه مسودا وهو كظيم، في النحل وفي الزخرف نعم فكلها بالظاء، وكلتاهما سوا، سواء أي لفظاهما واحد،&amp;nbsp; أي أن اللفظ جاء متحدا في السورتين في سورة النحل وفي سورة الزخرف وهو ظل وجهه مسودا، {وإذا بشر أحدهم بما ضرب للرحمن مثلا ظل وجهه مسودا وهو كظيم}، هذه في سورة الزخرف، {وإذا بشر أحدهم بالأنثى ظل وجهه مسودا وهو كظيم} في سورة النحل، فلذلك قال: سوا أي يستويان في ذلك، قال: و&lt;STRONG&gt;&lt;U&gt;ظلت&lt;/U&gt;&lt;/STRONG&gt;، {انظر إلى إلهك الذي ظَلْتَ عليه عاكفا لنحرقنه} فهي بالظاء، وكذلك ظَلْتُمْ {فظلتم تفكهون إنا لمغرمون بل نحن محرومون} ظلتم هذه بالظاء، وبروم ظلوا، كذلك &lt;STRONG&gt;&lt;U&gt;ظلوا&lt;/U&gt;&lt;/STRONG&gt; التي في سورة الروم، {لظلوا من بعده يكفرون}، فهي بالظاء، كالحجر، كذلك التي في سورة الحجر وهي {ولو فتحنا عليهم بابا من السماء فظلوا فيه يعرجون}، فهي بالظاء أيضا، ظلت شعرا معناه &lt;STRONG&gt;&lt;U&gt;ظلت&lt;/U&gt;&lt;/STRONG&gt; التي في سورة الشعراء وهي {فظلت أعناقهم لها خاضعين} فهي بالظاء، كذلك نظل في سورة الشعراء أيضا، {نظل لها عاكفين}، &lt;STRONG&gt;&lt;U&gt;يظللن&lt;/U&gt;&lt;/STRONG&gt; {إن يشأ يسكن الريح فيظللن رواكد على ظهره}، يظللن فهي بالظاء وما سوى ذلك هو من فروع الضلال هو هنا يريد أن يفرق بين ظل وضل، فذكر فروع ظل جميعا، وما سواها فهو بالضاد، &lt;STRONG&gt;&lt;U&gt;محظورا&lt;/U&gt;&lt;/STRONG&gt; كذلك {وما كان عطاء ربك محظورا} فهي بالظاء لا بالضاد، مع &lt;STRONG&gt;&lt;U&gt;المحتظر&lt;/U&gt;&lt;/STRONG&gt; كذلك {كهشيم المحتظر} فهي بالظاء وهو متخذ الحظيرة، وكنت &lt;STRONG&gt;&lt;U&gt;فظا&lt;/U&gt;&lt;/STRONG&gt;، كذلك {ولو كنت فظا غليظ القلب} فظا فهي بالظاء، وجيمع &lt;STRONG&gt;&lt;U&gt;النظر&lt;/U&gt;&lt;/STRONG&gt; كذلك جميع مادة النظر سواء كان من نظر البصر أو من نظر الرأي أو من النظر بمعنى الانتظار فكلها بالظاء، فنظر من الانتظار {انظرونا نقتبس من نوركم} ونظر بمعنى التفكر { فنظر نظرة في النجوم} ونظر بمعنى البصر {لا تقولوا راعنا ولكن قولوا انظرنا} فكلها بالظاء، إلا بويل، استنثى من ذلك كلمتين وهما نضرة النعيم، ونضرة وسرورا، فنضرة النعيم في سورة المطففين {ويل للمطففين الذين إذا اكتالوا على الناس يستوفون} فيها {تعرف في وجوههم نضرة النعيم} فهي بالضاد، وكذلك في هل، وهل يشير بها إلى سورة الإنسان، {هل أتى على الإنسان حين من الدهر لم يكن شيئا مذكورا}، وفيها نضرة وسرورا، فلذلك قال: إلا بويل هل، معناه إلا بويل وهل التي هي سورة الإنسان هل أتى على الإنسان حين من الدهر {نضرة وسرورا}، وأولى ناضرة كذلك وأولى ناضرة الأولى من هاتين الكلمتين وجوه يومئذ ناضرة إلى ربها ناظرة، فالأولى بالضاد والثانية بالظاء، ناضرة، نعم لأن الصوت متقارب فأراد أن يبين لك ذلك، وأولى ناضرة، {ناضرة إلى ربها ناظرة} الأولى بالضاد والثانية بالظاء، نعم هي جناس لكن هذا الجناس يقع أيضا في غير هذا، فالجناس التام ذكره سيبويه في هذه الآية في وجوه يومئذ ناضرة إلى ربها ناظرة، وذكره في آية سورة الأنعام وهي قوله: وهم ينهون عنه وينئون عنه، هذا جناس تام والفرق بين الهمزة والهاء واضح لك، فكذلك يقاس عليه الفرق بين الضاد والظاء، سورة المطففين فيها نضرة النعيم، تعرف في وجوههم نضرة النعيم، هل وهي سورة الإنسان ففيها نضرة وسرورا، ولقاهم نضرة وسرورا. بعد هذا قال والغيظ: كذلك الغيظ وجميع مشتقاته في القرآن فهو بالظاء لا بالضاد {والكاظمين الغيظ}، {إذا رأتهم من مكان بعيد سمعوا لها تغيظا وزفيرا}، فكلها بالظاء، لا الرعد، أما هذا اللفظ في سورة الرعد وهو: {الله يعلم ما تحمل كل أنثى وما تغيض الأرحام} فهو بالضاد لا بالظاء، لا الرعد وهود كذلك في سورة هود وغيض الماء وقضي الأمر، غيض الماء، فالذي فيها هو الضاد لا الظاء، لا الرعد وهود قاصرة فهذه قصرت أي استثنيت بخصوصها فالقصر هو الاستثناء، فقصرت الضاد على هذين الموضعين على التي في الرعد والتي في هود، و&lt;STRONG&gt;&lt;U&gt;الحظ&lt;/U&gt;&lt;/STRONG&gt; كذلك الحظ حيث جاء في القرآن فهو بالظاء &lt;FONT color=red&gt;إلا الحض على الطعام، &lt;/FONT&gt;قال والحظ لا الحض على الطعام&amp;nbsp; فالحظ حيث جاء في القرآن فهو بالظاء إلا قوله تعالى: {ولا تحضون على طعام المسكين} فهذه بالضاد، &lt;STRONG&gt;&lt;U&gt;&lt;FONT color=red&gt;وفي ظنين الخلاف سامي&lt;/FONT&gt;&lt;/U&gt;&lt;/STRONG&gt;، هذه كلمة اختلف فيها هل هي بالظاء أو بالضاد، وهي: {وما هو على الغيب بضنين} فقيل بضنين بالضاد وقيل بظنين بالظاء، فالظنين المتهم، ومنه قول عمر رضي الله عنه في كتابه إلى أبي موسى الأشعري رضي الله عنه: «والمسلمون عدول بعضهم على بعض إلا مجلودا في حد أو ظنينا في ولاء أو قرابة» عدول بعضهم على بعض إلا مجلودا في حد أو ظنينا في ولاء أو قرابة، والظنين هو المتهم، والضنين من الضنة وهي البخل، فالضنة البخل:&lt;BR&gt;&amp;nbsp;إذا ما كتمت السر عن من أوده** توهم أن الود غير حقيق&lt;BR&gt;وما صنت عنه السر عن ضنة به** ولكنني أخشى صديق صديقي&lt;BR&gt;أتاركة تدللها قطام** وضِنا بالتحية والكلام&lt;BR&gt;فهي من الضنة، وقد كانوا يقولون للنبي (ص) إذا قرأ عليهم القرآن يقولون: هلا اجتبيت لنا سورة أخرى غير هذه يقولون: اجتب لنا سورة غيرها، فإذا لم يقرأ عليهم سورة أخرى قالوا ضن علينا بقرآنه، فلذلك أنزل الله تعالى وما هو على الغيب بضنين، فليس ذلك إليه إنما ينزل الله ما شاء ولا يستطيع تقول شيء عليه وقد قال الله تعالى: {ولو تقول علينا بعض الأقاويل لأخذنا منه باليمين ثم لقطعنا منه الوتين}، وفي ظنين الخلاف سام فيها القراءتان بالضاد والظاء، بالنسبة لهذا يشترك فيه جميع المؤلفين في علم الأداء، فمنذ تأليف أبي عمرو الداني وقبله أيضا مكي بن أبي طالب كثر اللحن في عدم التمييز بين الضاد والظاء، والناس الآن لا يميزون في ذلك في كثير من المناطق، كثير من الناس يقولون الضهر يقصدون الظهر، ويكتبونها بالضاد، وكذلك يقولون ضفر فلان بكذا، وهي من الضفر والضفر هو ضفر الشعر، وهم يقصدونها من الظفر فيلتبس هذا ويقع هذا كثيرا في المشرق العربي وفي كثير من البلدان، ضفر الشعر بالضاد، ظفر بالشيء، بعد هذا قال: وإن تلاقيا البيان لازم إذا التقى الضاد والظاء خشية أن تظن أنهما حرف واحد فلا بد من البيان، لا بد أن تبين الفرق بينهما، وذلك في موضعين في المصحف، الموضع الأول في سورة ألم نشرح، أنقض ظهرك لا بد أن تبين الضاد باستطالتها ومخرجها فتقول: الذي أنقض ظهرك، فتميز الفرق بينهما فيكون واضحا للسماع، السامع إذا سمع أنقض ظهرك عرف الفرق بين الحرفين، وكذلك في سورة الفرقان: {ويوم يعض الظالم على يديه} يعض الظالم لا بد من الفرق بينهما، فالسامع إذا سمع الآن يعض الظالم عرف الفرق بين الضاد والظاء يعض الظالم، فلذلك قال: أنقض ظهرك يعض الظالم، فهذان الموضعان التقى فيهما الضاد والظاء، ومن العجيب من لطف الله تعالى أن الضاد تأتي سابقة على الظاء فيهما معا، لأنها قبلها في المخرج، فالضاد لسانية من حافة اللسان والظاء من رأس اللسان ورءوس الثنايا العليا، فبدئ بالأصعب، نعم وكان هذا من إعجاز القرآن&lt;BR&gt;&lt;BR&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="الميم الساكنة أو المشددة" path="التجويد/الميم الساكنة أو المشددة">
+        <desc>
         </desc>
     </section>
-    <section name="9 - طرف اللسان أي رأس اللسان أي من أسفل رأس اللسان"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/اللسان/9 - طرف اللسان أي رأس اللسان أي من أسفل رأس اللسان">
-        <desc>وَالنُّونَ مِنْ طَرَفِهِ تَحْتُ اجْعَلُوا
-            وهو مخرج النون حيث تكون من الطرف الأمامي السفلي
+    <section name="النون الساكنة أو التنوين و النون المشددة" path="التجويد/النون الساكنة أو التنوين و النون المشددة">
+        <desc>
         </desc>
     </section>
-    <section name="10 - من رأس اللسان و لكنه أدخل إلى جهة الظهر"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/اللسان/10 - من رأس اللسان و لكنه أدخل إلى جهة الظهر">
-        <desc>وَالرَّا يُدَانِيهِ لِظَهْرٍ أَدْخَلُ
-            هناك من يكتبها أدخلوا و هذا خطأ لأن المراد هنا أن مخرج الراء هو من جهة ظهر اللسان
-            المقابل لمخرج النون (من طرف اللسان الأمامي السفلي) و لكنه أدخل قليلا أي إلى الداخل أكثر
-            بقليل
+    <section name="ترجمة صاحب المنظوم" path="التجويد/مقدمة لعلم التجويد/ترجمة صاحب المنظوم">
+        <desc>&lt;P align=right&gt;وهو &lt;FONT color=red&gt;شمس الدين محمد ابن محمد ابن محمد الجزري &lt;/FONT&gt;نسبة إلى الجزيرة بالفرات, وهو من الأئمة الأثبات المشهور بعلم القراءات و الفقه الشافعي وهو أيضا من أهل النحو المشاهير, وهو من المجددين في علم القراءات&lt;/P&gt;
+            &lt;P align=right&gt;&lt;U&gt;&lt;STRONG&gt;من مؤلفاته&lt;BR&gt;&lt;/STRONG&gt;النشر في القراءات العشر&lt;/U&gt;&lt;BR&gt;&lt;U&gt;تحبير التيسير&lt;BR&gt;طيبة النشر&lt;BR&gt;الدرة في تتميم الشاطبية&lt;BR&gt;متن الجزرية &lt;/U&gt;و هو هذاالكتاب ألفه لابنه, وقد شرحه ابنه ثم أثنى هو بنفسه على شرح ابنه&lt;/P&gt;</desc>
+    </section>
+    <section name="ما يبحث فيه في الحروف" path="التجويد/باب مخارج الحروف/ما يبحث فيه في الحروف">
+        <desc>&lt;P align=right&gt;&lt;FONT color=red&gt;&lt;U&gt;الحروف يبحث فيها من أربعة أجه&lt;/U&gt;&lt;/FONT&gt;: بحيث إذا وقع أي خطأ فإنه على الأقل واحد من هذه الأربعة لا بد أن يحصل فيه الخلل&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;المخرج&lt;/U&gt;&lt;/STRONG&gt;: من حيث يبدأ الحرف في الخروج و ليس أين ينتهي&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الصفة&lt;/U&gt;&lt;/STRONG&gt;: سواء أكانت الصفة ذاتية أو&amp;nbsp;عرضية&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الشكل&lt;/U&gt;&lt;/STRONG&gt;: أي الظبط الذي يكون عليه سكونا أو حركة&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;موضع الحرف من الكلمة&lt;/U&gt;&lt;/STRONG&gt;: و ما يترتب عليه من العوارض الصوتية عند التركيب كالإدغام و الترقيق و غير ذلك&lt;/P&gt;</desc>
+    </section>
+    <section name="أنواع المخارج" path="التجويد/باب مخارج الحروف/أنواع المخارج">
+        <desc>&lt;P align=right&gt;المخارج نوعان , و المقصود بالمخرج هنا تكيفه حتى يستطيع الإنسان سماعه&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;مقدر&lt;/U&gt;&lt;/STRONG&gt;: و هو مخرج الجوف لأنه لا يعلم حده&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;محقق&lt;/U&gt;&lt;/STRONG&gt;: وهي بقية المخارج&lt;/P&gt;</desc>
+    </section>
+    <section name="مواضع المخارج الأساسية" path="التجويد/باب مخارج الحروف/مواضع المخارج الأساسية">
+        <desc>&lt;P align=right&gt;أو الأعضاء التي تساهم في خروج الحروف, وهي خمسة عند الجمهور&lt;BR&gt;&lt;STRONG&gt;الجوف&lt;/STRONG&gt;: تجاويف الحلقوم&lt;BR&gt;&lt;STRONG&gt;الحلق&lt;/STRONG&gt;&lt;BR&gt;&lt;STRONG&gt;اللسان&lt;/STRONG&gt;&lt;BR&gt;&lt;STRONG&gt;الشفتان&lt;/STRONG&gt;&lt;BR&gt;&lt;STRONG&gt;الخيشوم&lt;/STRONG&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="المخارج الجزئية أو الفرعية" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية">
+        <desc>&lt;P align=right&gt;وهي محال الضغط على الهواء المنطلق من الرئة&lt;BR&gt;و في كل مكان يضغط عليه يتركب مخرج من مخارج الحروف&lt;/P&gt;
+            &lt;P align=right&gt;اختلف أهل العلم فيها, فذهب بعضهم أنها&lt;BR&gt; &lt;STRONG&gt;&lt;U&gt;تسع و عشرون &lt;/U&gt;&lt;/STRONG&gt;أي لكل حرف مخرجا&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;سبعة عشرة&lt;/U&gt;&lt;/STRONG&gt; وهذا &lt;FONT color=red&gt;مذهب الخليل ابن أحمد&lt;/FONT&gt; وهو الذي اختاره أهل الأداء و سار عليه ابن الجزري في هذه المقدمة&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;ستة عشرة&lt;/U&gt;&lt;/STRONG&gt; (على &lt;FONT color=red&gt;مذهب سبويه&lt;/FONT&gt;) بإلغاء مخرج الجوف , و هذ ا الذي سلكه النحويون&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;أربعة عشرة&lt;/U&gt;&lt;/STRONG&gt; (&lt;FONT color=red&gt;مذهب الفراء&lt;/FONT&gt;)&amp;nbsp; قسم المخارج التي في اللسان فجعل المتقارب منها مخرجا واحدا&lt;/P&gt;
+            &lt;P align=right&gt;و لتبيان مخرج الحرف فإنه يسكن الحرف إثر همزة وصل و في ذلك يقول المختار ابن بونا رحمه الله&lt;BR&gt;لكل حرف مخرج إن سكنا&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; بإثر همز موصل تبينا&lt;/P&gt;</desc>
+    </section>
+    <section name="1 - الجوف" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/1 - الجوف">
+        <desc>&lt;P align=right&gt;
+            &lt;TABLE style="HEIGHT: 36px; WIDTH: 296px" cellSpacing=2 cols=2 cellPadding=1 width=296 border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;حُرُوفُ مَدٍّ لِلْـهَوَاءِ تَنْتَهـِي&lt;/TD&gt;
+            &lt;TD&gt;فَأَلِفُ الجَوُفِ وأُخْتَاهَا وَهِي&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;
+            &lt;P align=right&gt;تخرج منه أحرف المد, و سميت أحرف مد لأنها امتداد في صوت غيرها و هذه الحروف هي&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;الألف&lt;/U&gt;&lt;/STRONG&gt;: لاتكون دائما إلا حرف مد, كثير لا يعدها من الأحرف لأنه يتصور أنها مبدلة عن الهمزة و بالتالي يعد أحرف العربية 28 فقط و إنما هي 29&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الواو&lt;/U&gt;&lt;/STRONG&gt;: تكون حرف مد إذا كانت ساكنة و قبلها ضمة&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الياء&lt;/U&gt;&lt;/STRONG&gt;: تكون حرف مد إذا كانت ساكنة و قبلها كسرة&lt;/P&gt;</desc>
+    </section>
+    <section name="الحلق" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/1 - الجوف/الحلق">
+        <desc>&lt;P align=right&gt;للحلق ثلاث مخارج فرعية&lt;/P&gt;</desc>
+    </section>
+    <section name="2 - أقصى الحلق" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/1 - الجوف/الحلق/2 - أقصى الحلق">
+        <desc>&lt;P align=right&gt;&amp;nbsp; ثُمَّ لِأَقْصَى الْحَلْقِ هَمْزٌ هَاءُ&lt;/P&gt;
+            &lt;P align=right&gt;و منه تخرج &lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الهمزة&lt;/U&gt;&lt;/STRONG&gt;: و يكون الضغط عند المخرج شديدا&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الهاء&lt;/U&gt;&lt;/STRONG&gt;: و يكون الضغط خفيفا&lt;/P&gt;</desc>
+    </section>
+    <section name="3 - وسط الحلق" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/1 - الجوف/الحلق/3 - وسط الحلق">
+        <desc>&lt;P align=right&gt;ثُمَّ لِـوَسْطِـهِ فَعَـيْنٌ حَـاءُ&lt;/P&gt;
+            &lt;P align=right&gt;و من هذا المخرج حرفان&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;العين&lt;/U&gt;&lt;/STRONG&gt;:&amp;nbsp;حرف مجهور فلذلك يكون&amp;nbsp;الضغط عليه ضغطا قويا&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الحاء&lt;/U&gt;&lt;/STRONG&gt;: حرف مهموس فلذلك يكون&amp;nbsp;الضغط عليه ضغطا خفيفا&lt;/P&gt;</desc>
+    </section>
+    <section name="4 - آخر الحلق أي أدناه إلى الفم" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/1 - الجوف/الحلق/4 - آخر الحلق أي أدناه إلى الفم">
+        <desc>&lt;P align=right&gt;&amp;nbsp;أَدْنَـاهُ غَيْنٌ خَاؤُهَا&lt;/P&gt;
+            &lt;P align=right&gt;و من هذا المخرج حرفان&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الغين&lt;/U&gt;&lt;/STRONG&gt;:&amp;nbsp;حرف مجهور فلذلك يكون الضغط عليه ضغطا قويا&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الخاء&lt;/U&gt;&lt;/STRONG&gt;: حرف مهموس فلذلك يكون&amp;nbsp;الضغط عليه ضغطا خفيفا&lt;/P&gt;</desc>
+    </section>
+    <section name="اللسان" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/اللسان">
+        <desc>&lt;P align=right&gt;وهي عشرة بحسب مواضعها&lt;/P&gt;</desc>
+    </section>
+    <section name="5 - أصل اللسان: أقصاه" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/اللسان/5 - أصل اللسان: أقصاه">
+        <desc>&lt;P align=right&gt;وَالْقَـافُ&amp;nbsp;&amp;nbsp; &amp;nbsp;أَقْصَى اللِّسَانِ فَوْقُ ثُمَّ الْكَافُ&lt;BR&gt; أَسْفَلُ&lt;/P&gt;
+            &lt;P align=right&gt;و فيه حرفان&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;القاف&lt;/U&gt;&lt;/STRONG&gt;: من فوق, قريبة من أحرف الحلق&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الكاف&lt;/U&gt;&lt;/STRONG&gt;: من أسفل &lt;/P&gt;</desc>
+    </section>
+    <section name="6 - وسط اللسان" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/اللسان/6 - وسط اللسان">
+        <desc>&lt;P align=right&gt;&amp;nbsp;وَالْوَسْطُ فَجِيمُ الشِّينُ يـَا&lt;/P&gt;
+            &lt;P align=right&gt;بدأ الآن في ثلاثية التقسيم حيث أن لهذا المخرج ثلاث أحرف&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;الجيم&lt;/U&gt;&lt;/STRONG&gt;: عندما يكون الضغط شديدا&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الشين&lt;/U&gt;&lt;/STRONG&gt;:عندما يكون الضغط خفيفا&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الياء&lt;/U&gt;&lt;/STRONG&gt;:عندما يكون الضغط متوسطا&lt;/P&gt;</desc>
+    </section>
+    <section name="7 - حافة اللسان من جهة الأضراس" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/اللسان/7 - حافة اللسان من جهة الأضراس">
+        <desc>&lt;P align=right&gt;وَالضَّادُ مِنْ حَافَتِهِ إِذْ وَلِيَــا&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; الاَضْرَاسَ مِنْ أَيْسَرَ أَوْ يُمْنَاهَا&lt;/P&gt;
+            &lt;P align=right&gt;و منه يخرج حرف &lt;STRONG&gt;&lt;U&gt;الضاد &lt;/U&gt;&lt;/STRONG&gt;و هي أصعب الحروف و في ذلك يقول الناظم&lt;/P&gt;
+            &lt;P align=right&gt;الضاد حرف عسير يشبه الظاء&amp;nbsp;&amp;nbsp;&amp;nbsp; لا الدال يشبه في نطق و لا الطاء&lt;/P&gt;</desc>
+    </section>
+    <section name="8 - أدنى اللسان إلى طرفه" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/اللسان/8 - أدنى اللسان إلى طرفه">
+        <desc>&lt;P align=right&gt;وَالـلاَّمُ أَدْنـَاهَا لِمُنْتَهَاهــَا&lt;/P&gt;
+            &lt;P align=right&gt;و هو مخرج وحيد &lt;STRONG&gt;&lt;U&gt;للام&lt;/U&gt;&lt;/STRONG&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="9 - طرف اللسان أي رأس اللسان" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/اللسان/9 - طرف اللسان أي رأس اللسان">
+        <desc>&lt;P align=right&gt;وَالنُّونَ مِنْ طَرَفِهِ تَحْتُ اجْعَلُوا&lt;/P&gt;
+            &lt;P align=right&gt;من طرف اللسان الأمامي من الجهة التحتية و هو مخرج &lt;STRONG&gt;&lt;U&gt;النون&lt;/U&gt;&lt;/STRONG&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="10 - من رأس اللسان و لكنه أدخل إلى جهة الظهر" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/اللسان/10 - من رأس اللسان و لكنه أدخل إلى جهة الظهر">
+        <desc>&lt;P align=right&gt;وَالرَّا يُدَانِيهِ لِظَهْرٍ أَدْخَلُ&lt;/P&gt;
+            &lt;P align=right&gt;و هذا مخرج &lt;STRONG&gt;&lt;U&gt;الراء&lt;/U&gt;&lt;/STRONG&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;&lt;FONT color=red&gt;تنبيه&lt;/FONT&gt;&lt;/U&gt;&lt;/STRONG&gt;: كتبت في المنظومة ب&lt;FONT color=red&gt;أدخلوا&lt;/FONT&gt; و هذا خطأ و لكنها اسم تفضيل لبيان أن مخرج الراء يضاهي مخرج النون و لكنه لظهر أدخل&lt;/P&gt;</desc>
+    </section>
+    <section name="11 - بين راس اللسان و الثنايا العليا" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/اللسان/11 - بين راس اللسان و الثنايا العليا">
+        <desc>&lt;P align=right&gt;وَالطَّاءُ وَالدَّالُ وَتًا مِنْـهُ وَمِنْ * عُلْيَا الثَّنَايَا&lt;/P&gt;
+            &lt;P align=right&gt;و لهذا المخرج ثلاث حروف&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;الطاء&lt;/U&gt;&lt;/STRONG&gt;: و يكون الضغط عنده شديدا&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الدال&lt;/U&gt;&lt;/STRONG&gt;: و الضغط عنده متوسط في الشدة&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;التاء&lt;/U&gt;&lt;/STRONG&gt;: خفيفة في الضغط فتكون مهموسة&lt;/P&gt;</desc>
+    </section>
+    <section name="12 - من طرف اللسان و من فوق الثنايا السفلى" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/اللسان/12 - من طرف اللسان و من فوق الثنايا السفلى">
+        <desc>&lt;P align=right&gt;&lt;FONT color=black&gt;والصَّفِيرُ مُسْتـَكِنْ&lt;BR&gt;مِنْهُ وَمِنْ فَوْقِ الثَّنَايَا السُّفْلَـى&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;FONT color=black&gt;و هو مخرج لأخرف الصفير&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;FONT color=black&gt;&lt;STRONG&gt;&lt;U&gt;الصاد&lt;/U&gt;&lt;/STRONG&gt;: الضغط عندها أشد ضغطا&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الزاي&lt;/U&gt;&lt;/STRONG&gt;: متوسطة الضغط&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;السين&lt;/U&gt;&lt;/STRONG&gt;: أخف الضغط لذلك فهي مهموسة&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="13 - من طرف اللسان و لكن بينه و بين الثنايا العليا" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/اللسان/13 - من طرف اللسان و لكن بينه و بين الثنايا العليا">
+        <desc>&lt;P align=right&gt;وَالظـَّاءُ وَالذَّالُ وَثًا لِلْعُلْيــَا * مِنْ طَرَفَيْهِمَا&lt;/P&gt;
+            &lt;P align=right&gt;و منه يخرج الأحرف التالية&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;الظاء&lt;/U&gt;&lt;/STRONG&gt;: أشد ضغطا&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الذال&lt;/U&gt;&lt;/STRONG&gt;: متوسطة الضغط&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الثاء&lt;/U&gt;&lt;/STRONG&gt;: خفيفة الضغط فتكون مهموسة&lt;/P&gt;</desc>
+    </section>
+    <section name="14 - من بطن الشفة مع أطراف الثنايا المشرفة" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/اللسان/14 - من بطن الشفة مع أطراف الثنايا المشرفة">
+        <desc>&lt;P align=right&gt;وَمِنْ بَطْنِ الشَّفَهْ * فَالْفَا مَعَ اَطْرافِ الثَّنَايَا الْمُشْرِفَهْ&lt;/P&gt;
+            &lt;P align=right&gt;و منه تخرج &lt;STRONG&gt;&lt;U&gt;الفاء &lt;/U&gt;&lt;/STRONG&gt;و هي مترددة بين أن تكون من مخارج الشفتين أو من مخارج اللسان لأن أصل اللسان محفوف بإطار الأسنان فاللسان&amp;nbsp; داخل في حظيرة الأسنان, &lt;U&gt;أما الفاء فهي في خارج حظيرة الأسنان&lt;/U&gt;, و بالتالي ليست لسانية&amp;nbsp;وهي في الحقيقة طرد للهواء لا ضغط عليه فإذا اعترضته الشفة العليا كانت الفاء فصيحة أما غير ذلك فلا تكون فصيحة&lt;/P&gt;</desc>
+    </section>
+    <section name="الشفتان" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/الشفتان">
+        <desc>&lt;P align=right&gt;لِلشَّـفَتَيْنِ الْـوَاوُ بَـاءٌ مِيـمُ&lt;/P&gt;</desc>
+    </section>
+    <section name="15- من بين الشفتين لكنها داخلة إلى الداخل" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/الشفتان/15- من بين الشفتين لكنها داخلة إلى الداخل">
+        <desc>&lt;P align=right&gt;و هذا مخرج الواو كأنك تدخل الهواء إلى الداخل, وهي التي أخذ منها أبو الأسود الدألي شكل الحروف (ضبط الحروف) عندما كلفه الحجاج بن يوسف بذلك. دعا فتى نبها فقال: انظر إلى فمي كيف أنطق فإذا نطقت فارسم لي هيأة فمي&lt;BR&gt;فقال: &lt;FONT color=red&gt;وَ&lt;/FONT&gt; فرسم له خطا مستقيما&lt;BR&gt;فقال: &lt;FONT color=red&gt;وِ&lt;/FONT&gt; فرسم خطا مائلا إلى أسفل&lt;BR&gt;فقال: &lt;FONT color=red&gt;وُ&lt;/FONT&gt; فرسم له خطا مفتوحا بمد الشفتين&lt;BR&gt;فجعلها للحركات&lt;BR&gt;فقال: إ&lt;FONT color=red&gt;وْ&lt;/FONT&gt; فرسم له فمه مستديرا, فكان السكون بالإستدارة&lt;BR&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="16 - من بين الشفتين لكنها من الخارج" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/الشفتان/16 - من بين الشفتين لكنها من الخارج">
+        <desc>&lt;P align=right&gt;و هو مخرج لحرفان&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;الباء&lt;/U&gt;&lt;/STRONG&gt;: بضم الشفتين&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;الميم&lt;/U&gt;&lt;/STRONG&gt;: بفتح الشفتين&lt;/P&gt;</desc>
+    </section>
+    <section name="الخيشوم" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/الخيشوم">
+        <desc>&lt;P align=right&gt;وَغُنَّـةٌ مَخْرَجُهـَا الخَيْشـُومُ&lt;/P&gt;</desc>
+    </section>
+    <section name="17 - الخيشوم" path="التجويد/باب مخارج الحروف/المخارج الجزئية أو الفرعية/الخيشوم/17 - الخيشوم">
+        <desc>&lt;P align=right&gt;و هو مخرج &lt;STRONG&gt;&lt;U&gt;للغنة &lt;/U&gt;&lt;/STRONG&gt;فقط و هي صفة للنون و الميم, و قد استشكل أهي صفة أم حرف, و قد سأل الشيخ محمد عالي رحمه الله أحد القراء المصريين: هل الغنة صفة أم حرف؟ قال: بل صفة, قال: الصفة تلازم محلها فلو كانت صفة لخرجت من مخرج النون و الميم, و لما خرجت من مخرج آخر لأنها إذا صفة شيء آخر لغير النون و الميم. الصفة إنما تلازم الموصوف و تقوم به. و هذه من مشكلات القراءة&lt;/P&gt;</desc>
+    </section>
+    <section name="أقسام الحروف" path="التجويد/باب مخارج الحروف/أقسام الحروف">
+        <desc>&lt;P align=right&gt;تنقسم الحروف إلى&lt;/P&gt;</desc>
+    </section>
+    <section name="حروف أصلية" path="التجويد/باب مخارج الحروف/أقسام الحروف/حروف أصلية">
+        <desc>&lt;P align=right&gt;وهي تسعة و عشرون و هي الأحرف الهجائية العربية, الهمزة تكتب على الالف أو الياء أو الواو و إذا لم تكتب على أحدهم سميت محذوفة&lt;/P&gt;</desc>
+    </section>
+    <section name="حروف فرعية" path="التجويد/باب مخارج الحروف/أقسام الحروف/حروف فرعية">
+        <desc>&lt;P align=right&gt;و سميت فرعية لأن تغير يعرض للحرف ينقله عن أصله و &lt;FONT color=red&gt;&lt;U&gt;ذلك التغير راجع إلى المخرج لا إلى الصفة في الراجح&lt;/U&gt;&lt;/FONT&gt;, و هذه الحروف تنقسم إلى&lt;/P&gt;</desc>
+    </section>
+    <section name="فروع مستحسنة" path="التجويد/باب مخارج الحروف/أقسام الحروف/حروف فرعية/فروع مستحسنة">
+        <desc>&lt;P align=right&gt;فصيحة في اللغة, و هي التي جاءت في القرآن, و منها&lt;BR&gt;&lt;FONT color=blue&gt;&lt;U&gt;الهمزة المسهلة&lt;/U&gt;&lt;/FONT&gt;: و يكون مخرجها إذا كانت مفتوحة بين الهمز و الألف, و إذا كانت مضمومة بين الهمزة و الواو أما إذا مكسورة فبين الهمزة و الياء,&amp;nbsp;فتخرج بين المخرجين و تتصف بالإندماج فاندمج فيها حرفان لذلك كانت بينهما و تسهيلها لشدتها على النطق, و&amp;nbsp;نظم ابن بري لبيان ذلك&lt;BR&gt;&lt;/P&gt;
+            &lt;P align=right&gt;
+            &lt;TABLE style="HEIGHT: 57px; WIDTH: 285px" cellSpacing=2 cols=2 cellPadding=1 width=285 border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;فسهلوه تارة و حذفوا&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;و الهمز في النطق&amp;nbsp;به تكلف&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;و نقلوه للسكون رفضا&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;و أبدلوه حرف مد محضا&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;U&gt;&lt;FONT color=blue&gt;الصاد المشمة زايا&lt;/FONT&gt;&lt;/U&gt;: التي فيها صوت الزاي و ذلك في قراءة حمزة&amp;nbsp;فهي فرع عن الصاد الغير المشمة&lt;BR&gt;&lt;U&gt;&lt;FONT color=blue&gt;الألف المفخمة&lt;/FONT&gt;&lt;/U&gt;: فالألف إذا كانت مدا لحرف مفخم فإنها تفخم تبعا لذلك الحرف سواء أكان الحرف مفخما بحروف الاستعلاء أو كان التفخيم عارضا فيه كملا لام الجلالة أو كان التفخيم في غير لام الجلالة لورش فتفخم اللام المفتوحة بعد الصاد أو الطاء أو الظاء و ذلك بشروط يرجع إليها في باب القراءات&lt;BR&gt;&lt;FONT color=blue&gt;&lt;U&gt;الياء المشمة بصوت الواو&lt;/U&gt;&lt;/FONT&gt;: في مثل قيل و سيئ. و الفعل المبني من هذا النوع يجوز فيه النطق بالياء فتقول (قيل و سيء بالكسر التام) أو بالواو فتقول (قول أو سوء بالضم التام) أو بالإشمام وهي تتركب منهما في النطق, إذ&amp;nbsp;الأصل فيها الياء (إذ ترسم كذلك) و لكن تشم بالواو فيقرأ بها (سيء): سينا مكسورة ممدودة بياء, و الياء مشمومة بحرف الواو. &lt;STRONG&gt;&lt;U&gt;&lt;FONT color=red&gt;تنبيه&lt;/FONT&gt;&lt;/U&gt;&lt;/STRONG&gt;: كثير من الناس يقرأونها سينا ساكنة يتبعونها بواو مكسورة ممدودة بياء و هذا لحن. مثال وجه الواو&amp;nbsp;قول الشاعر&lt;/P&gt;
+            &lt;P align=center&gt;حوكت على نيرين إذ تحاك&amp;nbsp;&amp;nbsp; &amp;nbsp;تختبط الشوك ولا تشاك&lt;/P&gt;
+            &lt;P align=right&gt;&lt;FONT color=blue&gt;&lt;U&gt;اللام المفخمة&lt;/U&gt;&lt;/FONT&gt;: كاللام في اسم الجلالة بعد الفتح أو الضم أو اللام المفخمة لورش بعد الصاد أو الطاء أو الظاء إذا فتحن أو سكن و كانت اللام مفتوحة&lt;BR&gt;&lt;FONT color=blue&gt;&lt;U&gt;الالف الممالة إلى جهة الياء&lt;/U&gt;&lt;/FONT&gt;: وهي إما أن تكون إمالة كبرى قريبة من الياء وهي امالة الالف إلى الياء, أو&amp;nbsp;إمالة صغرى قريبة من الألف, وهي امالة الفتحة إلى الكسرة. و من أمثلة الشعر على ذلك&lt;/P&gt;
+            &lt;P align=right&gt;
+            &lt;TABLE style="HEIGHT: 58px; WIDTH: 336px" cellSpacing=2 cols=2 cellPadding=1 width=336 border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;بِمُنهَمِرٍ جَونِ الرَبابِ سَكوبِ&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;عَسى اللَهُ يُغني عَن بِلادِ ابنِ ق&lt;FONT color=red&gt;ا&lt;/FONT&gt;دِرٍ&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;لَهُ مِن لِوَيّاتِ العُكومِ نَصيبُ&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;هِجَفٍّ تَحَفُّ الريحُ فَوقَ سِبالِهِ&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;بإمالة ألف قادر&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;U&gt;&lt;FONT color=blue&gt;النون المخفات الساكنة أو التنوين&lt;/FONT&gt;&lt;/U&gt;: لا يبقى منها إلا جزء من غنتها قبل حروف الإخفاء المجموعة في رؤوس كلمات البيت التالية&lt;/P&gt;
+            &lt;P align=right&gt;
+            &lt;TABLE style="HEIGHT: 60px; WIDTH: 367px" cellSpacing=2 cols=2 cellPadding=1 width=367 border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;أوائل هذا البيت خمس مع العشر&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;ألا أخفين النون من قبل أحرف &lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;ك&lt;/FONT&gt;ما &lt;FONT color=red&gt;ذ&lt;/FONT&gt;اق &lt;FONT color=red&gt;ط&lt;/FONT&gt;ير &lt;FONT color=red&gt;ص&lt;/FONT&gt;يد &lt;FONT color=red&gt;س&lt;/FONT&gt;وء &lt;FONT color=red&gt;ش&lt;/FONT&gt;با &lt;FONT color=red&gt;ظ&lt;/FONT&gt;فر&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&lt;FONT color=red&gt;ت&lt;/FONT&gt;رى &lt;FONT color=red&gt;ج&lt;/FONT&gt;ار &lt;FONT color=red&gt;د&lt;/FONT&gt;عد &lt;FONT color=red&gt;ق&lt;/FONT&gt;د &lt;FONT color=red&gt;ث&lt;/FONT&gt;وى &lt;FONT color=red&gt;ز&lt;/FONT&gt;يد &lt;FONT color=red&gt;ف&lt;/FONT&gt;ي &lt;FONT color=red&gt;ض&lt;/FONT&gt;نى&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="فروع مستقبحة" path="التجويد/باب مخارج الحروف/أقسام الحروف/حروف فرعية/فروع مستقبحة">
+        <desc>&lt;P align=right&gt;غير فصيحة و لم يرد القرآن بها&lt;/P&gt;</desc>
+    </section>
+    <section name="صفات ذاتية" path="التجويد/باب الصفات/صفات ذاتية">
+        <desc>&lt;P align=right&gt;هي ما خلق الله عليه الشيء كالطول و القبح و السواد, و هي ثمانية عشرة صفة, وهي الواردة في الأبيات السابقة, و تنقسم إلى قسمين&lt;/P&gt;</desc>
+    </section>
+    <section name="الصفات المتضادة" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: الاستمرار في المخرج من أوله إلى نهايته، فالضاد تبدأ في الخروج من حافة اللسان مما يلي الأضراس وتستمر إلى مخرج اللام&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;أحرفه&lt;/U&gt;&lt;/STRONG&gt;:&amp;nbsp;&lt;FONT color=blue&gt;الضاد &lt;/FONT&gt;وحدها &lt;/P&gt;</desc>
+    </section>
+    <section name="الخمس الأول" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الخمس الأول">
+        <desc>&lt;P align=right&gt;صِفَـاتُهَا جَهْـرٌ وَرِخْوٌ مُسْتَفِلْ&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; مُنْفَتِـحٌ مُصْمَـتَةٌ وَالضِّـدَّ قُـلْ&lt;/P&gt;</desc>
+    </section>
+    <section name="1 - الجهر" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الخمس الأول/1 - الجهر">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;لغة&lt;/STRONG&gt;: الرفع&lt;BR&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: &lt;FONT color=red&gt;انقطاع النفس عند النطق بالحرف&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;أحرفه&lt;/STRONG&gt;: ما عدا المهموسة هي المجهورة تعدادها&amp;nbsp;19 حرفا&lt;/P&gt;</desc>
+    </section>
+    <section name="2 - الرخاوة" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الخمس الأول/2 - الرخاوة">
+        <desc>&lt;P align=right&gt;من الرخو وهو الغير المشدود, و المصطلح عليه في هذا الباب &lt;FONT color=red&gt;جريان الصوت عند النطق بالحرف&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;أحرف الرخاوة&lt;/STRONG&gt;: هي ما عدا أحرف الشدة و التوسط&lt;/P&gt;</desc>
+    </section>
+    <section name="3 - الاستفال" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الخمس الأول/3 - الاستفال">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;لغة&lt;/STRONG&gt;: مستفل أي مائل إلى السفل&lt;BR&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: &lt;FONT color=red&gt;الحرف ليس مستفلا و لكن اللسان مستَفَلٌ عنده&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;أحرفه&lt;/STRONG&gt;: كل ما لم يكن مستعل&lt;/P&gt;</desc>
+    </section>
+    <section name="4 - الانفتاح" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الخمس الأول/4 - الانفتاح">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;لغة&lt;/STRONG&gt;: ضد الاغلاق&lt;BR&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: &lt;FONT color=red&gt;أي أن يخرج صوت الحرف و يبقي معه مكان للنفس&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;أحرفه&lt;/STRONG&gt;: كل ما لم يكن مطبق&lt;/P&gt;</desc>
+    </section>
+    <section name="5 - الإصمات" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الخمس الأول/5 - الإصمات">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;لغة&lt;/STRONG&gt;: صمت فلان أي سكت, الصُّمات: السكوت, الصامت ما لا كلام له بالخِلقة. و منه الحديث: أن النبي صلى الله عليه وسلم ذكر الغلول فعظم من شأنه, و في هذا الحديث: ألا لا أُلفين أحدكم يأتي يوم القيامة و على رقبته صامت يقول يا محمد أغثنى و لست له بمغيث&lt;BR&gt;المقصود بالصامت الذهب أو الفضة, فالمال الصامت هو الذهب أو الفضة&lt;BR&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: &lt;FONT color=red&gt;حبس الصوت&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;أحرفه&lt;/STRONG&gt;: هي ما عدا حروف الذلاقة&lt;/P&gt;</desc>
+    </section>
+    <section name="الأخرى المقابلة" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الأخرى المقابلة">
+        <desc>
         </desc>
     </section>
-    <section name="11 - بين راس اللسان و الثنايا العليا"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/اللسان/11 - بين راس اللسان و الثنايا العليا">
-        <desc>وَالطَّاءُ وَالدَّالُ وَتًا مِنْـهُ وَمِنْ * عُلْيَا الثَّنَايَا
-            وهو مخرج لثلاثة أحرف
-            1 - الطاء: و هو من أقوى الحروف. يكون فيه الضغط على المخرج قويا
-            2 - الدال: و هو متوسط من حيث قوة الضغط على مخرج الحرف
-            3 - التاء: يكون الضغط على المخرج خفيفا فتأتي مهموسة
+    <section name="1- الهمس" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الأخرى المقابلة/1- الهمس">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;لغة&lt;/STRONG&gt;: والهمس الخفاء في الصوت، لا تسمع إلا همسا، أي إلا صوتا خفيفا، ومنه صوت المشي، فوطء الرجل للأرض ما يسمع من صوت الرجل ثلاثة أقسام، إذا كان &lt;U&gt;صوتا للنعل &lt;/U&gt;يسمى &lt;STRONG&gt;&lt;U&gt;قبقبة&lt;/U&gt;&lt;/STRONG&gt;، وإذا كان &lt;U&gt;صوتا للحلي&lt;/U&gt; يسمى &lt;STRONG&gt;&lt;U&gt;وسوسة&lt;/U&gt;&lt;/STRONG&gt;، {ولا يضربن بأرجلهن ليعلم ما يخفين من زينتهن} فصوت الحلي يسمى وسوسة، ومنه قول الأعشى&lt;BR&gt;&amp;nbsp;تسمع للحلي وسواسا إذا انصرفت&lt;BR&gt;وقول أبي تمام&lt;BR&gt;&amp;nbsp;وإذا مشت تركت بقلبك ضعف ما&amp;nbsp; بحليها من كثرة الوسواس&lt;BR&gt;فهنا استعمل الوسواس في معنييه: الوسواس الذي في القلب والوسواس الذي هو صوت الحلي&lt;/P&gt;
+            &lt;P align=right&gt;الصوت الثالث هو &lt;STRONG&gt;&lt;U&gt;الهمس &lt;/U&gt;&lt;/STRONG&gt;وهو &lt;U&gt;إذا كانت الرجل ليست لابسة لنعل ولا لحلي فمسها للأرض صوته يسمى همسا&lt;/U&gt;، ومنه قول الشاعر&lt;BR&gt;معاود جرأة وقف الهوادي** أشم كأنه رجل عبوس&lt;BR&gt;فباتوا يدلجون وبات يسري** بصير بالدجى ورد هموس&lt;BR&gt;إلى أن عرسوا فأغب عنهم** قريبا ما يحس له حسيس&lt;BR&gt;سوى أن العتاق من المطايا** أحسن به فهن إليه شوس&lt;BR&gt;يصف أسدا صحب قافلة تسير في الليل يريد أن يأخذ منها فريسة فيقول: معاود جرأة واقف الهوادي أن هذا الأسد تعود على وقف الهوادي، والهوادي السوابق من الخيل أو من الوحش، وهو معاود ذلك جرأة مفعول لأجله أي من أجل الجراءة والجسارة, أشم أي مرتفع الأنف والمقصود بذلك تكبره كأنه رجل عبوس، فالرجل العبوس يظهر على وجهه الشمم والتكبر فكذلك هو، كأنه رجل عبوس, فباتوا يدلجون و&lt;STRONG&gt;&lt;U&gt;الإدلاج&lt;/U&gt;&lt;/STRONG&gt; &lt;U&gt;السير أول الليل&lt;/U&gt; و&lt;STRONG&gt;&lt;U&gt;الإدِّلاج&lt;/U&gt;&lt;/STRONG&gt; &lt;U&gt;السير آخر الليل، &lt;/U&gt;فباتوا يدلجون وبات يسري بصير بالدجى والسباع كلها ترى في الظلام، ورد وهذا لونه وهو الغبرة المائلة إلى الحمرة، هموس فمشيه هو همس، أي يسمع له صوت خفيف جدا في مسه للأرض، ورد هموس إلى أن عرسوا أي نزلوا، &lt;STRONG&gt;&lt;U&gt;التعريس&lt;/U&gt;&lt;/STRONG&gt; هو &lt;U&gt;النزول ليلا&lt;/U&gt;، إلى أن عرسوا فأغب عنهم، أي استقر في مكان قريب منهم، قريبا ما يحس له حسيس، لا يحسون له بشيء، سوى أن العتاق من المطايا أي الحرائر من الخيل أحسن به أي أحسسن به فهن إليه شوس أي ينظرنه بمؤخرة أعينهن، &lt;STRONG&gt;&lt;U&gt;فالأَشْوَسُ&lt;/U&gt;&lt;/STRONG&gt; الذي &lt;U&gt;ينظر بمؤخرة عينه&lt;/U&gt;، وهذا من الوصف البليغ الذي يجعلك كأنك تنظر إلى هذا الأسد إلى وصفه كأنك تراه، من دقة الوصف وتمامه، فهذا الهمس&lt;BR&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: &lt;FONT color=red&gt;جريان النفس عند النطق بالحرف&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;أحرفه&lt;/STRONG&gt;: هي عشرة أحرف تجمعها الجملة التالية: سكت فحثه شخص, وفيها قال المختار بن بونه رحمه الله&lt;BR&gt; وما من الحروف قد حوى سكت** فحثه شخص فبالمهموسة&lt;/P&gt;</desc>
+    </section>
+    <section name="2 - الشدة" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الأخرى المقابلة/2 - الشدة">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;&lt;/STRONG&gt;&lt;BR&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: &lt;FONT color=red&gt;انقطاع الصوت عند النطق بالحرف&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;أحرفه&lt;/STRONG&gt;: هي&amp;nbsp;ثمانية أحرف تجمعها الجملة التالية: &lt;FONT color=blue&gt;أَجِدْ قَطِ بَكَـتْ&lt;/FONT&gt;, جمعها النحويون: &lt;FONT color=blue&gt;أجدك تطبق&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="1.2 - التوسط" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الأخرى المقابلة/1.2 - التوسط">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;أحرفه&lt;/STRONG&gt;: هي&amp;nbsp;ثمانية أحرف تجمعها الجملة التالية: &lt;FONT color=blue&gt;لِنْ عُمَرْ&lt;/FONT&gt;&lt;FONT color=blue&gt;&lt;/FONT&gt;,&amp;nbsp;و زاد&amp;nbsp;النحويون: &lt;FONT color=blue&gt;الألف و الياء و الواو&lt;/FONT&gt;&lt;FONT color=black&gt;, و يجمعون أحرف التوسط بقول: وَلِيَنا عمر &lt;/FONT&gt;&lt;FONT color=black&gt;فبعضهم يجمعها بقول: &lt;FONT color=blue&gt;لم يرَ عونا&lt;/FONT&gt;, &lt;/FONT&gt;&lt;FONT color=black&gt;و بعضهم يجمعها: &lt;/FONT&gt;&lt;FONT color=blue&gt;لم يرو عنا&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;FONT color=black&gt;&lt;STRONG&gt;&lt;U&gt;&lt;FONT color=red&gt;تنبيه&lt;/FONT&gt;&lt;/U&gt;&lt;/STRONG&gt;: الألف لا يكون مسبوقا إلا بحرف مفتوح و سكونه ليس سكونا حقيقيا بل سكونا مديا و بالتالي من الضعف اعتباره حرف لين فهو مربوط بحكم المد&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="3 - الاستعلاء" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الأخرى المقابلة/3 - الاستعلاء">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;&lt;/STRONG&gt;&lt;BR&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: &lt;FONT color=#000000&gt;هو في الواقع صفة للسان و ليست للحرف, لأن الذي يرتفع هو اللسان و ليس الحرف, فيعلو اللسان عند النطق بهذه الحروف&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;أحرفه&lt;/STRONG&gt;: هي&amp;nbsp;سبعة أحرف تجمعها الجملة التالية: &lt;FONT color=blue&gt;خُصَّ ضَغْطٍ قِظْ&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="4 - الاطباق" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الأخرى المقابلة/4 - الاطباق">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;لغة&lt;/STRONG&gt;: من أطبق الشيء على لاشيء إذا أوقعه عليه, و من ذلك حديث أم زرع: زوجي عَياياءُ غياياءُ طباقاءُ شَلَّك أو فلَّك أو جمع كلا لك&lt;/P&gt;
+            &lt;P align=right&gt;&amp;nbsp;&lt;U&gt;عياياء&lt;/U&gt;: عيي لا يستطيع أن يبين فكرة في قلبه &lt;BR&gt;&lt;U&gt;غياياء&lt;/U&gt;: كثير الغي مائل إلى الخصام &lt;BR&gt;&lt;U&gt;طباقاء&lt;/U&gt;: لا يُتحمل و لايُطاق كأنه يطبق على الإنسان النفس بحيث لا يستطيع التنفس معه &lt;BR&gt;&lt;U&gt;شجك&lt;/U&gt;: الشج هو الضرب في الرأس أو في الوجه &lt;BR&gt;&lt;U&gt;فلك&lt;/U&gt;: كسر بعض أسنانك&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;/STRONG&gt;قول امرئ القيس في المطر التي هي طبق&lt;/P&gt;
+            &lt;P align=right&gt;ديمة هطلاء فيها وطف&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; طبق الارض تحرى و تدر&lt;/P&gt;
+            &lt;P align=right&gt;طبق الأرض: تطبق الأرض&lt;/P&gt;
+            &lt;P align=right&gt;&lt;BR&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: &lt;FONT color=#000000&gt;تضخم الحرف في داخل الحرف حتى يسده و ذلك أن ينطبق المخرج على الحرف فلا يبقى فيه مكان&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;أحرفه&lt;/STRONG&gt;: هي&amp;nbsp;أربعة أحرف: &lt;FONT color=blue&gt;صَادُ ضَادٌ طَاءُ ظَاءٌ&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="5 - الذلاقة" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الأخرى المقابلة/5 - الذلاقة">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;لغة&lt;/STRONG&gt;: الإذلاق: الحدة, الذلِق: حديد اللسان&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: &lt;FONT color=#000000&gt;ما خرج من طرف اللسان يسمى حروف الذلاقة, هذه الحروف تخرج من أقرب الفم إلى الخارج, أي هي من آخر الحروف خروجا هذا يجعل لها يسرا في خروجها و في النطق بها&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;أحرفه&lt;/STRONG&gt;: هي&amp;nbsp;ستة أحرف تجمعها الجملة التالية: &lt;FONT color=blue&gt;فِـرَّ مِنْ لُبِّ&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="رأي الشيخ الددو حول احرف الصفير في إمكانية إضافتها لأحرف الذلاقة" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الأخرى المقابلة/5 - الذلاقة/رأي الشيخ الددو حول احرف الصفير في إمكانية إضافتها لأحرف الذلاقة">
+        <desc>&lt;P align=right&gt;يقول الشيخ الددو حفظه الله: أنه كان من الأولى لهذه الحروف أن تظاف لأحرف الذلاقة لأنها تخرج من اللسان, لكن لأن كل كلمة عربية رباعية فما أكثر ليس فيها حرفا من أحرف الذلاقة فهي ليست عربية بل هي معربة, و من&amp;nbsp;أمثلة ذلك&amp;nbsp;كلمة&amp;nbsp;&lt;FONT color=red&gt;عسجد &lt;/FONT&gt;وهو اسم للذهب&lt;/P&gt;
+            &lt;P align=right&gt;&lt;FONT color=#0000ff&gt;&lt;/FONT&gt;&amp;nbsp;&lt;/P&gt;</desc>
+    </section>
+    <section name="الحروف التي تنفع لتمييز الحروف هي التسع الأول, أما الإصمات و الذلاقة فلا نفع فيها" path="التجويد/باب الصفات/صفات ذاتية/الصفات المتضادة/الحروف التي تنفع لتمييز الحروف هي التسع الأول, أما الإصمات و الذلاقة فلا نفع فيها">
+        <desc>
         </desc>
     </section>
-    <section name="12 - من طرف اللسان و من فوق الثنايا السفلى"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/اللسان/12 - من طرف اللسان و من فوق الثنايا السفلى">
-        <desc>والصَّفِيرُ مُسْتـَكِنْ
-            و هذا مخرج أحرف الصفير و هي ثلاثة:
-            1 - الصاد: و يكون الضغط على المخرج عندها قويا
-            2 - السين: و يكون الضغط على المخرج عندها متوسطا
-            3 - الزاي: و يكون الضغط على المخرج عندها خفيفا
+    <section name="الصفات الإنفرادية" path="التجويد/باب الصفات/صفات ذاتية/الصفات الإنفرادية">
+        <desc>&lt;P align=right&gt;وهي ثماني صفات&lt;/P&gt;</desc>
+    </section>
+    <section name="الصفير" path="التجويد/باب الصفات/صفات ذاتية/الصفات الإنفرادية/الصفير">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;لغة&lt;/STRONG&gt;: والصفير والزفير هو صوت الهواء في التجاويف في كل مجوف، والعرب يطلقونه على نفخ الإنسان في تجاويف يده إذا فاتته الفرصة، كما قال تأبط شرا
+            &lt;P align=right&gt;
+            &lt;TABLE style="HEIGHT: 41px; WIDTH: 314px" cellSpacing=2 cols=2 cellPadding=1 width=314 border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وكم مثلها فارقتها وهي تصفر&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;فأبت إلى فهم وما كدت آئبا&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;
+            &lt;P align=right&gt;أي كم فرصة لقتلي وقعت فيها ففارقتها وهي تصفر نجوت منها فبقيت تصفر، والصفير هو الذي يزعم العرب أن الجبان يرتاع عند سماعه، فصوت الريح عند تحريكها للأشياء ودخولها في المجوفات يرتاع الجبان عند سماعه، ولذلك يقول الخارجي في خطابه للحجاج
+            &lt;P align=right&gt;
+            &lt;TABLE style="HEIGHT: 59px; WIDTH: 357px" cellSpacing=2 cols=2 cellPadding=1 width=357 border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;ربداء تنفر من صفير الصافر&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;أسد علي وفي الحروب نعامة&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;أم كان قلبك بين جنبي طائر&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;هلا كررت على غزالة في الوغى&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;
+            &lt;P align=right&gt;أسد علي أي في حال كونه أسيرا لديه يستأسد عليه، وفي الحروب نعامة، بمثابة النعامة والنعام أجبن المخلوقات، وفي الحروب نعامة ربداء وهذا لون النعامة، تنفر من صفير الصافر، أي تفر إذا سمعت صفيرا أيا كان، هلا كررت على غزالة في الوغى والكر هو الرجوع بعد الفر، هلا كررت على غزالة وهي امرأة من الخوارج أقسمت أن تصلي ركعتين في مسجد الكوفة فغزت الكوفة وفيها الحجاج أمير إذ ذاك، قال: هلا كررت على غزالة في الوغى أي في الحرب، أم كان قلبك بين جنبي طائر، فهذا غاية في الجبن&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: وهذا الصوت هو الذي يسمع مع النطق بهذه الحروف إذا قلت إص، إس، إز، يسمع صوت هذا الصوف هو الذي يسمى صفيرا&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;أحرفه&lt;/STRONG&gt;: ثلاثة  &lt;FONT color=blue&gt;صاد وزاي و سين&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="القلقلة" path="التجويد/باب الصفات/صفات ذاتية/الصفات الإنفرادية/القلقلة">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: اهتزاز المخرج عند النطق بالحرف, و عند السكون تكون مثل بروك البعير إذ ينطق بها في مرحلتين&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;أحرفه&lt;/STRONG&gt;: هي&amp;nbsp;خمسة أحرف تجمعها الكلمتان التاليتان: &lt;FONT color=blue&gt;قُـطْـبُ جَـدٍ&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;&lt;FONT color=red&gt;تنبيه&lt;/FONT&gt;&lt;/U&gt;&lt;/STRONG&gt;: الجيم لها صفات منها &lt;STRONG&gt;الشدة &lt;/STRONG&gt;فقد يأخذ الإنسان بالشدة فقط فيجعلها كالدال, و منها كذلك &lt;STRONG&gt;الانفتاح &lt;/STRONG&gt;فيأخذ بالإنفتاح فقط فيجعلها كالياء&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;&lt;FONT color=red&gt;تنبيه&lt;/FONT&gt;&lt;/U&gt;&lt;/STRONG&gt; &lt;STRONG&gt;&lt;FONT color=red&gt;&lt;U&gt;2&lt;/U&gt;&lt;/FONT&gt;&lt;/STRONG&gt;: ونطق هذه الأحرف&amp;nbsp;مشددة كثيرا ما يغير المعنى كمن يقول: &lt;STRONG&gt;أح&lt;FONT color=red&gt;دّ&lt;/FONT&gt;&lt;/STRONG&gt;، فهذا مغير للمعنى لأن &lt;STRONG&gt;الأحدّ &lt;/STRONG&gt;&lt;U&gt;معناه المحدد&lt;/U&gt;، وكذلك لم &lt;STRONG&gt;يل&lt;FONT color=red&gt;دّ&lt;/FONT&gt;&lt;/STRONG&gt; معناه&lt;U&gt; لم يجعل اللدود في فم الإنسان&lt;/U&gt;، و&lt;STRONG&gt;اللدود&lt;/STRONG&gt; &lt;U&gt;هو ما يجعل للإنسان إذا أمسك عن الطعام، يلد بالشيء أي يسعط له أو يدخل في فمه من غير مَلْكِه&lt;/U&gt;، فهذا مفسد للمعنى&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;&lt;FONT color=red&gt;فائدة&lt;/FONT&gt;&lt;/U&gt;&lt;/STRONG&gt;: القلقلة في حال السكون ظاهرة، والسكون نوعان، &lt;U&gt;سكون في الأثناء&lt;/U&gt; &lt;U&gt;وسكون في الانتهاء&lt;/U&gt;، &lt;FONT color=red&gt;فالسكون الذي في الأثناء &lt;STRONG&gt;أضعف &lt;/STRONG&gt;&lt;/FONT&gt;&lt;FONT color=red&gt;من السكون الذي في الانتهاء، &lt;/FONT&gt;السكون الذي في الانتهاء عند الوقف عليه، فإذا قلت:{والعاديات ضبحا} ضبحا، فالباء هنا ساكنة لكن سكونها في غير الوقف فتظهرها لكن إظهارها أقل من إظهارها في الوقف فيما لو قلت: {فإذا فرغت فانصب وإلى رب فارغب}، فارغب أظهرتها تمام الإظهار، القلقلة هنا ظاهرة جدا لأن المقلقل ساكن في الوقف، وإذا قلت: صبحا فالمقلقل ساكن تظهر ولكن إظهارها في الوقف أشد، فلذلك قال: وبينن مقلقلا إن سكنا، وإن يكن في الوقف كان أبينا، كانت القلقلة فيه أبين&lt;/P&gt;</desc>
+    </section>
+    <section name="اللين" path="التجويد/باب الصفات/صفات ذاتية/الصفات الإنفرادية/اللين">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: سهولة النطق بالحرف, &lt;FONT color=red&gt;أن لا يكون الحرف متصلا بمخرج حقيقي بل يخرج من مخرج مقدر&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;أحرفه&lt;/STRONG&gt;&amp;nbsp;ثلاثة &lt;BR&gt;الواو الساكنة المنفتح ما قبلها&lt;BR&gt;الياء الساكنة المنفتح ما قبلها&lt;BR&gt;و زاد النحويون الألف, إلا أن المؤلف لا يراها كذلك لأنها دائما ساكنة و مفتوح ما قبلها, فالنحويون يقولون كما قال المختار بن بونه&lt;/P&gt;
+            &lt;P align=center&gt;&amp;nbsp;فالهمز والها مخرج ذو النطق** والألف اللين من اقصى الحلق&lt;/P&gt;</desc>
+    </section>
+    <section name="الإنحراف" path="التجويد/باب الصفات/صفات ذاتية/الصفات الإنفرادية/الإنحراف">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: اعوجاج رأس اللسان عند النطق باللام و الراء، ويتبين ذلك بالسكون إذا قلت: إل، إر، يميل اللسان قليلا ذات اليمين أو ذات الشمال عند النطق بهما، وليس المقصود بذلك الانحراف في المخرج أي الميل فيه&lt;/P&gt;</desc>
+    </section>
+    <section name="التكرير" path="التجويد/باب الصفات/صفات ذاتية/الصفات الإنفرادية/التكرير">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: ارتعاد رأس اللسان عند النطق بالراء&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;&lt;FONT color=red&gt;تنبيه&lt;/FONT&gt;&lt;/U&gt;&lt;/STRONG&gt;: لا ينبغي اتباعها لأنه سيزيد فيها و بالأخص في حال السكون فمن اللحن الزيادة في تكرير الراء, ذهب بعض أهل الأداء إلى أنها تذكر حتى لا يؤتى بها أما مكي ابن أبي طالب فيقول أنها تذكر ليؤتى بها و لكن لا يبالغ فيها&lt;/P&gt;</desc>
+    </section>
+    <section name="التفشي" path="التجويد/باب الصفات/صفات ذاتية/الصفات الإنفرادية/التفشي">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;لغة&lt;/STRONG&gt;: من الفشو وهو الشيوع, و من ذلك حديث أم زرع: جارية أبي زرع و ما جارية أبي زرع, لا تفشي حديثنا تنفيثا و لا تملأ بيتنا تغشيشا
+            &lt;P align=right&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: انتشار الهواء في الفم عند النطق بالحرف&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;أحرفه&lt;/U&gt;&lt;/STRONG&gt;: &lt;FONT color=blue&gt;الشين &lt;/FONT&gt;وحدها على الراجح, و قال بعض أهل العلم توصف بها الضاد أيضا و قد نظم المختار ابن بونا رحمه الله&lt;/P&gt;
+            &lt;P align=center&gt;و للتفشي الشين باتفاق&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; و صف به الضاد على شقاق&lt;/P&gt;
+            &lt;P align=right&gt;و يزيد بعض أهل الأداء في رأي مرجوح أحرفا كالفاء و الثاء و الذال&lt;/P&gt;</desc>
+    </section>
+    <section name="الاستطالة" path="التجويد/باب الصفات/صفات ذاتية/الصفات الإنفرادية/الاستطالة">
+        <desc>&lt;P align=right&gt;&lt;STRONG&gt;في الاصطلاح&lt;/STRONG&gt;: الاستمرار في مخرجه من أوله إلى مخرجه فهي تستمر من حافة اللسان مما يلى الاضراس إلى حافة اللسان&lt;/P&gt;
+            &lt;P align=right&gt;&lt;STRONG&gt;&lt;U&gt;أحرفه&lt;/U&gt;&lt;/STRONG&gt;:&amp;nbsp;&lt;FONT color=blue&gt;الضاد &lt;/FONT&gt;وحدها &lt;/P&gt;</desc>
+    </section>
+    <section name="صفات عَرضية" path="التجويد/باب الصفات/صفات عَرضية">
+        <desc>&lt;P align=right&gt;وهذه الصفات الفرعية هي الناشئة عن التركيب فليست أصلا في الحرف ولكنها ناشئة عن تركيبه، إذا ركب مع حرف آخر عرضت هذه الصفة فيه، وذلك مثل التفخيم والترقيق في اللام والراء، فالتفخيم والترقيق صفتان أصليتان لبعض الحروف، &lt;FONT color=red&gt;فالحروف المستعلية كلها مفخمة&lt;/FONT&gt;، &lt;FONT color=red&gt;والحروف المستفلة كلها مرققة في الأصل&lt;/FONT&gt;، لكن&lt;FONT color=red&gt;&lt;U&gt; ثلاثة من الحروف المستفلة يعرض فيها التفخيم وهي اللام والراء والألف اللينة&lt;/U&gt;&lt;/FONT&gt;، هذه الثلاثة يعرض فيها التفخيم فهو صفة عارضة، والترقيق كذلك في مقابلها، وكذلك من الصفات العارضة الغنة، وبالأخص في حال النطق بالنون الساكنة عند أحرف الإخفاء، فإنها تبقى غنتها، كنتم، فالغنة في حال الإخفاء عارضة في النون، وإلا فالغنة صفة أصلية في النون والميم لكن تزداد عند الإخفاء كما تزداد عند الادغام الناقص وبالأخص إدغام النون في النون فإنها تغن بمقدار حركتين، إنَّ، تغن بمقدار حركتين إذا شددت، النون المشددة تغن بمقدار حركتين، وكذلك الميم المشددة&lt;/P&gt;</desc>
+    </section>
+    <section name="صفات حكمية" path="التجويد/باب الصفات/صفات حكمية">
+        <desc>&lt;P align=right&gt;ما ناطه به الشارع من الأحكام كالطهارة و النجاسة&lt;/P&gt;</desc>
+    </section>
+    <section name="المتماثل" path="التجويد/باب الإِدِّغام/المتماثل">
+        <desc>&lt;P align=right&gt;وهو إدغام الحرف في مثله كإدغام الميم في الميم أو الباء في الباء و هكذا و بهذا فإن كل حرف مشدد هو مدغم إدغاما متماثلا&lt;/P&gt;</desc>
+    </section>
+    <section name="المتجانس" path="التجويد/باب الإِدِّغام/المتجانس">
+        <desc>&lt;P align=right&gt;وهو إدغام الحرفان اللذان &lt;FONT color=red&gt;اتفقا في المخرج&lt;/FONT&gt; و اختلفا في الصفات&lt;/P&gt;</desc>
+    </section>
+    <section name="المتقارب" path="التجويد/باب الإِدِّغام/المتقارب">
+        <desc>&lt;P align=right&gt;وهو إدغام &lt;FONT color=red&gt;الحرفان اللذان تقاربا مخرجاهما&lt;/FONT&gt;, و &lt;U&gt;المخرجان لا بد أن يتواليا&lt;/U&gt; بحيث لا يفصل بينهما مخرج آخر. فالغين و الخاء و إن كانا من نفس المخرج الأساسي و هو الحلق و هما من أدنى الحلق إلا أنهما غير متقاربان مع الهمزة و الهاء اللذان هما حرفان حلقيان من أقصى الحلق و لكنهما مفصولان بمخرج العين و الحاء وسط الحلق&lt;/P&gt;</desc>
+    </section>
+    <section name="أقسام الإدغام" path="التجويد/باب الإِدِّغام/أقسام الإدغام">
+        <desc>&lt;P align=right&gt;للإدغام 12 قسما&lt;BR&gt;إما أن يكون كبيرا و إما أن يكون صغيرا: &lt;FONT color=red&gt;2&lt;/FONT&gt;&lt;BR&gt;إما أن يكون في كلمتين و إما أن يكون في كلمة واحدة:&lt;FONT color=red&gt; 2&lt;/FONT&gt;&lt;BR&gt;و هو إما متماثل و إما متجانس و إما متقارب:&lt;FONT color=red&gt; 3&lt;/FONT&gt;&lt;BR&gt;فالمجموع يكون:&lt;BR&gt;&lt;FONT color=red&gt;2 * 2 * 3 = 12&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="الكبير" path="التجويد/باب الإِدِّغام/أقسام الإدغام/الكبير">
+        <desc>&lt;P align=right&gt;و هو &lt;U&gt;&lt;FONT color=red&gt;إدغام الحرفين المتحركين&lt;/FONT&gt;&lt;/U&gt;&lt;BR&gt;و يختص من القراء بالسوسي وحده&lt;/P&gt;</desc>
+    </section>
+    <section name="الصغير" path="التجويد/باب الإِدِّغام/أقسام الإدغام/الصغير">
+        <desc>&lt;P align=right&gt;في الساكن أي &lt;U&gt;&lt;FONT color=red&gt;إدغام الساكن في المتحرك&lt;/FONT&gt;&lt;/U&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="إذا أُدغم حرف مطبق في حرف غير مطبق" path="التجويد/باب الإِدِّغام/إذا أُدغم حرف مطبق في حرف غير مطبق">
+        <desc>&lt;P align=right&gt;إذا أُدغم حرف مطبق في حرف غير مطبق فإن صفة الإطباق لا بد من إظهارها, مثاله: أحطتُّ, بسطتَّ&lt;BR&gt;فيبقى من حرف الإطباق الإطباق و الاستعلاء&lt;BR&gt;وَالخُلْفُ بِنَخْلُ&lt;FONT color=red&gt;قكُّ&lt;/FONT&gt;مْ وَقـَعْ: أي إدغام حرف مستعل &lt;FONT color=red&gt;القاف&amp;nbsp;&lt;/FONT&gt;في حرف مستفل &lt;FONT color=red&gt;الكاف &lt;/FONT&gt;فيه خلاف&lt;BR&gt; &lt;STRONG&gt;قيل &lt;/STRONG&gt;&lt;U&gt;تبقى صفة الإستعلاء التي في القاف في الكاف بعد الإدّغام &lt;BR&gt;&lt;/U&gt;&lt;STRONG&gt;و قيل &lt;/STRONG&gt;&lt;U&gt;يُرفض ذلك لأن صفة الاستعلاء أضعف من الإطباق&lt;/U&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="باب الانفكاك و هو ضد الإدِّغام" path="التجويد/باب الإِدِّغام/باب الانفكاك و هو ضد الإدِّغام">
+        <desc>&lt;P align=right&gt;و هذا الباب هو تنبيه عن ما يمكن الخطأ فيه بإدغام حرفين كان من المفروض أن لا يدغما&lt;/P&gt;</desc>
+    </section>
+    <section name="الحرفان المتجانسان" path="التجويد/باب الإِدِّغام/باب الانفكاك و هو ضد الإدِّغام/الحرفان المتجانسان">
+        <desc>&lt;P align=right&gt;و هما الحرفان المتفقان في المخرج فإنه من الخطأ أن يدغما &lt;U&gt;&lt;FONT color=red&gt;ما لم ترد في ذلك قراءة متواترة&lt;/FONT&gt;&lt;/U&gt;, و من أمثلة ذلك&lt;BR&gt;&lt;STRONG&gt;جع&lt;FONT color=red&gt;لن&lt;/FONT&gt;ا&lt;/STRONG&gt;: &lt;FONT color=red&gt;اللام و النون&lt;/FONT&gt; متجانسين قد يحصل فهيما الادغام خطأ فلا بد من انفكاكهما, و لتسهيل النطق لا بد من الاتيان بالتوسط الذي في اللام&lt;/P&gt;</desc>
+    </section>
+    <section name="الحروف المدية" path="التجويد/باب الإِدِّغام/باب الانفكاك و هو ضد الإدِّغام/الحروف المدية">
+        <desc>&lt;P align=right&gt;كأن &lt;FONT color=red&gt;&lt;U&gt;يأتي حرف المد ساكنا في آخر الكلمة و يأتي مثله في أول الكلمة التالية&lt;/U&gt;&lt;/FONT&gt;, من أمثلة ذلك&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;في الياء&lt;/U&gt;&lt;/STRONG&gt;: ف&lt;FONT color=red&gt;ي ي&lt;/FONT&gt;وم فالحذر هنا من ادغام الياء الساكنة المدية&amp;nbsp;في الياء التالية المتحركة التي هي في كلمة تالية&lt;BR&gt;&lt;STRONG&gt;&lt;U&gt;في الواو&lt;/U&gt;&lt;/STRONG&gt;: قال&lt;FONT color=red&gt;وا و&lt;/FONT&gt; هم كذلك الحذر هنا من ادغام الواو الساكنة المدية&amp;nbsp;في الواو التالية المتحركة التي هي في كلمة تالية&lt;/P&gt;</desc>
+    </section>
+    <section name="يمكن أن يلحق بهذا الباب" path="التجويد/باب الإِدِّغام/باب الانفكاك و هو ضد الإدِّغام/الحروف المدية/يمكن أن يلحق بهذا الباب">
+        <desc>&lt;P align=right&gt;&lt;U&gt;&lt;FONT color=red&gt;حرف مضموم في آخر الكلمة متبوع بواو في بداية الكلمة التالية&lt;/FONT&gt;&lt;/U&gt; فمثاله: نعب&lt;FONT color=red&gt;دُ وَ&lt;/FONT&gt;&lt;BR&gt;&lt;U&gt;&lt;FONT color=red&gt;حرف مكسور في آخر الكلمة متبوع بياء في بداية الكلمة التالية&lt;/FONT&gt;&lt;/U&gt; و مثال هذا: مل&lt;FONT color=red&gt;كِ ي&lt;/FONT&gt;وم&lt;BR&gt;فالإدغام لو يحصل هنا يكون خطئا مركبا إذ أنه قد أحدِث سكون ثم بعد ذلك أحدِث الإدغام&lt;/P&gt;</desc>
+    </section>
+    <section name="الحروف الحلقية" path="التجويد/باب الإِدِّغام/باب الانفكاك و هو ضد الإدِّغام/الحروف الحلقية">
+        <desc>&lt;P align=right&gt;&lt;U&gt;&lt;FONT color=red&gt;الحاء و الهاء&lt;/FONT&gt;&lt;/U&gt; لا بد من انفكاكهما فمثاله سب&lt;FONT color=red&gt;حه&lt;/FONT&gt;, لا بد من التحفظ على نطق الحاء ونطق الهاء معا، وأهل البلاغة يذكرون أن من أمثلة ما يصعب النطق به فلا يكون فصيحا اجتماع الحاء مع الهاء بالتكرر في قول أبي تمام&lt;/P&gt;
+            &lt;P align=center&gt;&amp;nbsp;جواد متى أمدحه أمدحه والورى** معي وإذا ما لمته لمته وحدي&lt;/P&gt;
+            &lt;P align=right&gt;&lt;BR&gt;فهنا قوله أمدحه أمدحه تكررتا فكان ذلك قبيحا لصعوبته، جواد متى أمدحه أمدحه هذا صعب، ولهذا يقول السيوطي رحمه الله في تعريف الفصاحة يقول&lt;/P&gt;
+            &lt;P align=right&gt;
+            &lt;TABLE style="HEIGHT: 258px; WIDTH: 384px" cellSpacing=2 cols=2 cellPadding=1 width=384 align=center border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;حروفه كهعخع واستشزرا&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;فصاحة المفرد أن لا تنفرا&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;كالحمد لله العلي الأجلل&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وعدم الخلف لقانون جلي&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;كفاحما ومرسنا مسرجا&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وفقده غرابة قد أرتجا&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;نحو الجرشاء وذا ذو منع&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;قيل وفقد كرهه في السمع&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;لضعف تاليف وللتنافر&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وفي الكلام فقده في الظاهر&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;فصاحة للكلمات تتبع&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;في الكلمات وكذا التعقيد مع&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;أجف الأخلاء وما كنت عمي&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;فالضعف نحو قد جفوني ولمي&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;كليس قرب قبر حرب قبر&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وذو تنافر أتاك النصر&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;والثالث الخفاء في قصد عرى&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;كذاك أمدحه الذي تكررا&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;إلى الذي يقصده ذوو المقال&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;لخلل في النظم أو في الانتقال&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="و أحرفا أخرى لا بد من التنبيه عليها" path="التجويد/باب الإِدِّغام/باب الانفكاك و هو ضد الإدِّغام/و أحرفا أخرى لا بد من التنبيه عليها">
+        <desc>&lt;P align=right&gt;&lt;FONT color=red&gt;&lt;U&gt;الضاد و الظاء&lt;/U&gt;&lt;/FONT&gt;&lt;FONT color=black&gt;: فلا بد من تبيان الاستطالة, من لطف الله سبحانه أن الضاد تأتي دائما متقدمة عن الظاء لأنها متقدمة عليها في المخرج و قد ورد اجتماعهما&amp;nbsp;في موضعين في المصحف ذكرهما المصنف في هذا البيت&amp;nbsp;&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=center&gt;&lt;FONT color=black&gt;وَإِنْ تَــلاَقَــيَا البَــيَانُ لاَزِمُ **&amp;nbsp;أَنْـقَ&lt;FONT color=red&gt;ـضَ ظَ&lt;/FONT&gt;ـهْـرَكَ يَـعَ&lt;FONT color=red&gt;ضُّ&lt;/FONT&gt; ال&lt;FONT color=red&gt;ظَّ&lt;/FONT&gt;ـالِمُ&lt;/FONT&gt;&lt;/P&gt;
+            &lt;P align=right&gt;&lt;U&gt;&lt;FONT color=red&gt;الضاد و الطاء&lt;/FONT&gt;&lt;/U&gt;: وَا&lt;FONT color=red&gt;ضْـطُ&lt;/FONT&gt;ـرَّ&lt;BR&gt;&lt;U&gt;&lt;FONT color=red&gt;الظاء و التاء&lt;/FONT&gt;&lt;/U&gt;: وَعَ&lt;FONT color=red&gt;ظْتَ&lt;/FONT&gt;&lt;BR&gt;&lt;FONT color=red&gt;الضاد و التاء&lt;/FONT&gt;: أَفَ&lt;FONT color=red&gt;ضْـتُ&lt;/FONT&gt;مُ&lt;BR&gt;&lt;U&gt;&lt;FONT color=red&gt;الهاء إذا تكررت في الكلمة&lt;/FONT&gt;&lt;/U&gt; فلا بد من تصفية الهاء عن الهاء التي بعدها حتى لا تدّغم فيها, و لكي يكون ذلك لا بد من الاتيان بصفتي الرخاوة و الهمس التي فيها: وَصَـفِّ هَــا جِـبَا&lt;FONT color=red&gt;هُـهُ&lt;/FONT&gt;ـم&lt;/P&gt;</desc>
+    </section>
+    <section name="باب الراءات" path="التجويد/باب الراءات">
+        <desc>&lt;P align=right&gt;عقد هذا الباب لصفة عارضة وهي الترقيق الذي تتصف به الراء، فقد سبق أن التغليظ صفة لكل الحروف المستعلية وأن الترقيق صفة لكل الحروف المستفلة وأن التغليظ يعرض في ثلاثة من الحروف المستفلة وهي الراء واللام والألف، فهذه الحروف الثلاثة مستفلة ومع ذلك يعرض فيها التغليظ&lt;/P&gt;</desc>
+    </section>
+    <section name="للراء أحكام في التفخيم و الترقيق و هي" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي">
+        <desc>&lt;TABLE style="HEIGHT: 81px; WIDTH: 351px" cellSpacing=2 cols=2 cellPadding=1 width=351 align=center border=0&gt;
+            &lt;TBODY&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;كَذَاكَ بَعْدَ الْكَسْرِ حَيْثُ سـَكَنَتْ&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَرَقِّقِ الرَّاءَ إِذَا مَا كُسِرَتْ&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;أَوْ كـَانَت الْكَسْرَةُ لَيْسَتْ أَصْلاَ&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;إِن لَّمْ تَكُنْ مِنْ قَبْلِ حَرْفِ اسْتِعْلاَ&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;
+            &lt;TR&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;&amp;nbsp;وَأَخْفِ تَكْرِيراً إِذَا تـُشَدَّدُ&lt;/P&gt;&lt;/TD&gt;
+            &lt;TD&gt;
+            &lt;P align=right&gt;وَالْخُلْفُ فِي فِرْقٍ لِكَسْرٍ يُوجَدُ&lt;/P&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="الراء الساكنة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة">
+        <desc>
         </desc>
     </section>
-    <section name="13 - من طرف اللسان و لكن بينه و بين الثنايا العليا"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/اللسان/13 - من طرف اللسان و لكن بينه و بين الثنايا العليا">
-        <desc>وَالظـَّاءُ وَالذَّالُ وَثَا لِلْعُلْيــَا
-            مِنْ طَرْفَيْهِما
-
-            من هذا المخرج تتشكل ثلاثة أحرف:
-            1 - الظاء: و هي أشد ضغطا عند المخرج
-            2 - الذال: متوسطة الضغط
-            3 - الثاء: خفيفة الضغط لذلك تكون مهموسة
+    <section name="مرققة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/إذا كانت بعد الكسر/مرققة">
+        <desc>
         </desc>
     </section>
-    <section name="14 - من بطن الشفة مع أطراف الثنايا المشرفة"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/اللسان/14 - من بطن الشفة مع أطراف الثنايا المشرفة">
-        <desc>وَمِنْ بَطْنِ الشَّفَهْ * فَالْفَا مَعَ اَطْرافِ الثَّنَايَا الْمُشْرِفَهْ
-            و هذا مخرج الفاء
-            رغم أن بعض العلماء يصنفونه من الأحرف اللسانية إلا أنه في القيقة من الأحرف الشفوية
+    <section name="مرققة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/بعد الياء/مرققة">
+        <desc>
         </desc>
     </section>
-    <section name="الشفتان"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/الشفتان">
-        <desc>لِلشَّـفَتَيْنِ الْـوَاوُ بَـاءٌ مِيـمُ
-            و هذا كذلك مخرج أساسي
+    <section name="مرققة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/بعد الإمالة/مرققة">
+        <desc>
         </desc>
     </section>
-    <section name="15- من بين الشفتين لكنها داخلة إلى الداخل"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/الشفتان/15- من بين الشفتين لكنها داخلة إلى الداخل">
-        <desc>و هذا مخرج للواو
-            عند النطق بها يلاحظ كأنك تدخل الهواء إلى الداخل لأن الشفتان تتقلصان إلى الداخل
-            وهي التي أخذ منها أبو الأسود الدألي شكل الحروف (ضبط الحروف) عندما كلفه الحجاج بن يوسف
-            بذلك فدعا فتى نبها فقال: انظر إلى فمي كيف أنطق فإذا نطقت فارسم لي هيأة فمي
-            فقال: وَ فرسم له خطامستقيما
-            فقال: وِ فرسم خطا مائلا إلى أسفل
-            فقال: وٌ فرسم له خطا مفتوحا بمد الشفتين
-            فجعلها للحركات.
-            فقال: إوْ فرسم له فمه مستديرا, فكان السكون بالإستدارة
+    <section name="مرققة إذا كانت" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/مرققة إذا كانت">
+        <desc>
         </desc>
     </section>
-    <section name="16 - من بين الشفتين لكنها من الخارج"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/الشفتان/16 - من بين الشفتين لكنها من الخارج">
-        <desc>و هذا المخرج لحرفين:
-            1 - الباء: بضم الشفتين
-            2 - الميم: بفتح الشفتين
+    <section name="بعد الكسر" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/مرققة إذا كانت/بعد الكسر">
+        <desc>
         </desc>
     </section>
-    <section name="الخيشوم"
-        path="كتاب التجويد/باب مخارج الحروف/المخارج الجزئية: مواضع خروج الحروف/الخيشوم">
-        <desc>وَغُنَّـةٌ مَخْرَجُهـَا الخَيْشـُومُ
-            وهو المخرج 17 السابع عشر
-            و هذا مخرج أساسي و هو مخرج جزئي للغنة التي هي صفة النون و الميم
-            و هذا الموضع هو للغنة فقط, و قد استشكل أهي صفة أم حرف, و قد سأل الشيخ محمد عالي رحمه
-            الله أحدَ القراء المصريين: هل الغنة صفة أم حرف؟ قال: بل صفة, قال: الصفة تلازم محلها فلو
-            كانت صفة لخرجت من مخرج النون و الميم, و لما خرجت من مخرج آخر لأنها إذا صفة شيء آخر لغير
-            النون و الميم. الصفة إنما تلازم الموصوف و تقوم به.
-
-            و هذه من مشكلات القراءة
+    <section name="بعد الياء" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/مرققة إذا كانت/بعد الياء">
+        <desc>
         </desc>
     </section>
-    <section name="الصفات المتضادة" path="كتاب التجويد/باب الصفات/الصفات المتضادة">
-        <desc>وهي إحدى عشرة صفة
-
-            صِفَـاتُهَا جَهْـرٌ وَرِخْوٌ مُسْتَفِلْ مُنْفَتِـحٌ مُصْمَـتَةٌ وَالضِّـدَّ قُـلْ
-
-            ذكر خمسا و أشار إلى أضدادها
-
-            كل حرف لا بد أن يتصف بخمس منها على الأقل
+    <section name="بعد الإمالة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/مرققة إذا كانت/بعد الإمالة">
+        <desc>
         </desc>
     </section>
-    <section name="الجهر &lt;-------&gt;  الهمس"
-        path="كتاب التجويد/باب الصفات/الصفات المتضادة/الجهر &lt;-------&gt;  الهمس">
-        <desc>و هما صفتان متقابلتان:
-            1 - الجهر:
-            لغة: الرفع, رفع الصوت منه ما هو محمود و منه ما هو مذموم.
-            المذموم منه ما يؤذي السامع أو ما يؤذي المتكلم, سمع عمر يوما رجلا يبالغ في رفع صوته فرفع
-            عليه الدرة و قال له: أما تختشي يا هذا أن تنشق بريداؤك. البُريداء أو المُريداء: أسفل
-            البطن
-            اصطلاحا: انقطاع النفس عند النطق بالحرف
-            حروفه: ما عدا المهموسة هي المجهورة (19 حرفا)
-            2 - الهمس:
-            لغة: الخفاء في الصوت
-            اصطلاحا: جريان النفس عند النطق بالحرف
-            حروفه: هي حروف جملة: حثه شخص فسكت
+    <section name="و يُستَثنى من ذلك" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/مرققة إذا كانت/و يُستَثنى من ذلك">
+        <desc>&lt;P align=right&gt;إِن لَّمْ تَكُنْ مِنْ قَبْلِ حَرْفِ اسْتِعْلاَ*** أَوْ كـَانَت الْكَسْرَةُ لَيْسَتْ أَصْلاَ&lt;/P&gt;</desc>
+    </section>
+    <section name="إن كانت الكسرة من قبل حرف استعلاء" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/مرققة إذا كانت/و يُستَثنى من ذلك/إن كانت الكسرة من قبل حرف استعلاء">
+        <desc>
         </desc>
     </section>
-    <section name="الرخاوة &lt;-------&gt;  الشدة و التوسط"
-        path="كتاب التجويد/باب الصفات/الصفات المتضادة/الرخاوة &lt;-------&gt;  الشدة و التوسط">
-        <desc>و يقابل الرخاوةَ الشدةُ و التوسطُ:
-
-            1 - الرخاوة:
-            لغة: من الرخو وهو الغير المشدود
-            اصطلاحا: امتداد الصوت عند النطق بالحرف
-            حروفه: ما عدا أحرف الشدة و التوسط
-
-            2 - الشدة: شَدِيدُهَـا لَـفْظُ (أَجِدْ قَطِ بَكَـتْ)
-            اصطلاحا: انقطاع الصوت عند النطق بالحرف
-            حروفه: هي ثمانية أحرف و هي حروف جملة &lt;أجدك تطبق&gt; أو كما قال المصنف &lt;أجد قط بكت&gt;
-
-            3 - التوسط: وَبَيْنَ رِخْوٍ وَالشَّدِيدِ ( لِنْ عُمَرْ)
-            اصطلاحا: و هو بين الرخاوة التوسط
-            حروفه: هي حروف جملة &lt;لِنْ عُمَرْ&gt; </desc>
-    </section>
-    <section name="الاستفال &lt;-------&gt;  الاستعلاء"
-        path="كتاب التجويد/باب الصفات/الصفات المتضادة/الاستفال &lt;-------&gt;  الاستعلاء">
-        <desc>الاستفال و يقابله الاستعلاء
-            1 - الاستفال:
-            في اللغة: مستفل أي مائل إلى السفل
-            في الاصطلاح: الحرف ليس مستفلا و لكن اللسان مستَفَلٌ عنده
-            أحرف الاستعلاء: كل ما لم يكن مستعلْ
-
-            2 - الاستعلاء:
-            اصطلاحا: استعلاء اللسان عند النطق بالحرف
-            أحرفه: أحرف كلمة &lt;خص ضغط قظ&gt;</desc>
-    </section>
-    <section name="الانفتاح  &lt;-------&gt;  الاطباق"
-        path="كتاب التجويد/باب الصفات/الصفات المتضادة/الانفتاح  &lt;-------&gt;  الاطباق">
-        <desc>الانفتاح و يقابله الاطباق
-            1 - الانفتاح:
-            في اللغة: ضد الاغلاق
-            في الاصطلاح: أي أن يخرج صوت الحرف و يبقي معه مكان للنفس
-            أحرف الانفتاح: كل ما عدا أحرف الاطباق
-
-            2 - الاطباق:
-            في اللغة: من أطبق الشيء على لاشيء إذا أوقعه عليه
-            شواهد على المفهوم اللغوي:
-            *حديث أم زرع: زوجي عَياياءُ غياياءُ طباقاءُ شَلَّك أو فلَّك أو جمع كلا لك
-            عياياء: عيي لا يستطيع أن يبين فكرة في قلبه
-            غياياء: كثير الغي مائل إلى الخصام
-            طباقاء: لا يُتحمل و لايُطاق كأنه يطبق على الإنسان النفس بحيث لا يستطيع التنفس معه
-            شجك: الشج هو الضرب في الرأس أو في الوجه
-            فلك: كسر بعض أسنانك
-
-            *قول امرئ القيس في المطر التي هي طبق
-            ديمة هطلاء فيها وطف طبق الارض تحرى و تدر
-            طبق الأرض: تطبق الأرض
-
-            اصطلاحا: أن ينطبق المخرج على الحرف فلا يبقى فيه مكان
-            أحرفه: الصاد و الضاد و الطاء و الظاء
+    <section name="أو كانت الكسرة ليست أصلا" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/مرققة إذا كانت/و يُستَثنى من ذلك/أو كانت الكسرة ليست أصلا">
+        <desc>
         </desc>
     </section>
-    <section name="الإصمات  &lt;-------&gt;  الذلاقة"
-        path="كتاب التجويد/باب الصفات/الصفات المتضادة/الإصمات  &lt;-------&gt;  الذلاقة">
-        <desc>الإصمات و يقابله الذلاقة
-            1 - الإصمات:
-            في اللغة: صمت فلان أي سكت
-            في الاصطلاح: حبس الصوت
-            أحرف الإصمات: كل ما عدا أحرف الذلاقة
-
-            2 - الاطباق:
-            في اللغة: الإذلاق تعني الحدة و يقال الذلِق معناه حديد اللسان
-            اصطلاحا: ما خرج من طرف اللسان يسمى حروف الذلاقة
-            أحرفه: أحرف جملة &lt;و مر بنفل&gt;
-
-            ملاحظات:
-            1 - الحروف التي تنفع لتمييز الحروف هي التسع الأول, أما الإصمات و الذلاقة فلا نفع فيها
-            2 - يقول الشيخ الددو حفظه الله: أنه كان من الأولى لاحرف الصفير أن تظاف لأحرف الذلاقة
-            لأنها تخرج من اللسان
-            3 - كل كلمة عربية رباعية فما أكثر ليس فيها حرفا من أحرف الذلاقة فهي ليست عربية بل هي
-            معرَّبة و من أمثلة ذلك كلمة &lt;عسجد&gt; وهو اسم للذهب
+    <section name="الكسرة عارضة ليست أصلية" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/مرققة إذا كانت/و يُستَثنى من ذلك/أو كانت الكسرة ليست أصلا/الكسرة عارضة ليست أصلية">
+        <desc>
         </desc>
     </section>
-    <section name="الصفات الإنفرادية" path="كتاب التجويد/باب الصفات/الصفات الإنفرادية">
-        <desc>من الأدب أن لا يقال أن هذه الصفات لا ضد لها لأن الله فقط هو الذي لا ضد له</desc>
-    </section>
-    <section name="الصفير" path="كتاب التجويد/باب الصفات/الصفات الإنفرادية/الصفير">
-        <desc>صَفِيـرُهَا صَـادٌ وَزَاىٌ سِينُ
-            يقول الشيخ الددو حفظه الله: أنه كان من الأولى لهذه الحروف أن تظاف لأحرف الذلاقة لأن تخرج
-            من اللسان
-            أحرف الصفير: الصاد و الزاي و السين
+    <section name="و يعرف العروض بزوالها في بعض الأحيان" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/مرققة إذا كانت/و يُستَثنى من ذلك/أو كانت الكسرة ليست أصلا/الكسرة عارضة ليست أصلية/و يعرف العروض بزوالها في بعض الأحيان">
+        <desc>
         </desc>
     </section>
-    <section name="القلقلة" path="كتاب التجويد/باب الصفات/الصفات الإنفرادية/القلقلة">
-        <desc>قَلْـقَلَـةٌ قُـطْـبُ جَـدٍ
-            اهتزاز المخرج عند النطق بالحرف, و عند السكون تكون مثل بروك البعير إذ ينطق بها في مرحلتين
-            أحرف القلقلة: القاف و الطاء و الباء الجيم و الدال
-
-            ملاحظات:
-            1 - الجيم لها صفات منها:
-            الشدة: قد يأخذ الإنسان بالشدة فقط فيجعلها كالدال
-            الإنفتاح: أو يأخذ بالإنفتاح فقط فيجعلها كالياء
-            2 - كثير من الناس يشدد الحرف بدل أن يقلقلوه فغير ذلك المعنى تماما و من أمثلة ذلك قولهم:
-            قل هو الله أَحَدُّ و الأحدُّ معناه المحدَّد ذو الحرف الحاد. أو قولهم: لم يلدَّ أي لم
-            يجعل اللدود في فم الانسان و اللدود ما يجعل في فم الإنسان عندما يمسك عن الطعام, فيجعل في
-            فمه من غير إرادته
+    <section name="ككسر همزة الوصل" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/مرققة إذا كانت/و يُستَثنى من ذلك/أو كانت الكسرة ليست أصلا/الكسرة عارضة ليست أصلية/و يعرف العروض بزوالها في بعض الأحيان/ككسر همزة الوصل">
+        <desc>إذا وصلتها بما قبلها سقطت همزة الوصل و إذا سقطت سقطت الكسرة معها لأن الكسرة تابعة للحرف فإذا سقط الحرف سقطت الحركة معه</desc>
+    </section>
+    <section name="و استثني من هذه القاعدة كلمة واحدة و هي كلمة فِرق" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/مرققة إذا كانت/و يُستَثنى من ذلك/إن كانت الكسرة من قبل حرف استعلاء/و استثني من هذه القاعدة كلمة واحدة و هي كلمة فِرق">
+        <desc>&lt;P align=right&gt;&lt;FONT color=black&gt;لأن استعلاء القاف خف بالكسرة التي في القاف&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="الراء المتحركة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء المتحركة">
+        <desc>
         </desc>
     </section>
-    <section name="اللين" path="كتاب التجويد/باب الصفات/الصفات الإنفرادية/اللين">
-        <desc>سهولة النطق بالحرف, أن لا يكون الحرف متصلا بمخرج حقيقي بل يخرج من مخرج مقدر
-            و أحرف اللين هي:
-            - الواو الساكنة المنفتح ما قبلها
-            - الياء الساكنة المنفتح ما قبلها
-            - و زاد النحويون الألف, إلا أن المؤلف (ابن الجزري) لا يراها كذلك لأنها دائما ساكنة و
-            مفتوح ما قبلها
+    <section name="إذا كانت مفتوحة أو مضمومة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء المتحركة/إذا كانت مفتوحة أو مضمومة">
+        <desc>
         </desc>
     </section>
-    <section name="الإنحراف" path="كتاب التجويد/باب الصفات/الصفات الإنفرادية/الإنحراف">
-        <desc>و هو صفة للام و الراء
-            صفة مصححة في اللام, أي أن اللام و الراء تتصفان بصفة هي الإنحراف
-            و هو إعوجاج رأس اللسان عند النطق بهما و يتبين ذلك في السكون فينحرف اللسان ذات اليمين أو
-            ذات الشمال
+    <section name="إذا كانت مكسورة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء المتحركة/إذا كانت مكسورة">
+        <desc>
         </desc>
     </section>
-    <section name="التكرير" path="كتاب التجويد/باب الصفات/الصفات الإنفرادية/التكرير">
-        <desc>وَالرَّا وَبِتَكْرِيرٍ جُعِلْ
-            هو صفة للراء فقط
-            و هو ارتعاد رأس اللسان عند النطق بالراء
-
-            تنبيه:
-            لا ينبغي اتباعها لأنه سيزيد فيها و بالأخص في حال السكون
-            من اللحن الزيادة في تكرير الراء
-            ذهب بعض أهل الأداء إلى أنها تذكر حتى لا يؤتى بها
-            أما مكي ابن أبي طالب فيقول أنها تذكر ليؤتى بها و لكن لا يبالغ فيها
+    <section name="مفخمة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء المتحركة/إذا كانت مفتوحة أو مضمومة/مفخمة">
+        <desc>
         </desc>
     </section>
-    <section name="التفشي" path="كتاب التجويد/باب الصفات/الصفات الإنفرادية/التفشي">
-        <desc>لغة: من الفشو وهو الشيوع و مثاله حديث أم زرع: (جارية أبي زرع و ما جارية أبي زرع, لا
-            تفشي حديثنا تنفيثا و لا تملأ بيتنا تغشيشا)
-            اصطلاحا: انتشار الهواء في الفم عند النطق بهذا الحرف
-
-            أحرفه:
-            - الشين: وحدها على الراجح
-            - و قال بعض أهل العلم توصف بها الضاد أيضا فقد نظم المختار ابن بونا رحمه الله فقال:
-            و للتفشي الشين باتفاق و صف به الضاد على شقاق
-            - و بعض أهل الأداء يزيد أيضا حروفا أخرى ك: الفاء و الثاء و الذال
+    <section name="مرققة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء المتحركة/إذا كانت مكسورة/مرققة">
+        <desc>
         </desc>
     </section>
-    <section name="الاستطالة" path="كتاب التجويد/باب الصفات/الصفات الإنفرادية/الاستطالة">
-        <desc>ضَاداً اِسْتَـطِـلْ
-            و هو صفة منفردة للضاد و المقصود به الاستمرار في مخرجه من أوله إلى مخرجه
-            فهي تستمر من حافة اللسان مما يلى الاضراس إلى حافة اللسان حتى مخرج اللام
+    <section name="السكون إما أن يكون" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون">
+        <desc>
         </desc>
     </section>
-    <section name="الغنة" path="كتاب التجويد/باب الصفات/الصفات الإنفرادية/الغنة">
-        <desc>و هي صوت يخرج من الخيشوم و يتصف بها النون و الميم</desc>
+    <section name="أصليا" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا">
+        <desc>&lt;P align=right&gt;&lt;FONT color=black&gt;فلها حالان&lt;/FONT&gt;&lt;/P&gt;</desc>
     </section>
-    <section name="التفخيم" path="كتاب التجويد/باب الصفات/الصفات الإنفرادية/التفخيم">
-        <desc>هي صفة يقابلها الترقيق.
-
-            الأصل في الحروف كلها إذا كانت مستعلية التفخيم, و إذا كانت مستفلة الترقيق
-
-            وهي صفات عرضية و ليست ذاتية
+    <section name="عارضا" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا">
+        <desc>&lt;P align=right&gt;و يكون سكونها عارضا بسبب الوقف أي إذا وقف عليها&lt;/P&gt;</desc>
+    </section>
+    <section name="إذا كان قبلها فتحة أو ضمة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إذا كان قبلها فتحة أو ضمة">
+        <desc>
         </desc>
     </section>
-    <section name="باب الراءات و اللامات" path="كتاب التجويد/باب الراءات و اللامات">
-        <desc></desc>
+    <section name="فحكمها إذا التفخيم" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إذا كان قبلها فتحة أو ضمة/فحكمها إذا التفخيم">
+        <desc>
+        </desc>
     </section>
-    <section name="باب الادغام" path="كتاب التجويد/باب الادغام">
-        <desc></desc>
+    <section name="إن كان قبلها كسرة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة">
+        <desc>
+        </desc>
     </section>
-    <section name="باب تاءات التأنيث" path="كتاب التجويد/باب تاءات التأنيث">
-        <desc></desc>
+    <section name="لها ثلاثة أحكام" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام">
+        <desc>
+        </desc>
     </section>
-    <section name="باب الوصل و الفصل" path="كتاب التجويد/باب الوصل و الفصل">
-        <desc></desc>
+    <section name="الترقيق" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/الترقيق">
+        <desc>
+        </desc>
     </section>
-    <section name="باب الضادات و الظاءات" path="كتاب التجويد/باب الضادات و الظاءات">
-        <desc></desc>
+    <section name="إذا كانت الكسرة أصلية لازمة متصلة بها في كلمتها" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/الترقيق/إذا كانت الكسرة أصلية لازمة متصلة بها في كلمتها">
+        <desc>
+        </desc>
     </section>
-
+    <section name="و كان بعد الراء حرف استعلاء أو استفال و هو منفصل" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/الترقيق/إذا كانت الكسرة أصلية لازمة متصلة بها في كلمتها/و كان بعد الراء حرف استعلاء أو استفال و هو منفصل">
+        <desc>
+        </desc>
+    </section>
+    <section name="مثال المتصل" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/الترقيق/إذا كانت الكسرة أصلية لازمة متصلة بها في كلمتها/و كان بعد الراء حرف استعلاء أو استفال و هو منفصل/مثال المتصل">
+        <desc>&lt;P align=right&gt;&lt;FONT color=black&gt;&lt;FONT color=red&gt;&lt;FONT color=green&gt;شِ&lt;/FONT&gt;ر&lt;/FONT&gt;&lt;FONT color=green&gt;ع&lt;/FONT&gt;ةً: &lt;/FONT&gt;&lt;FONT color=red&gt;&lt;U&gt;الراء ساكنة و قبلها كسرة حقيقية و بعدها حرف استفال متصل بها&lt;/U&gt;&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="مثال المنفصل" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/الترقيق/إذا كانت الكسرة أصلية لازمة متصلة بها في كلمتها/و كان بعد الراء حرف استعلاء أو استفال و هو منفصل/مثال المنفصل">
+        <desc>&lt;P align=right&gt;&lt;FONT color=black&gt;فاص&lt;FONT color=red&gt;&lt;FONT color=green&gt;بِ&lt;/FONT&gt;رْ &lt;/FONT&gt;&lt;FONT color=green&gt;ص&lt;/FONT&gt;برا: &lt;/FONT&gt;&lt;FONT color=red&gt;&lt;U&gt;الراء ساكنة و قبلها كسرة حقيقية و بعدها حرف استعلاء منفصل عنها في الكلمة التي تليها&lt;/U&gt;&lt;/FONT&gt;&lt;FONT color=red&gt;&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="التفخيم و ذلك في أربعة مواضع" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/التفخيم و ذلك في أربعة مواضع">
+        <desc>
+        </desc>
+    </section>
+    <section name="إذا كانت الكسرة التي قبلها عارضة و كانت متصلة بها" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/التفخيم و ذلك في أربعة مواضع/إذا كانت الكسرة التي قبلها عارضة و كانت متصلة بها">
+        <desc>
+        </desc>
+    </section>
+    <section name="مثاله" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/التفخيم و ذلك في أربعة مواضع/إذا كانت الكسرة التي قبلها عارضة و كانت متصلة بها/مثاله">
+        <desc>&lt;P align=right&gt;&lt;FONT color=black&gt;ا&lt;FONT color=red&gt;ر&lt;/FONT&gt;جعوا: &lt;/FONT&gt;&lt;FONT color=red&gt;&lt;U&gt;الكسرة التي قبلها على همزة الوصل و هي عارضة فإذا وصلت الكلمة بالتي قبلها أزيلت الهمزة بكسرتها&lt;/U&gt;&lt;/FONT&gt;&lt;FONT color=red&gt;&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="إذا كانت الكسرة التي قبلها عارضة و كانت منفصلة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/التفخيم و ذلك في أربعة مواضع/إذا كانت الكسرة التي قبلها عارضة و كانت منفصلة">
+        <desc>
+        </desc>
+    </section>
+    <section name="مثاله" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/التفخيم و ذلك في أربعة مواضع/إذا كانت الكسرة التي قبلها عارضة و كانت منفصلة/مثاله">
+        <desc>&lt;P align=right&gt;إ&lt;FONT color=green&gt;ن&lt;/FONT&gt; ا&lt;FONT color=red&gt;ر&lt;/FONT&gt;تبتم: &lt;U&gt;الكسرة هنا عارضة لأن الكسرة التي على النون عارضة لأن النون في الأصل ساكنة و لكن تحركت لالتقاء الساكنين&lt;/U&gt;, و الكسرة العارضة في كلمة أخرى&lt;/P&gt;
+        </desc>
+    </section>
+    <section name="إذا كانت الكسرة أصلية و كانت منفصلة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/التفخيم و ذلك في أربعة مواضع/إذا كانت الكسرة أصلية و كانت منفصلة">
+        <desc>
+        </desc>
+    </section>
+    <section name="مثاله" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/التفخيم و ذلك في أربعة مواضع/إذا كانت الكسرة أصلية و كانت منفصلة/مثاله">
+        <desc>&lt;P align=right&gt;ر&lt;FONT color=green&gt;بِّ&lt;/FONT&gt; ا&lt;FONT color=red&gt;ر&lt;/FONT&gt;جعون: &lt;U&gt;الباء مكسورة كسرة أصلية و الراء&amp;nbsp;ساكنة في كلمة بعدها&lt;/U&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="إذا كانت الكسرة أصلية و كانت متصلة و لكن بعد الراء حرف استعلاء و هو متصل بها" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/التفخيم و ذلك في أربعة مواضع/إذا كانت الكسرة أصلية و كانت متصلة و لكن بعد الراء حرف استعلاء و هو متصل بها">
+        <desc>
+        </desc>
+    </section>
+    <section name="مثاله" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/التفخيم و ذلك في أربعة مواضع/إذا كانت الكسرة أصلية و كانت متصلة و لكن بعد الراء حرف استعلاء و هو متصل بها/مثاله">
+        <desc>&lt;P align=right&gt;&lt;FONT color=green&gt;قِ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;&lt;FONT color=blue&gt;ط&lt;/FONT&gt;اس , &lt;FONT color=green&gt;مِ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;&lt;FONT color=blue&gt;ص&lt;/FONT&gt;اد, فالراء هنا &lt;FONT color=red&gt;ساكنة &lt;/FONT&gt;و &lt;FONT color=green&gt;قبلها حرف مكسور في نفس الكلمة&lt;/FONT&gt; ثم&lt;FONT color=blue&gt; يتلوها حرف استعلاء&lt;/FONT&gt;&lt;/P&gt;
+        </desc>
+    </section>
+    <section name="جواز الأمرين أو الرواية بهما معا و هو في كلمة واحدة فِرْق" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/جواز الأمرين أو الرواية بهما معا و هو في كلمة واحدة فِرْق">
+        <desc>&lt;P align=right&gt;و هو موضع واحد في سورة الشعراء&lt;/P&gt;</desc>
+    </section>
+    <section name="يمكن الترقيق و هو أرجح" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/جواز الأمرين أو الرواية بهما معا و هو في كلمة واحدة فِرْق/يمكن الترقيق و هو أرجح">
+        <desc>
+        </desc>
+    </section>
+    <section name="و يمكن التفخيم و هو مرجوح" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/أصليا/إن كان قبلها كسرة/لها ثلاثة أحكام/جواز الأمرين أو الرواية بهما معا و هو في كلمة واحدة فِرْق/و يمكن التفخيم و هو مرجوح">
+        <desc>
+        </desc>
+    </section>
+    <section name="لها ثلاثة أحكام" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام">
+        <desc>
+        </desc>
+    </section>
+    <section name="التفخيم" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/التفخيم">
+        <desc>
+        </desc>
+    </section>
+    <section name="و ذلك في خمسة مواضع" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/التفخيم/و ذلك في خمسة مواضع">
+        <desc>
+        </desc>
+    </section>
+    <section name="1 - إذا كان قبلها فتحة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/التفخيم/و ذلك في خمسة مواضع/1 - إذا كان قبلها فتحة">
+        <desc>
+        </desc>
+    </section>
+    <section name="مثاله" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/التفخيم/و ذلك في خمسة مواضع/1 - إذا كان قبلها فتحة/مثاله">
+        <desc>&lt;P align=right&gt;ب&lt;FONT color=green&gt;شَ&lt;/FONT&gt;&lt;FONT color=red&gt;ر&lt;/FONT&gt;, م&lt;FONT color=green&gt;طَ&lt;/FONT&gt;&lt;FONT color=red&gt;ر&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="2 - إذا كان قبلها ضمة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/التفخيم/و ذلك في خمسة مواضع/2 - إذا كان قبلها ضمة">
+        <desc>
+        </desc>
+    </section>
+    <section name="مثاله" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/التفخيم/و ذلك في خمسة مواضع/2 - إذا كان قبلها ضمة/مثاله">
+        <desc>&lt;P align=right&gt;الع&lt;FONT color=green&gt;مُ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;, الي&lt;FONT color=green&gt;سُ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;, الن&lt;FONT color=green&gt;ذُ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="3 - إذا كان قبلها ألفا غير مُمال" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/التفخيم/و ذلك في خمسة مواضع/3 - إذا كان قبلها ألفا غير مُمال">
+        <desc>
+        </desc>
+    </section>
+    <section name="مثاله" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/التفخيم/و ذلك في خمسة مواضع/3 - إذا كان قبلها ألفا غير مُمال/مثاله">
+        <desc>&lt;P align=right&gt;الأبص&lt;FONT color=green&gt;ا&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;, الكف&lt;FONT color=green&gt;ا&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="4 - إذا كان قبلها واو مدية" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/التفخيم/و ذلك في خمسة مواضع/4 - إذا كان قبلها واو مدية">
+        <desc>
+        </desc>
+    </section>
+    <section name="مثاله" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/التفخيم/و ذلك في خمسة مواضع/4 - إذا كان قبلها واو مدية/مثاله">
+        <desc>&lt;P align=right&gt;الأمُ&lt;FONT color=green&gt;و&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;, الذكُ&lt;FONT color=green&gt;و&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="5 - إذا كان قبلها ساكن صحيح و كان قبل الساكن فتح أو ضم" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/التفخيم/و ذلك في خمسة مواضع/5 - إذا كان قبلها ساكن صحيح و كان قبل الساكن فتح أو ضم">
+        <desc>
+        </desc>
+    </section>
+    <section name="مثاله" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/التفخيم/و ذلك في خمسة مواضع/5 - إذا كان قبلها ساكن صحيح و كان قبل الساكن فتح أو ضم/مثاله">
+        <desc>&lt;P align=right&gt;ال&lt;FONT color=green&gt;يُسْ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;, ال&lt;FONT color=green&gt;فَجْ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="الترقيق" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/الترقيق">
+        <desc>
+        </desc>
+    </section>
+    <section name="و ذلك في ثلاثة صور" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/الترقيق/و ذلك في ثلاثة صور">
+        <desc>
+        </desc>
+    </section>
+    <section name="1 - إذا كان قبلها كسرة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/الترقيق/و ذلك في ثلاثة صور/1 - إذا كان قبلها كسرة">
+        <desc>&lt;P align=right&gt;فلا خلاف بين القراء في ترقيقها في هذا الموضع&lt;/P&gt;</desc>
+    </section>
+    <section name="مثاله" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/الترقيق/و ذلك في ثلاثة صور/1 - إذا كان قبلها كسرة/مثاله">
+        <desc>&lt;P align=right&gt;نا&lt;FONT color=green&gt;صِ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;, قُ&lt;FONT color=green&gt;دِ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="2 - إذا كان قبلها ياء ساكنة" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/الترقيق/و ذلك في ثلاثة صور/2 - إذا كان قبلها ياء ساكنة">
+        <desc>&lt;P align=right&gt;فلا خلاف بين القراء في ترقيقها في هذا الموضع&lt;/P&gt;</desc>
+    </section>
+    <section name="مثاله" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/الترقيق/و ذلك في ثلاثة صور/2 - إذا كان قبلها ياء ساكنة/مثاله">
+        <desc>&lt;P align=right&gt;خَ&lt;FONT color=green&gt;يْ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;, ضَ&lt;FONT color=green&gt;يْ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;, قدِي&lt;FONT color=red&gt;رْ&lt;/FONT&gt;, بصِ&lt;FONT color=green&gt;ي&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="3 - إذا كان قبلها حرف ساكن مستفِل و قبله كسر" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/الترقيق/و ذلك في ثلاثة صور/3 - إذا كان قبلها حرف ساكن مستفِل و قبله كسر">
+        <desc>&lt;P align=right&gt;فترقق بالإتفاق,&amp;nbsp;و &lt;U&gt;&lt;FONT color=red&gt;ترقق للكسرة التي قبل الساكن لأن الساكن حاجِز غير حصين&lt;/FONT&gt;&lt;/U&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="مثاله" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/الترقيق/و ذلك في ثلاثة صور/3 - إذا كان قبلها حرف ساكن مستفِل و قبله كسر/مثاله">
+        <desc>&lt;P align=right&gt;&lt;FONT color=green&gt;ذِكْ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;, ال&lt;FONT color=green&gt;شِّعْ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;, &lt;FONT color=green&gt;بِكْ&lt;/FONT&gt;&lt;FONT color=red&gt;رْ&lt;/FONT&gt;&lt;/P&gt;</desc>
+    </section>
+    <section name="جواز الأمرين" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/جواز الأمرين">
+        <desc>
+        </desc>
+    </section>
+    <section name="و ذلك في كلمتين فقط" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/جواز الأمرين/و ذلك في كلمتين فقط">
+        <desc>
+        </desc>
+    </section>
+    <section name="في لفظ مصر" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/جواز الأمرين/و ذلك في كلمتين فقط/في لفظ مصر">
+        <desc>
+        </desc>
+    </section>
+    <section name="في لفظ القطر" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/جواز الأمرين/و ذلك في كلمتين فقط/في لفظ القطر">
+        <desc>
+        </desc>
+    </section>
+    <section name="الراجح فيها التفخيم" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/جواز الأمرين/و ذلك في كلمتين فقط/في لفظ مصر/الراجح فيها التفخيم">
+        <desc>
+        </desc>
+    </section>
+    <section name="الراجح فيها الترقيق" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/الراء الساكنة/السكون إما أن يكون/عارضا/لها ثلاثة أحكام/جواز الأمرين/و ذلك في كلمتين فقط/في لفظ القطر/الراجح فيها الترقيق">
+        <desc>
+        </desc>
+    </section>
+    <section name="و لورش أحكام للراء خاصة به تُستعرض في باب القراءات" path="التجويد/باب الراءات/للراء أحكام في التفخيم و الترقيق و هي/و لورش أحكام للراء خاصة به تُستعرض في باب القراءات">
+        <desc>
+        </desc>
+    </section>
 </sections>

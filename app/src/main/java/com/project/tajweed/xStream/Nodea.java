@@ -57,4 +57,8 @@ public class Nodea {
     public boolean equals(Object obj) {
         return this.name.equals(((Nodea)obj).name);
     }
+
+    public static  Nodea getInstance() {
+        return new Nodea();
+    }
 }

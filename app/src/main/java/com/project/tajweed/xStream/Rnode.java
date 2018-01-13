@@ -8,17 +8,14 @@ import java.util.List;
 /**
  * Created by Belgacem on 25/02/2017.
  */
-public class Rnode {
+public class Rnode extends Nodea {
     private static Rnode ourInstance = new Rnode();
-    private List<Nodea> nodes=new ArrayList<Nodea>();
+    private List<Nodea> nodes = new ArrayList<Nodea>();
 
 
     private String name;
     private Section section;
 
-    public static Rnode getInstance() {
-        return ourInstance;
-    }
 
     private Rnode() {
     }
@@ -34,10 +31,11 @@ public class Rnode {
     public void add(Nodea nodea) {
         nodes.add(nodea);
     }
-   
+
     public void setName(String name) {
         this.name = name;
     }
+
     public String getName() {
         return name;
     }
