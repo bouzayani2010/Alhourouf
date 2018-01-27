@@ -2,28 +2,25 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="20dp">
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="4dp"
         android:layout_toLeftOf="@+id/icon"
-        android:gravity="right"
+        android:gravity="right|center"
+        android:layout_centerVertical="true"
         android:text="@string/parsed_data"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:textSize="15sp"/>
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="4dp"
         android:src="@drawable/down"></ImageView>
 
 </RelativeLayout>

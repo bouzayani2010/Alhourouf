@@ -24,12 +24,12 @@ import java.util.List;
 
 public class PathAdapter extends BaseAdapter {
     private final Context mContext;
-    private List<Node> items_path= new ArrayList<Node>();
+    private List<Node> items_path = new ArrayList<Node>();
 
 
     public PathAdapter(Context mContext, List items_path) {
-        this.mContext=mContext;
-        this.items_path=items_path;
+        this.mContext = mContext;
+        this.items_path = items_path;
     }
 
     @Override
@@ -70,13 +70,15 @@ public class PathAdapter extends BaseAdapter {
 
                 Element nodea = (Element) node;
 
-                viewHolder.name.setText(nodea.getAttribute("name"));}
+                viewHolder.name.setText(nodea.getAttribute("name"));
+            }
         } catch (ClassCastException e) {
             e.printStackTrace();
-            viewHolder.name.setText(((Nodea)node).getName());
+            viewHolder.name.setText(((Nodea) node).getName());
         }
         return convertView;
     }
+
     static class ViewHolderItem {
         public TextView name;
     }

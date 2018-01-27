@@ -10,13 +10,14 @@ import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.project.tajweed.adapters.ListNodeAdapter;
 import com.project.tajweed.adapters.ListtajweedAdapter;
-import com.project.tajweed.xStream.Nodea;
-import com.project.tajweed.xStream.Rnode;
+import com.unnamed.b.atv.model.TreeNode;
+import com.unnamed.b.atv.view.AndroidTreeView;
 
 import org.lucasr.twowayview.TwoWayView;
 import org.w3c.dom.Document;
@@ -24,7 +25,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
 import java.io.IOException;
@@ -33,33 +33,33 @@ import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.List;
 import java.util.Stack;
+import java.util.StringTokenizer;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 /**
  * Created by bbouzaiene on 31/07/2017.
  */
 
-public class HomeActivity1 extends Activity implements AdapterView.OnItemClickListener {
+public class HomeActivity1 extends Activity {
 
     private static Node rNode;
     private static HomeActivity1 homeActivity;
     private ListtajweedAdapter adapter;
     private static List<Section> cartList;
 
-    @InjectView(R.id.scrollView)
+    @BindView(R.id.scrollView)
     ScrollView scrollView;
 
-    @InjectView(R.id.tv_desc)
+    @BindView(R.id.tv_desc)
     TextView tv_desc;
-    @InjectView(R.id.tv_back)
+    @BindView(R.id.tv_back)
     TextView tv_back;
 
     // private List<Nodea> nodes = new ArrayList<>();
@@ -72,14 +72,19 @@ public class HomeActivity1 extends Activity implements AdapterView.OnItemClickLi
     private static ListNodeAdapter listNodeAdapter;
     private static ListView listView;
     private NodeList nList;
+    private RelativeLayout treeconTainer;
+    private TreeNode root;
+    private String nameRoot = "";
+    private Node ndRoot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-        ButterKnife.inject(this);
+        setContentView(R.layout.activity_home1);
+        ButterKnife.bind(this);
         mWebView = (WebView) this.findViewById(R.id.webview);
         listView = (ListView) this.findViewById(R.id.listview);
+        treeconTainer = (RelativeLayout) this.findViewById(R.id.treeconTainer);
         img = (ImageView) this.findViewById(R.id.image_view);
         img.setVisibility(View.GONE);
         stack_path = new Stack();
@@ -87,14 +92,48 @@ public class HomeActivity1 extends Activity implements AdapterView.OnItemClickLi
         parseXML();
         //  parseNodeDOMXML(this);
         //   rNode = Rnode.getInstance();
-        Node ndRoot = parseNodeDOMXML1(this);
+        ndRoot = parseNodeDOMXML1(this);
+        if (ndRoot.getNodeType() == Node.ELEMENT_NODE) {
+            Element eElement = (Element) ndRoot;
+            nameRoot = eElement.getAttribute("name");
+        }
         stack_path.add(0, ndRoot);
 
         //   nodes = rNode.getNodes();
 
 
         items_path = new ArrayList<>();
-        refreshlistview(ndRoot);
+
+        root = TreeNode.root();
+        MyHolder.IconTreeItem nodeItem = new MyHolder.IconTreeItem("" + nameRoot);
+
+        final TreeNode parentRoot = new TreeNode(nodeItem);
+
+        parentRoot.setViewHolder(new MyHolder(HomeActivity1.this));
+
+        refreshTreeView(ndRoot, parentRoot);
+        root.addChild(parentRoot);
+
+        AndroidTreeView tView = new AndroidTreeView(this, root);
+        tView.setDefaultNodeClickListener(new TreeNode.TreeNodeClickListener() {
+            @Override
+            public void onClick(TreeNode node, Object value) {
+                if (node.isExpanded()) {
+
+                    View nodeview = node.getViewHolder().getView();
+                    ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
+                    img_node.setImageResource(R.drawable.down);
+                } else {
+
+                    View nodeview = node.getViewHolder().getView();
+                    ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
+                    img_node.setImageResource(R.drawable.up);
+                }
+                stack_path = reformulePath(parentRoot.getPath());
+                createviews();
+            }
+        });
+        treeconTainer.addView(tView.getView());
 
         tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,29 +141,183 @@ public class HomeActivity1 extends Activity implements AdapterView.OnItemClickLi
                 onBackPressed();
             }
         });
-        listView.setOnItemClickListener(this);
+        //listView.setOnItemClickListener(this);
     }
 
-    public void refreshlistview(Node ndRoot) {
 
+    public void refreshTreeView(Node ndRoot, final TreeNode parent) {
+        if (ndRoot.getNodeType() == Node.ELEMENT_NODE) {
+            Element eElement = (Element) ndRoot;
+            Log.d("NodeName", ":::" + eElement.getAttribute("name"));
+            nList = ndRoot.getChildNodes();
+            final List<Node> nListFiltered = Utils.filterNodes(nList);
+            Log.d("NodeName", ":::" + nList.getLength());
+
+            for (final Node nd : nListFiltered) {
+
+                if (nd.getNodeType() == Node.ELEMENT_NODE) {
+                    Element nodea = (Element) nd;
+                    MyHolder.IconTreeItem nodeItem = new MyHolder.IconTreeItem("" + nodea.getAttribute("name").toString());
+                    final TreeNode child1 = new TreeNode(nodeItem);
+                    child1.setViewHolder(new MyHolder(HomeActivity1.this));
+                    refreshTreeView(nd, child1);
+
+                    child1.setClickListener(new TreeNode.TreeNodeClickListener() {
+                        @Override
+                        public void onClick(TreeNode node, Object value) {
+                            String desc = "***" + child1.getPath();
+                            Log.d("nodepathnodepath", desc);
+                            stack_path = reformulePath(child1.getPath());
+                            createviews();
+                            if (node.isExpanded()) {
+
+                                View nodeview = node.getViewHolder().getView();
+                                ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
+                                img_node.setImageResource(R.drawable.down);
+                            } else {
+
+                                View nodeview = node.getViewHolder().getView();
+                                ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
+                                img_node.setImageResource(R.drawable.up);
+                            }
+                        }
+                    });
+
+                    parent.addChild(child1);
+                }
+
+            }
+        }
+
+    }
+
+    private List<Node> reformulePath(String path) {
+        Log.d("pathpath","***"+path);
+        ArrayList<Node> listNodePath = new ArrayList<Node>();
+        try {
+            StringTokenizer st2 = new StringTokenizer(path, ":");
+            Node childselected = ndRoot;
+            int i = 0;
+            while (st2.hasMoreElements() && i < st2.countTokens()) {
+                if (childselected.getNodeType() == Node.ELEMENT_NODE) {
+                    listNodePath.add(0, childselected);
+
+                    Element eElement = (Element) childselected;
+
+                    NodeList nList1 = eElement.getChildNodes();
+                    List<Node> nListFiltered = Utils.filterNodes(nList1);
+                    String element = (String) st2.nextElement();
+                    int indexElement = Integer.parseInt(element) - 1;
+                    if (nListFiltered != null && nListFiltered.size() > 0) {
+                        childselected = nListFiltered.get(indexElement);
+                    }
+                }
+
+
+                i++;
+
+                // System.out.println(st2.nextElement());
+            }
+        } catch (NumberFormatException e) {
+
+        }
+        return listNodePath;
+    }
+
+    public void refreshTreeView1(Node ndRoot, final TreeNode parent) {
         Log.d("NodeName", ":::" + ndRoot.getNodeName());
         if (ndRoot.getNodeType() == Node.ELEMENT_NODE) {
             Element eElement = (Element) ndRoot;
             Log.d("NodeName", ":::" + eElement.getAttribute("name"));
             nList = ndRoot.getChildNodes();
-            List<Node> nListFiltered = Utils.filterNodes(nList);
+            final List<Node> nListFiltered = Utils.filterNodes(nList);
             Log.d("NodeName", ":::" + nList.getLength());
-            if (nList != null && nList.getLength() > 0) {
-                listNodeAdapter = new ListNodeAdapter(this, nListFiltered);
-                listView.setAdapter(listNodeAdapter);
+
+            for (final Node nd : nListFiltered) {
+                if (nd.getNodeType() == Node.ELEMENT_NODE) {
+                    Element nodea = (Element) nd;
+                    //viewHolder.name.setText(nodea.getAttribute("name"));
+
+                    MyHolder.IconTreeItem nodeItem = new MyHolder.IconTreeItem("" + nodea.getAttribute("name").toString());
+                    final TreeNode child1 = new TreeNode(nodeItem);
+                    child1.setViewHolder(new MyHolder(HomeActivity1.this));
+
+
+                    int deep = getDeep(child1);
+                    child1.setClickListener(new TreeNode.TreeNodeClickListener() {
+                        @Override
+                        public void onClick(TreeNode node, Object value) {
+                            refreshTreeView(nd, child1);
+
+                            if (node.isExpanded()) {
+
+                                View nodeview = node.getViewHolder().getView();
+                                ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
+                                img_node.setImageResource(R.drawable.down);
+                            } else {
+
+                                View nodeview = node.getViewHolder().getView();
+                                ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
+                                img_node.setImageResource(R.drawable.up);
+                            }
+                            Log.d("stack_Path", stack_path.toString());
+                            String childPath = child1.getPath();
+
+                            int childDeep = Integer.parseInt(childPath);
+
+                            Log.d("stack_Path", "::" + childPath);
+                            // stack_path.clear();
+                            if (childDeep + 1 > stack_path.size()) {
+                                stack_path.add(0, nd);
+                            } else {
+                                while (childDeep + 1 < stack_path.size()) {
+                                    stack_path.remove(stack_path.size() - 1);
+                                }
+                            }
+
+
+                            //drawviews(nd);
+                        }
+                    });
+                    parent.addChild(child1);
+                    String desc = ":::" + child1.getPath() + ": " + nodea.getAttribute("name");
+                    Log.d("nodepathnodepath", desc);
+
+                }
             }
+
+
+            root.addChild(parent);
+
         }
+
+
         createviews();
+    }
+
+    private int getDeep(TreeNode child1) {
+        int i = 0;
+        TreeNode parent = child1;
+        while (parent != null) {
+            parent = parent.getParent();
+            i++;
+        }
+        return i;
+    }
+
+    private void remplirStackPath(List<Node> stack_path, TreeNode child1) {
+        stack_path.clear();
+        int childpath = Integer.parseInt(child1.getPath());
+        for (int i = 0; i < childpath; i++) {
+            //stack_path.add(child1.getParent())
+        }
     }
 
     private void createviews() {
         //  items_path = new ArrayList(stack_path);
         items_path = stack_path;
+        Log.d("pathpath",stack_path.toString());
+
         //   Collections.reverse(items_path);
         // Collections.sort(items_path,Collections.<String>reverseOrder());
         //  items_path.add(getString(R.string.tajweed));
@@ -136,16 +329,19 @@ public class HomeActivity1 extends Activity implements AdapterView.OnItemClickLi
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
 
-                Node nod = items_path.get(i);
-                List<Node> nodes = Utils.filterNodes(nod.getChildNodes());
-                if (nodes.size() > 0) {
-                    createviews();
-                    //  refreshlistview(ndRoot);
-                    scrollView.setVisibility(View.GONE);
-                }
-                for (int k = 0; k < i; k++) {
-                    stack_path.remove(0);
-                    stack_path.remove(0);
+                try {
+                    Node nod = items_path.get(i);
+                    List<Node> nodes = Utils.filterNodes(nod.getChildNodes());
+                    if (nodes.size() > 0) {
+                        createviews();
+                        scrollView.setVisibility(View.GONE);
+                    }
+                    for (int k = 0; k < i; k++) {
+                        stack_path.remove(0);
+                        stack_path.remove(0);
+                    }
+                } catch (Exception e) {
+
                 }
             }
         });
@@ -178,7 +374,7 @@ public class HomeActivity1 extends Activity implements AdapterView.OnItemClickLi
 
 
     private static Section getSectionfrompath(String path) {
-        //Log.d("cartlist", "" + path);
+        Log.d("pathpath", "" + path);
         // Log.d("cartlist",""+cartList.toString());
         for (Section section : cartList) {
 
@@ -195,57 +391,10 @@ public class HomeActivity1 extends Activity implements AdapterView.OnItemClickLi
 
     }
 
-    @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-        try {
-            Node nd = listNodeAdapter.getItem(i);
-
-            refreshlistview(nd);
-            stack_path.add(0, nd);
-            // listView.setVisibility(View.GONE);
-        /*    List<Nodea> nodeas = nodea.getNodes();
-
-            if (nodeas.size() > 0) {
-                nodes = nodea.getNodes();
-
-                stack_path.add(0, nodea);
-              //  createviews();
-            }
-            if (!nodea.getSection().getDesc().isEmpty()) {
-                // adapter = new ListtajweedAdapter(this, nodes);
-                //listView.setAdapter(adapter);
-                for (int k = 0; k < nodes.size(); k++) {
-                    try {
-                        View kView = listView.getChildAt(k);
-                        kView.setBackgroundResource(R.drawable.background_transparent);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-                scrollView.setVisibility(View.GONE);
-                tv_desc.setText(nodea.getSection().getDesc());
-                drawviews(nodea);
-                scrollView.setVisibility(View.VISIBLE);
-                TextView tv_name = (TextView) view.findViewById(R.id.tv_name);
-                //  tv_name.setTextColor(R.color.red_color);
-                view.setBackgroundResource(R.drawable.gray_shape);
-
-            } else {
-
-                scrollView.setVisibility(View.GONE);
-            }*/
-        } catch (Exception e) {
-            e.printStackTrace();
-            Log.d("nodeanodea", e.getMessage());
-        }
-
-    }
-
     private void drawviews(Node nodea) {
         img.setVisibility(View.VISIBLE);
-       String path=Utils.drawPath(stack_path);
-        Log.d("pathpath",path);
+        String path = Utils.drawPath(stack_path);
+        Log.d("pathpath", path);
         Section section = getSectionfrompath(path);
         String desc = section.getDesc();
         String name = section.getName();
@@ -326,7 +475,7 @@ public class HomeActivity1 extends Activity implements AdapterView.OnItemClickLi
                 stack_path.remove(0);
                 Node nd = stack_path.get(0);
                 drawviews(nd);
-                refreshlistview(nd);
+                // refreshTreeView(nd, parentRoot);
 
             } else {
                 super.onBackPressed();

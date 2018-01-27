@@ -40,9 +40,9 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import butterknife.BindView;
+import butterknife.BindViews;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
-
 /**
  * Created by bbouzaiene on 31/07/2017.
  */
@@ -54,12 +54,12 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
     private ListtajweedAdapter adapter;
     private static List<Section> cartList;
 
-    @InjectView(R.id.scrollView)
+    @BindView(R.id.scrollView)
     ScrollView scrollView;
 
-    @InjectView(R.id.tv_desc)
+    @BindView(R.id.tv_desc)
     TextView tv_desc;
-    @InjectView(R.id.tv_back)
+    @BindView(R.id.tv_back)
     TextView tv_back;
 
     private List<Nodea> nodes = new ArrayList<>();
@@ -78,7 +78,7 @@ public class HomeActivity extends Activity implements AdapterView.OnItemClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         //stack = new Stack();
         stack_path = new Stack();
         //listView = (ListView) findViewById(R.id.listview);
