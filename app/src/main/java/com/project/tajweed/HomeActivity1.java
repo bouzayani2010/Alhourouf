@@ -30,10 +30,11 @@ import org.xml.sax.XMLReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.EmptyStackException;
 import java.util.List;
 import java.util.Stack;
-import java.util.StringTokenizer;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -109,7 +110,7 @@ public class HomeActivity1 extends Activity {
 
         final TreeNode parentRoot = new TreeNode(nodeItem);
 
-        parentRoot.setViewHolder(new MyHolder(HomeActivity1.this));
+        parentRoot.setViewHolder(new MyHolder(HomeActivity1.this,0));
 
         refreshTreeView(ndRoot, parentRoot);
         root.addChild(parentRoot);
@@ -129,10 +130,13 @@ public class HomeActivity1 extends Activity {
                     ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
                     img_node.setImageResource(R.drawable.up);
                 }
-                stack_path = reformulePath(parentRoot.getPath());
-                createviews();
+                List<Node> stack_path1 = reformulePath(parentRoot.getPath());
+                createviews(stack_path1);
             }
         });
+
+        tView.setDefaultAnimation(true);
+        tView.setDefaultContainerStyle(R.style.TreeNodeStyleDivided, true);
         treeconTainer.addView(tView.getView());
 
         tv_back.setOnClickListener(new View.OnClickListener() {
@@ -157,18 +161,28 @@ public class HomeActivity1 extends Activity {
 
                 if (nd.getNodeType() == Node.ELEMENT_NODE) {
                     Element nodea = (Element) nd;
+
                     MyHolder.IconTreeItem nodeItem = new MyHolder.IconTreeItem("" + nodea.getAttribute("name").toString());
+
                     final TreeNode child1 = new TreeNode(nodeItem);
-                    child1.setViewHolder(new MyHolder(HomeActivity1.this));
+                    List<Node> stack_path1 = reformulePath(child1.getPath());
+
+
+                    child1.setViewHolder(new MyHolder(HomeActivity1.this,stack_path1.size()));
+                 //   nodeItem.setPaddingLevel(stack_path1.size());
                     refreshTreeView(nd, child1);
+
 
                     child1.setClickListener(new TreeNode.TreeNodeClickListener() {
                         @Override
                         public void onClick(TreeNode node, Object value) {
                             String desc = "***" + child1.getPath();
                             Log.d("nodepathnodepath", desc);
-                            stack_path = reformulePath(child1.getPath());
-                            createviews();
+
+                            List<Node> stack_path1 = reformulePath(child1.getPath());
+
+                            drawviews(stack_path1);
+                            createviews(stack_path1);
                             if (node.isExpanded()) {
 
                                 View nodeview = node.getViewHolder().getView();
@@ -192,34 +206,47 @@ public class HomeActivity1 extends Activity {
     }
 
     private List<Node> reformulePath(String path) {
-        Log.d("pathpath","***"+path);
+        List<String> list = Arrays.asList(path.split(":"));
+        List<String> items = new ArrayList<String>(list);
+
+        //Log.i("pathpath", "*** " + items);
+        Collections.reverse(items);
+        Log.i("pathpath", "*** " + items);
         ArrayList<Node> listNodePath = new ArrayList<Node>();
+        items.remove(0);
         try {
-            StringTokenizer st2 = new StringTokenizer(path, ":");
             Node childselected = ndRoot;
-            int i = 0;
-            while (st2.hasMoreElements() && i < st2.countTokens()) {
+            listNodePath.add(0, childselected);
+
+
+            //for (String element : items) {
+            for (int i = 0; i < items.size(); i++) {
+                String element = items.get(i);
+
                 if (childselected.getNodeType() == Node.ELEMENT_NODE) {
-                    listNodePath.add(0, childselected);
 
                     Element eElement = (Element) childselected;
 
                     NodeList nList1 = eElement.getChildNodes();
                     List<Node> nListFiltered = Utils.filterNodes(nList1);
-                    String element = (String) st2.nextElement();
+
+                    Log.i("pathpath nListFiltered", "* " + Utils.getStrings(nListFiltered));
+                    Log.i("pathpath", "* " + element);
                     int indexElement = Integer.parseInt(element) - 1;
                     if (nListFiltered != null && nListFiltered.size() > 0) {
                         childselected = nListFiltered.get(indexElement);
                     }
+                    listNodePath.add(0, childselected);
+
                 }
 
 
-                i++;
-
                 // System.out.println(st2.nextElement());
             }
-        } catch (NumberFormatException e) {
 
+
+        } catch (NumberFormatException e) {
+            Log.i("pathpath", "" + e.getMessage());
         }
         return listNodePath;
     }
@@ -240,7 +267,7 @@ public class HomeActivity1 extends Activity {
 
                     MyHolder.IconTreeItem nodeItem = new MyHolder.IconTreeItem("" + nodea.getAttribute("name").toString());
                     final TreeNode child1 = new TreeNode(nodeItem);
-                    child1.setViewHolder(new MyHolder(HomeActivity1.this));
+                    child1.setViewHolder(new MyHolder(HomeActivity1.this,0));
 
 
                     int deep = getDeep(child1);
@@ -292,7 +319,7 @@ public class HomeActivity1 extends Activity {
         }
 
 
-        createviews();
+        //createviews(stack_path1);
     }
 
     private int getDeep(TreeNode child1) {
@@ -313,15 +340,15 @@ public class HomeActivity1 extends Activity {
         }
     }
 
-    private void createviews() {
+    private void createviews(List<Node> stack_path) {
         //  items_path = new ArrayList(stack_path);
         items_path = stack_path;
-        Log.d("pathpath",stack_path.toString());
+        Log.i("pathpath", "***" + Utils.getStrings(stack_path));
 
         //   Collections.reverse(items_path);
         // Collections.sort(items_path,Collections.<String>reverseOrder());
         //  items_path.add(getString(R.string.tajweed));
-        pathAdapter = new PathAdapter(this, items_path);
+        pathAdapter = new PathAdapter(this, stack_path);
         TwoWayView lvTest = (TwoWayView) findViewById(R.id.lvItems);
         lvTest.setAdapter(pathAdapter);
         lvTest.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -329,20 +356,6 @@ public class HomeActivity1 extends Activity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
 
-                try {
-                    Node nod = items_path.get(i);
-                    List<Node> nodes = Utils.filterNodes(nod.getChildNodes());
-                    if (nodes.size() > 0) {
-                        createviews();
-                        scrollView.setVisibility(View.GONE);
-                    }
-                    for (int k = 0; k < i; k++) {
-                        stack_path.remove(0);
-                        stack_path.remove(0);
-                    }
-                } catch (Exception e) {
-
-                }
             }
         });
     }
@@ -391,79 +404,82 @@ public class HomeActivity1 extends Activity {
 
     }
 
-    private void drawviews(Node nodea) {
+    private void drawviews(List<Node> stack_path) {
         img.setVisibility(View.VISIBLE);
+     //   Collections.reverse(stack_path);
         String path = Utils.drawPath(stack_path);
         Log.d("pathpath", path);
         Section section = getSectionfrompath(path);
-        String desc = section.getDesc();
-        String name = section.getName();
+        if (section != null) {
+            String desc = section.getDesc();
+            String name = section.getName();
 
-        img.setVisibility(View.VISIBLE);
-        if (name.equals("الجوف: تجاويف الحلقوم")) {
-            img.setImageResource(R.drawable.jawf_01);
-        } else if (name.equals("الحلق")) {
-            img.setImageResource(R.drawable.quaaf_05);
-        } else if (name.equals("اللسان")) {
-            img.setImageResource(R.drawable.wasat_lissan_07);
-        } else if (name.equals("الشفتان")) {
-            img.setImageResource(R.drawable.meem_baa_16);
-        } else if (name.equals("الخيشوم")) {
-            img.setImageResource(R.drawable.khayshoom_17);
-        } else if (name.equals("1 - الجوف")) {
-            img.setImageResource(R.drawable.jawf_01);
-        } else if (name.equals("2 - أقصى الحلق")) {
-            img.setImageResource(R.drawable.hamzaa_aa_02);
-        } else if (name.equals("3 - وسط الحلق")) {
-            img.setImageResource(R.drawable.ayn_7aa_03);
-        } else if (name.equals("4 - آخر الحلق أي أدناه إلى الفم")) {
-            img.setImageResource(R.drawable.ayn_7aa_03);
-        } else if (name.equals("5 - أصل اللسان: أقصاه")) {
-            img.setImageResource(R.drawable.kaaf_06);
-        } else if (name.equals("6 - وسط اللسان")) {
-            img.setImageResource(R.drawable.wasat_lissan_07);
-        } else if (name.equals("7 - حافة اللسان من جهة الأضراس")) {
-            img.setImageResource(R.drawable.al_dhaad_08);
-        } else if (name.equals("8 - أدنى اللسان إلى طرفه")) {
-            img.setImageResource(R.drawable.al_dhaad_08);
-        } else if (name.equals("9 - طرف اللسان أي رأس اللسان أي من أسفل رأس اللسان")) {
-            img.setImageResource(R.drawable.al_noon_09);
-        } else if (name.equals("10 - من رأس اللسان و لكنه أدخل إلى جهة الظهر")) {
-            img.setImageResource(R.drawable.al_raa_10);
-        } else if (name.equals("11 - بين راس اللسان و الثنايا العليا")) {
-            img.setImageResource(R.drawable.taa_daal_ta_11);
-        } else if (name.equals("12 - من طرف اللسان و من فوق الثنايا السفلى")) {
-            img.setImageResource(R.drawable.al_safeer_12);
-        } else if (name.equals("13 - من طرف اللسان و لكن بينه و بين الثنايا العليا")) {
-            img.setImageResource(R.drawable.taa_daal_ta_11);
-        } else if (name.equals("14 - من بطن الشفة مع أطراف الثنايا المشرفة")) {
-            img.setImageResource(R.drawable.al_faa_14);
-        } else if (name.equals("الشفتان")) {
-            img.setImageResource(R.drawable.al_waw_15);
-        } else if (name.equals("15- من بين الشفتين لكنها داخلة إلى الداخل")) {
-            img.setImageResource(R.drawable.al_waw_15);
-        } else if (name.equals("16 - من بين الشفتين لكنها من الخارج")) {
-            img.setImageResource(R.drawable.meem_baa_16);
-        } else {
-            img.setVisibility(View.GONE);
-        }
-        String html = "<html dir=\"rtl\" lang=\"\"><head><style>@font-face {font-family: framd;src: " +
-                "url('file:///android_asset/fonts/framd.ttf');}.container_style {margin: 0; padding" +
-                ": 10px 5px 10px 5px;color: #00aaa9a7;font-size: 16px;font-weight:normal;font-family: " +
-                "'framd';}.detail_style {color: #00aaa9a7;font-size: 16px;font-weight:normal;}</style>" +
-                "</head><body class=\"container_style\"><div class=\"detail_style\" >"
-                + desc
-                + "</div></body></html>";
-        try
+           // img.setVisibility(View.VISIBLE);
+            if (name.equals("الجوف: تجاويف الحلقوم")) {
+                img.setImageResource(R.drawable.jawf_01);
+            } else if (name.equals("الحلق")) {
+                img.setImageResource(R.drawable.quaaf_05);
+            } else if (name.equals("اللسان")) {
+                img.setImageResource(R.drawable.wasat_lissan_07);
+            } else if (name.equals("الشفتان")) {
+                img.setImageResource(R.drawable.meem_baa_16);
+            } else if (name.equals("الخيشوم")) {
+                img.setImageResource(R.drawable.khayshoom_17);
+            } else if (name.equals("1 - الجوف")) {
+                img.setImageResource(R.drawable.jawf_01);
+            } else if (name.equals("2 - أقصى الحلق")) {
+                img.setImageResource(R.drawable.hamzaa_aa_02);
+            } else if (name.equals("3 - وسط الحلق")) {
+                img.setImageResource(R.drawable.ayn_7aa_03);
+            } else if (name.equals("4 - آخر الحلق أي أدناه إلى الفم")) {
+                img.setImageResource(R.drawable.ayn_7aa_03);
+            } else if (name.equals("5 - أصل اللسان: أقصاه")) {
+                img.setImageResource(R.drawable.kaaf_06);
+            } else if (name.equals("6 - وسط اللسان")) {
+                img.setImageResource(R.drawable.wasat_lissan_07);
+            } else if (name.equals("7 - حافة اللسان من جهة الأضراس")) {
+                img.setImageResource(R.drawable.al_dhaad_08);
+            } else if (name.equals("8 - أدنى اللسان إلى طرفه")) {
+                img.setImageResource(R.drawable.al_dhaad_08);
+            } else if (name.equals("9 - طرف اللسان أي رأس اللسان أي من أسفل رأس اللسان")) {
+                img.setImageResource(R.drawable.al_noon_09);
+            } else if (name.equals("10 - من رأس اللسان و لكنه أدخل إلى جهة الظهر")) {
+                img.setImageResource(R.drawable.al_raa_10);
+            } else if (name.equals("11 - بين راس اللسان و الثنايا العليا")) {
+                img.setImageResource(R.drawable.taa_daal_ta_11);
+            } else if (name.equals("12 - من طرف اللسان و من فوق الثنايا السفلى")) {
+                img.setImageResource(R.drawable.al_safeer_12);
+            } else if (name.equals("13 - من طرف اللسان و لكن بينه و بين الثنايا العليا")) {
+                img.setImageResource(R.drawable.taa_daal_ta_11);
+            } else if (name.equals("14 - من بطن الشفة مع أطراف الثنايا المشرفة")) {
+                img.setImageResource(R.drawable.al_faa_14);
+            } else if (name.equals("الشفتان")) {
+                img.setImageResource(R.drawable.al_waw_15);
+            } else if (name.equals("15- من بين الشفتين لكنها داخلة إلى الداخل")) {
+                img.setImageResource(R.drawable.al_waw_15);
+            } else if (name.equals("16 - من بين الشفتين لكنها من الخارج")) {
+                img.setImageResource(R.drawable.meem_baa_16);
+            } else {
+                img.setVisibility(View.GONE);
+            }
+            String html = "<html dir=\"rtl\" lang=\"\"><head><style>@font-face {font-family: framd;src: " +
+                    "url('file:///android_asset/fonts/framd.ttf');}.container_style {margin: 0; padding" +
+                    ": 10px 5px 10px 5px;color: #00aaa9a7;font-size: 16px;font-weight:normal;font-family: " +
+                    "'framd';}.detail_style {color: #00aaa9a7;font-size: 16px;font-weight:normal;}</style>" +
+                    "</head><body class=\"container_style\"><div class=\"detail_style\" >"
+                    + desc
+                    + "</div></body></html>";
+            try
 
-        {
-            mWebView.setVisibility(View.VISIBLE);
-            mWebView.loadDataWithBaseURL("file:///android_asset/", html,
-                    "text/html", "utf-8", null);
-        } catch (Exception e)
+            {
+                mWebView.setVisibility(View.VISIBLE);
+                mWebView.loadDataWithBaseURL("file:///android_asset/", html,
+                        "text/html", "utf-8", null);
+            } catch (Exception e)
 
-        {
-            // TODO: handle exception
+            {
+                // TODO: handle exception
+            }
         }
     }
 
@@ -474,7 +490,7 @@ public class HomeActivity1 extends Activity {
             if (stack_path.size() > 1) {
                 stack_path.remove(0);
                 Node nd = stack_path.get(0);
-                drawviews(nd);
+                //  drawviews(nd);
                 // refreshTreeView(nd, parentRoot);
 
             } else {

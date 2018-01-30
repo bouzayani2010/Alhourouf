@@ -66,10 +66,10 @@ public class MainActivity extends Activity {
         ///parent
         MyHolder.IconTreeItem nodeItem = new MyHolder.IconTreeItem();
         nodeItem.text = "node";
-        TreeNode parent = new TreeNode(nodeItem).setViewHolder(new MyHolder(this));
+        TreeNode parent = new TreeNode(nodeItem).setViewHolder(new MyHolder(this,0));
         ///child
-        TreeNode child0 = new TreeNode(nodeItem).setViewHolder(new MyHolder(this));
-        TreeNode child1 = new TreeNode(nodeItem).setViewHolder(new MyHolder(this));
+        TreeNode child0 = new TreeNode(nodeItem).setViewHolder(new MyHolder(this,0));
+        TreeNode child1 = new TreeNode(nodeItem).setViewHolder(new MyHolder(this,0));
         parent.addChildren(child0, child1);
 
         root.addChild(parent);
@@ -90,14 +90,14 @@ public class MainActivity extends Activity {
         ///parent
         MyHolder.IconTreeItem nodeItem = new MyHolder.IconTreeItem();
         nodeItem.text = "" + rNode.getName();
-        TreeNode parent = new TreeNode(nodeItem).setViewHolder(new MyHolder(this));
+        TreeNode parent = new TreeNode(nodeItem).setViewHolder(new MyHolder(this,0));
         /////////////
         List<Nodea> fils_rnodes = rNode.getNodes();
         for (Nodea na : fils_rnodes) {
             MyHolder.IconTreeItem naItem = new MyHolder.IconTreeItem();
             naItem.text = "" + na.getName();
             naItem.section = na.getSection();
-            TreeNode child = new TreeNode(naItem).setViewHolder(new MyHolder(this));
+            TreeNode child = new TreeNode(naItem).setViewHolder(new MyHolder(this,0));
             /////////////
             List<Nodea> fils_rnodes1 = na.getNodes();
             for (Nodea na1 : fils_rnodes1) {
@@ -105,7 +105,7 @@ public class MainActivity extends Activity {
                 naItem1.text = "" + na1.getName();
 
                 naItem1.section = na1.getSection();
-                TreeNode child1 = new TreeNode(naItem1).setViewHolder(new MyHolder(this));
+                TreeNode child1 = new TreeNode(naItem1).setViewHolder(new MyHolder(this,0));
                 /////////////
                 List<Nodea> fils_rnodes2 = na1.getNodes();
                 for (Nodea na2 : fils_rnodes2) {
@@ -113,14 +113,14 @@ public class MainActivity extends Activity {
                     naItem2.text = "" + na2.getName();
 
                     naItem2.section = na2.getSection();
-                    TreeNode child2 = new TreeNode(naItem2).setViewHolder(new MyHolder(this));
+                    TreeNode child2 = new TreeNode(naItem2).setViewHolder(new MyHolder(this,0));
                     /////////////
                     List<Nodea> fils_rnodes3 = na2.getNodes();
                     for (Nodea na3 : fils_rnodes3) {
                         MyHolder.IconTreeItem naItem3 = new MyHolder.IconTreeItem();
                         naItem3.text = "" + na3.getName();
                         naItem3.section = na3.getSection();
-                        TreeNode child3 = new TreeNode(naItem3).setViewHolder(new MyHolder(this));
+                        TreeNode child3 = new TreeNode(naItem3).setViewHolder(new MyHolder(this,0));
                         child2.addChildren(child3);
 
                     }
@@ -250,12 +250,12 @@ public class MainActivity extends Activity {
             ///parent
             MyHolder.IconTreeItem nodeItem = new MyHolder.IconTreeItem();
             nodeItem.text = "node";
-            TreeNode parent = new TreeNode(nodeItem).setViewHolder(new MyHolder(this));
+            TreeNode parent = new TreeNode(nodeItem).setViewHolder(new MyHolder(this,0));
             for (Node1 node : nodeList) {
                 MyHolder.IconTreeItem new_nodeItem = new MyHolder.IconTreeItem();
                 new_nodeItem.text = node.getName();
                 Log.d("nodenode", ":" + node.getName());
-                TreeNode child = new TreeNode(new_nodeItem).setViewHolder(new MyHolder(this));
+                TreeNode child = new TreeNode(new_nodeItem).setViewHolder(new MyHolder(this,0));
                 parent.addChildren(child);
 
             }
@@ -421,7 +421,7 @@ public class MainActivity extends Activity {
             Log.d("Rootelement PConfEx:", "" + e.getMessage());
             e.printStackTrace();
         } catch (SAXException e) {
-            Log.d("Rootelement SAXException:", "" + e.getMessage());
+            Log.d("Rooxception:", "" + e.getMessage());
             e.printStackTrace();
         }
 

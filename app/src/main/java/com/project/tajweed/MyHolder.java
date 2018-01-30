@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.unnamed.b.atv.model.TreeNode;
@@ -14,8 +15,11 @@ import com.unnamed.b.atv.model.TreeNode;
 
 public class MyHolder extends TreeNode.BaseNodeViewHolder<MyHolder.IconTreeItem>{
 
-    public MyHolder(Context context) {
+    private final int paddingLevel;
+
+    public MyHolder(Context context, int paddingLevel ) {
         super(context);
+        this.paddingLevel=paddingLevel;
     }
 
 
@@ -24,8 +28,10 @@ public class MyHolder extends TreeNode.BaseNodeViewHolder<MyHolder.IconTreeItem>
         final LayoutInflater inflater = LayoutInflater.from(context);
         final View view = inflater.inflate(R.layout.node_item, null, false);
         TextView tvValue = (TextView) view.findViewById(R.id.tv_name);
+        RelativeLayout relativeLayout = (RelativeLayout) view.findViewById(R.id.layout);
         ImageView ivValue = (ImageView) view.findViewById(R.id.icon);
         tvValue.setText(value.text);
+        relativeLayout.setPadding(0,0,paddingLevel*2,0);
         if(node.isExpanded()){
             ivValue.setImageResource(R.drawable.up);
         }
@@ -52,5 +58,8 @@ public class MyHolder extends TreeNode.BaseNodeViewHolder<MyHolder.IconTreeItem>
         public void setText(String text) {
             this.text = text;
         }
+
+
+
     }
 }
