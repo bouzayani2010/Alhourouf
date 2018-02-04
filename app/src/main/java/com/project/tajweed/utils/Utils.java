@@ -1,4 +1,4 @@
-package com.project.tajweed;
+package com.project.tajweed.utils;
 
 
 import org.w3c.dom.Element;

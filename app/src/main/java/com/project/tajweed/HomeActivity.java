@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.project.tajweed.adapters.ListNodeAdapter;
 import com.project.tajweed.adapters.ListtajweedAdapter;
+import com.project.tajweed.utils.Utils;
 import com.project.tajweed.xStream.Nodea;
 import com.project.tajweed.xStream.Rnode;
 
@@ -41,7 +42,6 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
 import butterknife.BindView;
-import butterknife.BindViews;
 import butterknife.ButterKnife;
 /**
  * Created by bbouzaiene on 31/07/2017.

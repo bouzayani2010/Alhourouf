@@ -27,7 +27,7 @@
                 android:layout_centerInParent="true"
                 android:gravity="center"
                 android:padding="5dp"
-                android:text="@string/tajweed"
+                android:text=""
                 android:textColor="@color/blue_color"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -70,57 +70,62 @@
                 android:id="@+id/treeconTainer"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:gravity="right"
                 android:layout_weight="3"
+                android:background="@drawable/grey_stroke_shape"
+                android:gravity="right"
+                android:padding="3dp"
                 android:visibility="visible">
 
             </RelativeLayout>
-            <ScrollView
-                android:id="@+id/scrollView"
+
+
+            <RelativeLayout
+                android:id="@+id/dataview"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_below="@+id/listview"
                 android:layout_weight="4"
                 android:background="@drawable/grey_stroke_shape"
-                android:padding="5dp"
-                android:visibility="visible">
+                android:padding="3dp"
+                android:visibility="gone">
 
 
-                <RelativeLayout
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/image_view"
+                    android:layout_marginBottom="2dip"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:visibility="gone" />
+
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent">
+                    <com.project.tajweed.Custom.TypeWriter
+                        android:id="@+id/webviewtypeWriter"
+                        android:layout_width="fill_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/image_view"
+                        android:layout_marginBottom="2dip"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:visibility="gone" />
+                </ScrollView>
 
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_below="@+id/treeconTainer"
-                        android:visibility="visible">
+                <ImageView
+                    android:id="@+id/image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:src="@drawable/jawf_01"
+                    android:visibility="gone" />
+            </RelativeLayout>
 
-                        <WebView
-                            android:id="@+id/webview"
-                            android:layout_width="fill_parent"
-                            android:layout_height="match_parent"
-                            android:layout_below="@+id/image_view"
-                            android:layout_marginBottom="2dip"
-                            android:focusable="true"
-                            android:focusableInTouchMode="true"
-                            android:visibility="visible" />
-                        <ImageView
-                            android:id="@+id/image_view"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:layout_margin="5dp"
-                            android:padding="5dp"
-                            android:src="@drawable/jawf_01"
-                            android:visibility="gone" />
-                    </RelativeLayout>
-                </RelativeLayout>
-
-
-
-            </ScrollView>
         </LinearLayout>
 
         <LinearLayout

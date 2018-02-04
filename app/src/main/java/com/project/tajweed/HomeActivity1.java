@@ -3,19 +3,25 @@ package com.project.tajweed;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.project.tajweed.Custom.TypeWriter;
 import com.project.tajweed.adapters.ListNodeAdapter;
 import com.project.tajweed.adapters.ListtajweedAdapter;
+import com.project.tajweed.utils.Datahelper;
+import com.project.tajweed.utils.Utils;
 import com.unnamed.b.atv.model.TreeNode;
 import com.unnamed.b.atv.view.AndroidTreeView;
 
@@ -55,8 +61,6 @@ public class HomeActivity1 extends Activity {
     private ListtajweedAdapter adapter;
     private static List<Section> cartList;
 
-    @BindView(R.id.scrollView)
-    ScrollView scrollView;
 
     @BindView(R.id.tv_desc)
     TextView tv_desc;
@@ -77,26 +81,33 @@ public class HomeActivity1 extends Activity {
     private TreeNode root;
     private String nameRoot = "";
     private Node ndRoot;
+    private RelativeLayout dataview;
+    private List<String> nodeList;
+    private AndroidTreeView tView;
+    private TextView tv_name;
+    private TypeWriter webviewtypeWriter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home1);
+
+        tv_name = (TextView) findViewById(R.id.tv_name);
         ButterKnife.bind(this);
         mWebView = (WebView) this.findViewById(R.id.webview);
+        webviewtypeWriter=findViewById(R.id.webviewtypeWriter);
         listView = (ListView) this.findViewById(R.id.listview);
+        dataview = (RelativeLayout) findViewById(R.id.dataview);
         treeconTainer = (RelativeLayout) this.findViewById(R.id.treeconTainer);
         img = (ImageView) this.findViewById(R.id.image_view);
         img.setVisibility(View.GONE);
         stack_path = new Stack();
-
-        parseXML();
-        //  parseNodeDOMXML(this);
-        //   rNode = Rnode.getInstance();
-        ndRoot = parseNodeDOMXML1(this);
+        cartList=Datahelper.getInstance().getNodeXmlData();
+        ndRoot = Datahelper.getInstance().getNodeXmlStructure();
         if (ndRoot.getNodeType() == Node.ELEMENT_NODE) {
             Element eElement = (Element) ndRoot;
             nameRoot = eElement.getAttribute("name");
+            tv_name.setText(nameRoot);
         }
         stack_path.add(0, ndRoot);
 
@@ -110,23 +121,26 @@ public class HomeActivity1 extends Activity {
 
         final TreeNode parentRoot = new TreeNode(nodeItem);
 
-        parentRoot.setViewHolder(new MyHolder(HomeActivity1.this,0));
+        parentRoot.setViewHolder(new MyHolder(HomeActivity1.this, 0));
 
         refreshTreeView(ndRoot, parentRoot);
         root.addChild(parentRoot);
+        List<Node> stack_path1 = reformulePath(parentRoot.getPath());
+        createviews(stack_path1);
 
-        AndroidTreeView tView = new AndroidTreeView(this, root);
+        tView = new AndroidTreeView(this, root);
         tView.setDefaultNodeClickListener(new TreeNode.TreeNodeClickListener() {
             @Override
             public void onClick(TreeNode node, Object value) {
+                View nodeview = node.getViewHolder().getView();
+                TextView tv_name = (TextView) nodeview.findViewById(R.id.tv_name);
+                // tv_name.setTextColor(getResources().getColor(R.color.colorAccent));
                 if (node.isExpanded()) {
 
-                    View nodeview = node.getViewHolder().getView();
                     ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
                     img_node.setImageResource(R.drawable.down);
                 } else {
 
-                    View nodeview = node.getViewHolder().getView();
                     ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
                     img_node.setImageResource(R.drawable.up);
                 }
@@ -135,9 +149,17 @@ public class HomeActivity1 extends Activity {
             }
         });
 
-        tView.setDefaultAnimation(true);
-        tView.setDefaultContainerStyle(R.style.TreeNodeStyleDivided, true);
+        //tView.setDefaultAnimation(true);
+        tView.setUseAutoToggle(true);
+        tView.setDefaultContainerStyle(R.style.TreeNodeStyleCustom, true);
         treeconTainer.addView(tView.getView());
+
+        if (savedInstanceState != null) {
+            String state = savedInstanceState.getString("tState");
+            if (!TextUtils.isEmpty(state)) {
+                tView.restoreState(state);
+            }
+        }
 
         tv_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -168,8 +190,8 @@ public class HomeActivity1 extends Activity {
                     List<Node> stack_path1 = reformulePath(child1.getPath());
 
 
-                    child1.setViewHolder(new MyHolder(HomeActivity1.this,stack_path1.size()));
-                 //   nodeItem.setPaddingLevel(stack_path1.size());
+                    child1.setViewHolder(new MyHolder(HomeActivity1.this, stack_path1.size()));
+                    //   nodeItem.setPaddingLevel(stack_path1.size());
                     refreshTreeView(nd, child1);
 
 
@@ -206,9 +228,10 @@ public class HomeActivity1 extends Activity {
     }
 
     private List<Node> reformulePath(String path) {
+
         List<String> list = Arrays.asList(path.split(":"));
         List<String> items = new ArrayList<String>(list);
-
+        nodeList = list;
         //Log.i("pathpath", "*** " + items);
         Collections.reverse(items);
         Log.i("pathpath", "*** " + items);
@@ -251,76 +274,6 @@ public class HomeActivity1 extends Activity {
         return listNodePath;
     }
 
-    public void refreshTreeView1(Node ndRoot, final TreeNode parent) {
-        Log.d("NodeName", ":::" + ndRoot.getNodeName());
-        if (ndRoot.getNodeType() == Node.ELEMENT_NODE) {
-            Element eElement = (Element) ndRoot;
-            Log.d("NodeName", ":::" + eElement.getAttribute("name"));
-            nList = ndRoot.getChildNodes();
-            final List<Node> nListFiltered = Utils.filterNodes(nList);
-            Log.d("NodeName", ":::" + nList.getLength());
-
-            for (final Node nd : nListFiltered) {
-                if (nd.getNodeType() == Node.ELEMENT_NODE) {
-                    Element nodea = (Element) nd;
-                    //viewHolder.name.setText(nodea.getAttribute("name"));
-
-                    MyHolder.IconTreeItem nodeItem = new MyHolder.IconTreeItem("" + nodea.getAttribute("name").toString());
-                    final TreeNode child1 = new TreeNode(nodeItem);
-                    child1.setViewHolder(new MyHolder(HomeActivity1.this,0));
-
-
-                    int deep = getDeep(child1);
-                    child1.setClickListener(new TreeNode.TreeNodeClickListener() {
-                        @Override
-                        public void onClick(TreeNode node, Object value) {
-                            refreshTreeView(nd, child1);
-
-                            if (node.isExpanded()) {
-
-                                View nodeview = node.getViewHolder().getView();
-                                ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
-                                img_node.setImageResource(R.drawable.down);
-                            } else {
-
-                                View nodeview = node.getViewHolder().getView();
-                                ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
-                                img_node.setImageResource(R.drawable.up);
-                            }
-                            Log.d("stack_Path", stack_path.toString());
-                            String childPath = child1.getPath();
-
-                            int childDeep = Integer.parseInt(childPath);
-
-                            Log.d("stack_Path", "::" + childPath);
-                            // stack_path.clear();
-                            if (childDeep + 1 > stack_path.size()) {
-                                stack_path.add(0, nd);
-                            } else {
-                                while (childDeep + 1 < stack_path.size()) {
-                                    stack_path.remove(stack_path.size() - 1);
-                                }
-                            }
-
-
-                            //drawviews(nd);
-                        }
-                    });
-                    parent.addChild(child1);
-                    String desc = ":::" + child1.getPath() + ": " + nodea.getAttribute("name");
-                    Log.d("nodepathnodepath", desc);
-
-                }
-            }
-
-
-            root.addChild(parent);
-
-        }
-
-
-        //createviews(stack_path1);
-    }
 
     private int getDeep(TreeNode child1) {
         int i = 0;
@@ -332,58 +285,51 @@ public class HomeActivity1 extends Activity {
         return i;
     }
 
-    private void remplirStackPath(List<Node> stack_path, TreeNode child1) {
-        stack_path.clear();
-        int childpath = Integer.parseInt(child1.getPath());
-        for (int i = 0; i < childpath; i++) {
-            //stack_path.add(child1.getParent())
-        }
-    }
 
     private void createviews(List<Node> stack_path) {
         //  items_path = new ArrayList(stack_path);
         items_path = stack_path;
-        Log.i("pathpath", "***" + Utils.getStrings(stack_path));
-
-        //   Collections.reverse(items_path);
-        // Collections.sort(items_path,Collections.<String>reverseOrder());
-        //  items_path.add(getString(R.string.tajweed));
         pathAdapter = new PathAdapter(this, stack_path);
         TwoWayView lvTest = (TwoWayView) findViewById(R.id.lvItems);
         lvTest.setAdapter(pathAdapter);
         lvTest.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int j, long l) {
+                try {
+
+                    int position = pathAdapter.getCount() - j - 1;
+                    TreeNode selectedNode = root;
+                    Log.i("pathpath1", "***" + nodeList.get(position));
+                    tView.collapseAll();
+                    int lev = 0;
+                    Collections.reverse(nodeList);
+                    if (position == 0) ;
+                    else {
+                        for (int i = 0; i <= position; i++) {
+                            lev = Integer.parseInt(nodeList.get(i)) - 1;
+                            List<TreeNode> childs = selectedNode.getChildren();
+                            selectedNode = childs.get(lev);
+                            selectedNode.setExpanded(true);
+                            tView.expandNode(selectedNode);
+                        }
+                    }
+                    Collections.reverse(nodeList);
+                    for (int i = 0; i < j; i++) {
+                        items_path.remove(0);
+                    }
+                    createviews(items_path);
+                } catch (NumberFormatException e) {
+
+                } catch (Exception e) {
+
+                }
 
 
             }
         });
     }
 
-    private void parseXML() {
-        AssetManager assetManager = getBaseContext().getAssets();
-        try {
-            InputStream is = assetManager.open("tajweed_data.xml");
-            SAXParserFactory spf = SAXParserFactory.newInstance();
-            SAXParser sp = spf.newSAXParser();
-            XMLReader xr = sp.getXMLReader();
 
-            OrderXMLHandler1 myXMLHandler = new OrderXMLHandler1();
-            xr.setContentHandler(myXMLHandler);
-            InputSource inStream = new InputSource(is);
-            xr.parse(inStream);
-
-
-            cartList = myXMLHandler.getCartList();
-            is.close();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            Log.d("nodeanodea", ":" + e.getMessage());
-        }
-
-
-    }
 
 
     private static Section getSectionfrompath(String path) {
@@ -405,16 +351,25 @@ public class HomeActivity1 extends Activity {
     }
 
     private void drawviews(List<Node> stack_path) {
-        img.setVisibility(View.VISIBLE);
-     //   Collections.reverse(stack_path);
+        // img.setVisibility(View.VISIBLE);
+        //   Collections.reverse(stack_path);
         String path = Utils.drawPath(stack_path);
         Log.d("pathpath", path);
         Section section = getSectionfrompath(path);
         if (section != null) {
             String desc = section.getDesc();
             String name = section.getName();
+            if (desc != null && !desc.isEmpty()) {
+                dataview.setVisibility(View.VISIBLE);
+            } else {
+                dataview.setVisibility(View.GONE);
 
-           // img.setVisibility(View.VISIBLE);
+                LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) dataview.getLayoutParams();
+                layoutParams.setMargins(0, 0, 0, 0);
+                dataview.setLayoutParams(layoutParams);
+            }
+
+            // img.setVisibility(View.VISIBLE);
             if (name.equals("الجوف: تجاويف الحلقوم")) {
                 img.setImageResource(R.drawable.jawf_01);
             } else if (name.equals("الحلق")) {
@@ -469,17 +424,46 @@ public class HomeActivity1 extends Activity {
                     "</head><body class=\"container_style\"><div class=\"detail_style\" >"
                     + desc
                     + "</div></body></html>";
+
+
+            String html1 ="<html>\n" +
+                    "\t<head>\n" +
+                    "\t\t<meta charset=\"UTF-8\">\n" +
+                    "\t\t\t<title></title>\n" +
+                    "\t\t</head>\n" +
+                    "\t\t<body>\n" +
+                    "\t\t\t\t<body>\n" +
+                    "\t<p>"+desc+"</p>\n" +
+                    "\t\n" +
+                    "\t\t\t\t\t</body>\n" +
+                    "\t\t\t\t</html>\n" +
+                    "\t\t\t</body>\n" +
+                    "\t\t</html>";
             try
 
             {
-                mWebView.setVisibility(View.VISIBLE);
+                Typeface font = Typeface.createFromAsset(getAssets(), "fonts/neorcha.ttf");
+              //  txt.setTypeface(font);
+               // mWebView.setVisibility(View.VISIBLE);
+                webviewtypeWriter.setVisibility(View.VISIBLE);
                 mWebView.loadDataWithBaseURL("file:///android_asset/", html,
                         "text/html", "utf-8", null);
-            } catch (Exception e)
-
-            {
+                //webviewtypeWriter.setText(Html.fromHtml(html1));
+                webviewtypeWriter.setCharacterDelay(100);
+                webviewtypeWriter.setTextSize(18);
+                webviewtypeWriter.setTypeface(font);
+                webviewtypeWriter.setPadding(5, 5, 5, 5);
+                webviewtypeWriter.animateText(Html.fromHtml(html1));
+              //  webviewtypeWriter.animateText(Html.fromHtml(html1).toString());
+            } catch (Exception e) {
                 // TODO: handle exception
             }
+            dataview.setVisibility(View.VISIBLE);
+        } else {
+            dataview.setVisibility(View.GONE);
+            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) dataview.getLayoutParams();
+            layoutParams.setMargins(0, 0, 0, 0);
+            dataview.setLayoutParams(layoutParams);
         }
     }
 

@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<rNode>
-        <node name="1a">attribute 1 of detail a</node>
-        <node name="2a">attribute 2 of detail a</node>
-        <node name="3a">attribute 3 of detail a</node>
-        <node name="1b">attribute 1 of detail b</node>
-        <node name="2b">attribute 2 of detail b</node>
-</rNode>
