@@ -449,7 +449,7 @@ public class HomeActivity1 extends Activity {
                 mWebView.loadDataWithBaseURL("file:///android_asset/", html,
                         "text/html", "utf-8", null);
                 //webviewtypeWriter.setText(Html.fromHtml(html1));
-                webviewtypeWriter.setCharacterDelay(100);
+                webviewtypeWriter.setCharacterDelay(0);
                 webviewtypeWriter.setTextSize(18);
                 webviewtypeWriter.setTypeface(font);
                 webviewtypeWriter.setPadding(5, 5, 5, 5);
@@ -491,37 +491,7 @@ public class HomeActivity1 extends Activity {
         }
     }
 
-    private Node parseNodeDOMXML1(Context context) {
-
-        // rNode = Rnode.getInstance();
-        AssetManager assetManager = context.getAssets();
-
-        try {
-            InputStream is = assetManager.open("tajweed_structure.xml");
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            Document doc = dBuilder.parse(is);
-
-            Element element = doc.getDocumentElement();
-            element.normalize();
-            Log.d("Rootelement :", "" + doc.getDocumentElement().getNodeName());
-            Node root = doc.getFirstChild();
-            if (root.getNodeType() == Node.ELEMENT_NODE) {
-                return root;
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 
 
-    public static HomeActivity1 getInstance() {
-        if (homeActivity == null) {
-            homeActivity = new HomeActivity1();
-        }
-        return homeActivity;
-    }
+
 }
