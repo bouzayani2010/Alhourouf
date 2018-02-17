@@ -202,7 +202,7 @@ public class HomeActivity1 extends Activity {
                             Log.d("nodepathnodepath", desc);
 
                             List<Node> stack_path1 = reformulePath(child1.getPath());
-
+                            webviewtypeWriter.setVisibility(View.VISIBLE);
                             drawviews(stack_path1);
                             createviews(stack_path1);
                             if (node.isExpanded()) {
@@ -212,6 +212,7 @@ public class HomeActivity1 extends Activity {
                                 img_node.setImageResource(R.drawable.down);
                             } else {
 
+                                webviewtypeWriter.setVisibility(View.INVISIBLE);
                                 View nodeview = node.getViewHolder().getView();
                                 ImageView img_node = (ImageView) nodeview.findViewById(R.id.icon);
                                 img_node.setImageResource(R.drawable.up);
@@ -453,7 +454,8 @@ public class HomeActivity1 extends Activity {
                 webviewtypeWriter.setTextSize(18);
                 webviewtypeWriter.setTypeface(font);
                 webviewtypeWriter.setPadding(5, 5, 5, 5);
-                webviewtypeWriter.animateText(Html.fromHtml(html1));
+             //   webviewtypeWriter.animateText(Html.fromHtml(html1));
+                webviewtypeWriter.setText(Html.fromHtml(html1));
               //  webviewtypeWriter.animateText(Html.fromHtml(html1).toString());
             } catch (Exception e) {
                 // TODO: handle exception
